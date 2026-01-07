@@ -2,7 +2,7 @@
 
 A small Next.js + TypeScript app for designing and managing armies for a renaissance-inspired tabletop builder.
 
-## ⚡ Quick Start
+## Quick Start
 
 **Prerequisites**
 - Node.js (18+ recommended)
@@ -31,13 +31,13 @@ npm run lint
 
 ---
 
-## 🔧 Tech Stack
+## Tech Stack
 - **Next.js**
 - **TypeScript**
 - **Tailwind CSS**
 - **Zustand** (state management)
 
-## 📁 Project Structure (important files)
+## Project Structure (important files)
 - `src/app/` - Next.js app routes and global layout
   - `builder/` - The army builder UI
 - `src/components/builder/` - UI components for building armies (`UnitList`, `UnitEditor`, `ArmyList`)
@@ -51,10 +51,3 @@ npm run lint
 ## Contributing
 - Open an issue or submit a pull request.
 - Keep changes small and focused; add tests where applicable.
-
-## License
-MIT — feel free to change this to another license if desired.
-
----
-
-If you'd like, I can expand the README with screenshots, CI instructions, or contribution guidelines.
