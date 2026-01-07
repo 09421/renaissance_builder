@@ -47,7 +47,3 @@ npm run lint
 - `package.json` - Scripts: `dev`, `build`, `start`, `lint`
 
 ---
-
-## Contributing
-- Open an issue or submit a pull request.
-- Keep changes small and focused; add tests where applicable.
