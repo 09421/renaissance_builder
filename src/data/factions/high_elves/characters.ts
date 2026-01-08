@@ -45,6 +45,7 @@ export const characters: UnitDefinition[] = [
     modelName: 'Hero',
     role: 'character',
     type: 'infantry',
+    magicItemAllowance: 2,
     minSize: 1,
     maxSize: 1,
     pointsPerModel: 74,
@@ -97,7 +98,7 @@ export const characters: UnitDefinition[] = [
   },
   {
     id: 'mage_lord',
-    name: 'Mage Lord',
+    name: 'Mage Lord (lvl 4)',
     modelName: 'Mage Lord',
     role: 'character',
     type: 'infantry',
@@ -124,7 +125,7 @@ export const characters: UnitDefinition[] = [
   },
   {
     id: 'master_mage',
-    name: 'Master Mage',
+    name: 'Master Mage (lvl 3)',
     modelName: 'Master Mage',
     role: 'character',
     type: 'infantry',
@@ -148,7 +149,7 @@ export const characters: UnitDefinition[] = [
   },
   {
     id: 'mage_champion',
-    name: 'Mage Champion',
+    name: 'Mage Champion (lvl 2)',
     modelName: 'Mage Champion',
     role: 'character',
     type: 'infantry',
@@ -172,7 +173,7 @@ export const characters: UnitDefinition[] = [
   },
   {
     id: 'mage',
-    name: 'Mage',
+    name: 'Mage (lvl 1)',
     modelName: 'Mage',
     role: 'character',
     type: 'infantry',

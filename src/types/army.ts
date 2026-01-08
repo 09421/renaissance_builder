@@ -1,5 +1,19 @@
 export type StatValue = number | string;
 
+export type MagicItemCategory = 'weapon' | 'armour' | 'helmet' | 'talisman' | 'arcane' | 'enchanted' | 'banner';
+
+export interface MagicItem {
+  id: string;
+  name: string;
+  type: MagicItemCategory;
+  points: number;
+  description?: string;
+  
+  onlyWizards?: boolean;
+  onlyBattleStandard?: boolean;
+  requiresMundaneOption?: string;
+}
+
 export interface ArmyUnit {
   instanceId: string;
   defId: string;
@@ -64,4 +78,5 @@ export interface UnitDefinition {
   specialRules: string[];
   additionalProfiles?: SubProfile[];
   baseCrew?: number;
+  magicItemAllowance?: number;
 }
