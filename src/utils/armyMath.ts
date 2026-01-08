@@ -1,5 +1,4 @@
-import { ArmyUnit } from '@/store/armyStore';
-import { UnitDefinition } from '@/types/army';
+import { UnitDefinition, ArmyUnit } from '@/types/army';
 
 export const calculateUnitCost = (unit: ArmyUnit, definition: UnitDefinition): number => {
   let optionCost = 0;

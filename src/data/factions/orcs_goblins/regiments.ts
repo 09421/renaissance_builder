@@ -1,4 +1,5 @@
 import { UnitDefinition } from '@/types/army';
+import { OG_STATS } from './stats';
 
 export const regiments: UnitDefinition[] = [
   {
@@ -10,7 +11,7 @@ export const regiments: UnitDefinition[] = [
     minSize: 5,
     maxSize: null,
     pointsPerModel: 5,
-    stats: { M: 4, Ws: 3, Bs: 3, S: 3, T: 4, W: 1, I: 2, A: 1, Ld: 7 },
+    stats: OG_STATS.commonOrc,
     equipment: ['Hand Weapon', 'Light armor'],
     specialRules: ['Animosity', 'Ignore panic induced by Goblins.'],
     options: [
@@ -24,7 +25,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Orc Champion', 
         points: 20,
         maxPerUnit: 1,
-        stats: { Ws:4, Bs:4, S:4, I:3, A:2 },
+        stats: OG_STATS.commonOrcChampion,
         isFixedCost: true
       }
     ]
@@ -38,7 +39,7 @@ export const regiments: UnitDefinition[] = [
     minSize: 5,
     maxSize: null,
     pointsPerModel: 7,
-    stats: { M: 4, Ws: 3, Bs: 3, S: 3, T: 4, W: 1, I: 2, A: 1, Ld: 7 },
+    stats: OG_STATS.commonOrc,
     equipment: ['Hand Weapon', 'Bows'],
     specialRules: ['Animosity', 'Ignore panic induced by Goblins.'],
     options: [
@@ -49,7 +50,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Orc Champion', 
         points: 20,
         maxPerUnit: 1,
-        stats: { Ws:4, Bs:4, S:4, I:3, A:2 },
+        stats: OG_STATS.commonOrcChampion,
         isFixedCost: true
       }
     ]
@@ -63,11 +64,11 @@ export const regiments: UnitDefinition[] = [
     minSize: 5,
     maxSize: null,
     pointsPerModel: 15,
-    stats: { M: 4, Ws: 3, Bs: 3, S: 3, T: 4, W: 1, I: 2, A: 1, Ld: 7 },
+    stats: OG_STATS.commonOrc,
     additionalProfiles: [
       {
         name: 'War Boar',
-        stats: { M:7, Ws:4, Bs:0, S:3, T:4, W:1, I:3, A:1, Ld:3 } 
+        stats: OG_STATS.warBoar
       }
     ],
     equipment: ['Hand Weapon', 'Light armor', 'Shield', 'War Boars'],
@@ -79,7 +80,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Orc Champion', 
         points: 20,
         maxPerUnit: 1,
-        stats: { Ws:4, Bs:4, S:4, I:3, A:2 },
+        stats: OG_STATS.commonOrcChampion,
         isFixedCost: true
       }
     ]
@@ -93,7 +94,7 @@ export const regiments: UnitDefinition[] = [
     minSize: 5,
     maxSize: null,
     pointsPerModel: 7,
-    stats: { M: 4, Ws: 4, Bs: 3, S: 4, T: 4, W: 1, I: 3, A: 1, Ld: 7 },
+    stats: OG_STATS.bigun,
     equipment: ['Hand Weapon', 'Light armor'],
     specialRules: ['Animosity', 'Ignore panic induced by Goblins.'],
     options: [
@@ -107,7 +108,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Big\'un Champion', 
         points: 20,
         maxPerUnit: 1,
-        stats: { Ws:5, Bs:4, I:4, A:2 },
+        stats: OG_STATS.bigunChampion,
         isFixedCost: true
       }
     ]
@@ -121,7 +122,7 @@ export const regiments: UnitDefinition[] = [
     minSize: 5,
     maxSize: null,
     pointsPerModel: 9,
-    stats: { M: 4, Ws: 4, Bs: 3, S: 4, T: 4, W: 1, I: 3, A: 1, Ld: 7 },
+    stats: OG_STATS.bigun,
     equipment: ['Hand Weapon', 'Bows'],
     specialRules: ['Animosity', 'Ignore panic induced by Goblins.'],
     options: [
@@ -132,7 +133,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Big\'un Champion', 
         points: 20,
         maxPerUnit: 1,
-        stats: { Ws:5, Bs:4, I:4, A:2 },
+        stats: OG_STATS.bigunChampion,
         isFixedCost: true
       }
     ]
@@ -146,11 +147,11 @@ export const regiments: UnitDefinition[] = [
     minSize: 5,
     maxSize: null,
     pointsPerModel: 15,
-    stats: { M: 4, Ws: 4, Bs: 3, S: 4, T: 4, W: 1, I: 3, A: 1, Ld: 7 },
+    stats: OG_STATS.bigun,
     additionalProfiles: [
       {
         name: 'War Boar',
-        stats: { M:7, Ws:4, Bs:0, S:3, T:4, W:1, I:3, A:1, Ld:3 } 
+        stats: OG_STATS.warBoar
       }
     ],
     equipment: ['Hand Weapon', 'Light armor', 'Shield', 'War Boars'],
@@ -162,7 +163,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Big\'un Champion', 
         points: 20,
         maxPerUnit: 1,
-        stats: { Ws:5, Bs:4, I:4, A:2 },
+        stats: OG_STATS.bigunChampion,
         isFixedCost: true
       }
     ]
@@ -176,7 +177,7 @@ export const regiments: UnitDefinition[] = [
     minSize: 5,
     maxSize: null,
     pointsPerModel: 8,
-    stats: { M: 4, Ws: 3, Bs: 3, S: 3, T: 4, W: 1, I: 2, A: 1, Ld: 7 },
+    stats: OG_STATS.savageOrc,
     equipment: ['Hand Weapon', 'magical tattoos'],
     specialRules: ['Animosity', 'frenzied', 'Ignore panic induced by Goblins.'],
     options: [
@@ -189,7 +190,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Savage Orc Champion', 
         points: 30,
         maxPerUnit: 1,
-        stats: { Ws:4, Bs:4, S:4, I:3, A:2 },
+        stats: OG_STATS.savageChampion,
         isFixedCost: true
       }
     ]
@@ -203,7 +204,7 @@ export const regiments: UnitDefinition[] = [
     minSize: 5,
     maxSize: null,
     pointsPerModel: 10,
-    stats: { M: 4, Ws: 3, Bs: 3, S: 3, T: 4, W: 1, I: 2, A: 1, Ld: 7 },
+    stats: OG_STATS.savageOrc,
     equipment: ['Hand Weapon', 'Bows', 'magical tattoos'],
     specialRules: ['Animosity', 'frenzied', 'Ignore panic induced by Goblins.'],
     options: [
@@ -212,7 +213,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Savage Orc Champion', 
         points: 30,
         maxPerUnit: 1,
-        stats: { Ws:4, Bs:4, S:4, I:3, A:2 },
+        stats: OG_STATS.savageChampion,
         isFixedCost: true
       }
     ]
@@ -226,11 +227,11 @@ export const regiments: UnitDefinition[] = [
     minSize: 5,
     maxSize: null,
     pointsPerModel: 20,
-    stats: { M: 4, Ws: 3, Bs: 3, S: 3, T: 4, W: 1, I: 2, A: 1, Ld: 7 },
+    stats: OG_STATS.savageOrc,
     additionalProfiles: [
       {
         name: 'War Boar',
-        stats: { M:7, Ws:4, Bs:0, S:3, T:4, W:1, I:3, A:1, Ld:3 } 
+        stats: OG_STATS.warBoar
       }
     ],
     equipment: ['Hand Weapon', 'magical tattoos', 'Shield', 'War Boars'],
@@ -243,7 +244,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Savage Orc Champion', 
         points: 30,
         maxPerUnit: 1,
-        stats: { Ws:4, Bs:4, S:4, I:3, A:2 },
+        stats: OG_STATS.savageChampion,
         isFixedCost: true
       }
     ]
@@ -257,7 +258,7 @@ export const regiments: UnitDefinition[] = [
     minSize: 5,
     maxSize: null,
     pointsPerModel: 9,
-    stats: { M: 4, Ws: 4, Bs: 3, S: 4, T: 4, W: 1, I: 2, A: 1, Ld: 8 },
+    stats: OG_STATS.blackOrc,
     equipment: ['Hand Weapon', 'Light armor'],
     specialRules: ['Ignore panic induced by Goblins and other orc types'],
     options: [
@@ -272,7 +273,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Black Orc Champion', 
         points: 20,
         maxPerUnit: 1,
-        stats: { Ws:5, Bs:4, S:5, I:3, A:2, Ld:8 },
+        stats: OG_STATS.blackOrcChampion,
         isFixedCost: true
       }
     ]
@@ -286,7 +287,7 @@ export const regiments: UnitDefinition[] = [
     minSize: 5,
     maxSize: null,
     pointsPerModel: 2.5,
-    stats: { M: 4, Ws: 2, Bs: 3, S: 3, T: 3, W: 1, I: 2, A: 1, Ld: 5 },
+    stats: OG_STATS.goblin,
     equipment: ['Hand Weapon'],
     specialRules: ['Animosity', 'Fear Elves'],
     options: [
@@ -300,7 +301,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Goblin Champion', 
         points: 10,
         maxPerUnit: 1,
-        stats: { Ws:3, Bs:4, S:4, I:3, A:2 },
+        stats: OG_STATS.goblinChampion,
         isFixedCost: true
       }
     ]
@@ -314,11 +315,11 @@ export const regiments: UnitDefinition[] = [
     minSize: 5,
     maxSize: null,
     pointsPerModel: 9,
-    stats: { M: 4, Ws: 2, Bs: 3, S: 3, T: 3, W: 1, I: 2, A: 1, Ld: 5 },
+    stats: OG_STATS.goblin,
     additionalProfiles: [
       {
         name: 'Giant Wolf',
-        stats: { M:9, Ws:4, Bs:0, S:3, T:3, W:1, I:3, A:1, Ld:3 } 
+        stats: OG_STATS.giantWolf
       }
     ],
     equipment: ['Hand Weapon', 'Giant Wolf'],
@@ -334,7 +335,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Goblin Champion', 
         points: 10,
         maxPerUnit: 1,
-        stats: { Ws:3, Bs:4, S:4, I:3, A:2 },
+        stats: OG_STATS.goblinChampion,
         isFixedCost: true
       }
     ]
@@ -348,7 +349,7 @@ export const regiments: UnitDefinition[] = [
     minSize: 5,
     maxSize: null,
     pointsPerModel: 2.5,
-    stats: { M: 4, Ws: 2, Bs: 3, S: 3, T: 3, W: 1, I: 2, A: 1, Ld: 5 },
+    stats: OG_STATS.forestGoblin,
     equipment: ['Hand Weapon'],
     specialRules: ['Animosity', 'Fear Elves', 'Traverse woods without penalty'],
     options: [
@@ -361,7 +362,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Goblin Champion', 
         points: 10,
         maxPerUnit: 1,
-        stats: { Ws:3, Bs:4, S:4, I:3, A:2 },
+        stats: OG_STATS.forestGoblinChampion,
         isFixedCost: true
       }
     ]
@@ -375,11 +376,11 @@ export const regiments: UnitDefinition[] = [
     minSize: 5,
     maxSize: null,
     pointsPerModel: 8,
-    stats: { M: 4, Ws: 2, Bs: 3, S: 3, T: 3, W: 1, I: 2, A: 1, Ld: 5 },
+    stats: OG_STATS.forestGoblin,
     additionalProfiles: [
       {
         name: 'Giant Spider',
-        stats: { M:9, Ws:4, Bs:0, S:3, T:3, W:1, I:3, A:1, Ld:3 } 
+        stats: OG_STATS.giantSpider
       }
     ],
     equipment: ['Hand Weapon', 'Giant Spider'],
@@ -394,7 +395,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Goblin Champion', 
         points: 10,
         maxPerUnit: 1,
-        stats: { Ws:3, Bs:4, S:4, I:3, A:2 },
+        stats: OG_STATS.goblinChampion,
         isFixedCost: true
       }
     ]
@@ -408,7 +409,7 @@ export const regiments: UnitDefinition[] = [
     minSize: 5,
     maxSize: null,
     pointsPerModel: 2.5,
-    stats: { M: 4, Ws: 2, Bs: 3, S: 3, T: 3, W: 1, I: 2, A: 1, Ld: 5 },
+    stats: OG_STATS.nightGoblin,
     equipment: ['Hand Weapon'],
     specialRules: ['Animosity', 'Fear Elves', 'Hate Dwarfs'],
     options: [
@@ -416,7 +417,15 @@ export const regiments: UnitDefinition[] = [
       { id: 'great_wpn', name: 'Double handed weapons', points: 2, group: 'weapon' },
       { id: 'short_bow', name: 'Short Bows', points: 1, group: 'weapon', conflicts: ['shield'] },
       { id: 'shield', name: 'Shields', points: 0.5, conflicts: ['short_bow'] },
-      { id: 'fanatic', name: 'Fanatic', points: 30, maxPerUnit: 3, isFixedCost: true, isExternalPoints: true, },
+      { 
+        id: 'fanatic', 
+        name: 'Fanatic', 
+        points: 30, 
+        maxPerUnit: 3, 
+        isFixedCost: true, 
+        isExternalPoints: true,
+        stats: OG_STATS.fanatic
+      },
       { 
         id: 'mad_cap_mushroom', 
         name: 'Mad Cap Mushroom', 
@@ -430,7 +439,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Goblin Champion', 
         points: 10,
         maxPerUnit: 1,
-        stats: { Ws:3, Bs:4, S:4, I:3, A:2 },
+        stats: OG_STATS.goblinChampion,
         isFixedCost: true
       }
     ]

@@ -5,8 +5,9 @@ import { useSearchParams } from 'next/navigation';
 import { useArmyStore } from '@/store/armyStore';
 import { getFactionRoster, getUnitDef } from '@/utils/getFactionData';
 import { UnitList } from '@/components/builder/UnitList';
-import { ArmyList } from '@/components/builder/ArmyList';
+import { ArmyList } from '@/components/builder/armylist/ArmyList';
 import { UnitEditor } from '@/components/builder/UnitEditor';
+import Link from 'next/link';
 
 // 2. Extract the main logic into its own component
 function BuilderContent() {
@@ -20,7 +21,7 @@ function BuilderContent() {
   const availableUnits = useMemo(() => getFactionRoster(factionKey), [factionKey]);
   const selectedUnit = roster.find(u => u.instanceId === selectedUnitId);
   const selectedUnitDef = selectedUnit ? getUnitDef(factionKey, selectedUnit.defId) : null;
-  const currentPoints = getPointsTotal ? getPointsTotal() : 0; // Check if you implemented this yet
+  const currentPoints = getPointsTotal ? getPointsTotal() : 0;
 
   useEffect(() => {
     initializeList(factionKey, pointsLimit);
@@ -31,9 +32,22 @@ function BuilderContent() {
       
       {/* LEFT COLUMN */}
       <aside className="w-80 flex-none border-r border-slate-700 flex flex-col bg-slate-800/50">
-        <div className="p-4 border-b border-slate-700 font-bold uppercase tracking-wider text-amber-500">
-          Muster Forces
+        <div className="h-16 flex items-center px-4 border-b border-slate-700 gap-3">
+          <Link 
+            href="/" 
+            className="text-slate-400 hover:text-amber-500 hover:bg-slate-700/50 p-2 rounded-full transition-all"
+            title="Back to Main Menu"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+            </svg>
+          </Link>
+
+          <div className="font-bold uppercase tracking-wider text-amber-500 select-none">
+            Muster Forces
+          </div>
         </div>
+
         <div className="flex-1 overflow-y-auto p-4">
           <UnitList units={availableUnits} />
         </div>
@@ -52,8 +66,7 @@ function BuilderContent() {
            </div>
            
            <div className={`text-2xl font-bold font-mono ${currentPoints > pointsLimit ? 'text-red-500' : 'text-amber-500'}`}>
-             {/* Note: You need to implement getPointsTotal in store, or calculate it here */}
-             0 / {pointsLimit}
+             {getPointsTotal()} / {pointsLimit}
            </div>
         </header>
         
@@ -77,7 +90,6 @@ function BuilderContent() {
   );
 }
 
-// 3. Main Page Component wraps the content in Suspense
 export default function BuilderPage() {
   return (
     <Suspense fallback={<div className="flex h-screen items-center justify-center text-slate-500">Loading Army Builder...</div>}>

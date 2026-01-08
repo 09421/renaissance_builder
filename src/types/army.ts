@@ -1,5 +1,15 @@
 export type StatValue = number | string;
 
+export interface ArmyUnit {
+  instanceId: string;
+  defId: string;
+  name: string;
+  role: string;
+  pointsPerModel: number;
+  modelCount: number;
+  selectedOptions: Record<string, number>;
+}
+
 export type StatBlock = {
   M: StatValue;  // Movement
   Ws: StatValue; // Weapon Skill

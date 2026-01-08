@@ -1,15 +1,5 @@
 import { create } from 'zustand';
-import { UnitDefinition } from '@/types/army';
-
-export interface ArmyUnit {
-  instanceId: string;
-  defId: string;
-  name: string;
-  role: string;
-  pointsPerModel: number;
-  modelCount: number;
-  selectedOptions: Record<string, number>;
-}
+import { UnitDefinition, ArmyUnit } from '@/types/army';
 
 interface ArmyState {
   faction: string;

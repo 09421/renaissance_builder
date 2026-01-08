@@ -1,5 +1,5 @@
-import { useArmyStore, ArmyUnit } from '@/store/armyStore';
-import { UnitDefinition, UnitOption } from '@/types/army';
+import { useArmyStore } from '@/store/armyStore';
+import { UnitDefinition, ArmyUnit } from '@/types/army';
 
 interface Props {
   unit: ArmyUnit;
