@@ -27,9 +27,12 @@ export type UnitOption = {
   maxPerUnit?: number;
   stats?: Partial<StatBlock>;
   group?: string;
+  conflicts?: string[];
   isFixedCost?: boolean;
   replaces?: string;
   mountProfile?: SubProfile;
+  requires?: string[];
+  isExternalPoints?: boolean;
 };
 
 export interface UnitDefinition {

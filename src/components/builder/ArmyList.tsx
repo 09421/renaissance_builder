@@ -16,7 +16,6 @@ export const ArmyList = () => {
     );
   }
 
-  // Helper to render a single row of stats
   const renderStatRow = (label: string, stats: StatBlock, isHighlight = false) => (
     <>
       <div className={`col-span-2 py-1 px-2 text-left font-bold text-xs flex items-center ${isHighlight ? 'text-amber-500' : 'text-slate-300'}`}>
@@ -37,7 +36,6 @@ export const ArmyList = () => {
         const roleUnits = roster.filter(u => u.role === role);
         if (roleUnits.length === 0) return null;
 
-        // Calculate Subtotal
         const sectionPoints = roleUnits.reduce((sum, unit) => {
           const def = getUnitDef(faction, unit.defId);
           return sum + (def ? calculateUnitCost(unit, def) : 0);
@@ -63,17 +61,14 @@ export const ArmyList = () => {
                 const points = calculateUnitCost(unit, def);
 
                 // --- 1. GEAR LOGIC (With Swaps) ---
-                const selectedOptions = def.options.filter(o => unit.selectedOptions.includes(o.id));
-                
-                // Find items to remove (e.g. "Bows")
+                const selectedOptions = def.options.filter(o => unit.selectedOptions[o.id] !== undefined);
+
                 const replacedItems = selectedOptions
                   .map(o => o.replaces)
                   .filter((item): item is string => !!item);
 
-                // Filter base gear
                 const activeBaseGear = def.equipment.filter(item => !replacedItems.includes(item));
 
-                // Combine for display
                 const fullGearList = [
                   ...activeBaseGear, 
                   ...selectedOptions.map(o => o.name)
@@ -81,7 +76,7 @@ export const ArmyList = () => {
 
                 // --- 2. STAT LOGIC (Champions) ---
                 const activeProfiles = def.options
-                  .filter(o => unit.selectedOptions.includes(o.id) && o.stats);
+                  .filter(o => unit.selectedOptions[o.id] !== undefined && o.stats);
 
                 return (
                   <div 
@@ -123,9 +118,8 @@ export const ArmyList = () => {
                       {renderStatRow(def.role === 'character' ? 'Hero' : def.modelName, def.stats)}
 
                       {/* 2. Champions / Modifiers (Merged Stats) */}
-                      {/* (Existing code for champions) */}
                       {def.options
-                        .filter(o => unit.selectedOptions.includes(o.id) && o.stats)
+                        .filter(o => unit.selectedOptions[o.id] !== undefined && o.stats)
                         .map(opt => {
                           const mergedStats = { ...def.stats, ...opt.stats };
                           return (
@@ -144,7 +138,7 @@ export const ArmyList = () => {
 
                       {/* 4. Optional Mounts (e.g., Warboss on Wyvern) */}
                       {def.options
-                        .filter(o => unit.selectedOptions.includes(o.id) && o.mountProfile)
+                        .filter(o => unit.selectedOptions[o.id] !== undefined && o.mountProfile)
                         .map(opt => (
                           <div key={`mount-${opt.id}`} className="contents bg-slate-900/40">
                             {/* We use ! because we filtered for it above */}

@@ -1,18 +1,19 @@
-// utils/armyMath.ts
 import { ArmyUnit } from '@/store/armyStore';
 import { UnitDefinition } from '@/types/army';
 
 export const calculateUnitCost = (unit: ArmyUnit, definition: UnitDefinition): number => {
-  // 1. Upgrades that cost points per model
-  const perModelOptionCost = definition.options
-    .filter(opt => unit.selectedOptions.includes(opt.id) && !opt.isFixedCost)
-    .reduce((sum, opt) => sum + opt.points, 0);
+  let optionCost = 0;
 
-  // 2. Fixed cost upgrades (Champions, Standards)
-  const fixedOptionCost = definition.options
-    .filter(opt => unit.selectedOptions.includes(opt.id) && opt.isFixedCost)
-    .reduce((sum, opt) => sum + opt.points, 0);
+  Object.entries(unit.selectedOptions).forEach(([optId, count]) => {
+    const optDef = definition.options.find(o => o.id === optId);
+    if (!optDef) return;
 
-  // 3. Total
-  return ((definition.pointsPerModel + perModelOptionCost) * unit.modelCount) + fixedOptionCost;
+    const costPerItem = optDef.isFixedCost 
+      ? optDef.points
+      : optDef.points * unit.modelCount;
+
+    optionCost += (costPerItem * count);
+  });
+
+  return (definition.pointsPerModel * unit.modelCount) + optionCost;
 };

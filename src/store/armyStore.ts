@@ -1,15 +1,14 @@
 import { create } from 'zustand';
-import { UnitDefinition, UnitOption } from '@/types/army';
+import { UnitDefinition } from '@/types/army';
 
-// This is a "Live" unit in your army list
 export interface ArmyUnit {
-  instanceId: string; // Unique ID (because you might have 2 units of Boyz)
-  defId: string;      // The ID from the data file (e.g. 'orc_boyz')
+  instanceId: string;
+  defId: string;
   name: string;
   role: string;
   pointsPerModel: number;
   modelCount: number;
-  selectedOptions: string[]; // List of Option IDs (e.g. ['spears', 'shield'])
+  selectedOptions: Record<string, number>;
 }
 
 interface ArmyState {
@@ -18,15 +17,18 @@ interface ArmyState {
   roster: ArmyUnit[];
   selectedUnitId: string | null;
 
-  // Actions
   initializeList: (faction: string, points: number) => void;
   addUnit: (unitDef: UnitDefinition) => void;
   removeUnit: (instanceId: string) => void;
   updateUnitSize: (instanceId: string, newSize: number) => void;
-  toggleOption: (instanceId: string, option: UnitOption, isSelected: boolean, unitDef: UnitDefinition) => void;
+  setOptionCount: (
+    instanceId: string, 
+    optionId: string, 
+    count: number, 
+    unitDef: UnitDefinition
+  ) => void;
   selectUnit: (instanceId: string | null) => void;
   
-  // Getters
   getPointsTotal: () => number;
   getRegimentPoints: () => number;
 }
@@ -51,7 +53,7 @@ export const useArmyStore = create<ArmyState>((set, get) => ({
         role: unitDef.role,
         pointsPerModel: unitDef.pointsPerModel, 
         modelCount: unitDef.minSize, 
-        selectedOptions: [] 
+        selectedOptions: {},
       }]
     };
   }),
@@ -66,32 +68,52 @@ export const useArmyStore = create<ArmyState>((set, get) => ({
     )
   })),
 
-toggleOption: (instanceId, option, isSelected, unitDef) => set((state) => ({
+  setOptionCount: (instanceId, optionId, count, unitDef) => set((state) => ({
     roster: state.roster.map((u) => {
       if (u.instanceId !== instanceId) return u;
 
-      let newOptions = [...u.selectedOptions];
+      const newOptions = { ...u.selectedOptions };
+      const optionDef = unitDef.options.find(o => o.id === optionId);
 
-      if (isSelected) {
-        // LOGIC: If this option belongs to a group (e.g. 'weapon')...
-        if (option.group) {
-          // 1. Find all other Option IDs in this unit definition that share the same group
-          const conflictingOptionIds = unitDef.options
-            .filter((o) => o.group === option.group && o.id !== option.id)
-            .map((o) => o.id);
+      if (!optionDef) return u;
 
-          // 2. Remove those conflicting IDs from our list
-          newOptions = newOptions.filter((id) => !conflictingOptionIds.includes(id));
-        }
-        
-        // 3. Add the new option
-        // (Prevent duplicates just in case)
-        if (!newOptions.includes(option.id)) {
-          newOptions.push(option.id);
-        }
+      if (count <= 0) {
+        delete newOptions[optionId];
       } else {
-        // Deselecting: Just remove the ID
-        newOptions = newOptions.filter((id) => id !== option.id);
+        newOptions[optionId] = count;
+      }
+
+      if (count > 0) {
+        if (optionDef.group) {
+          unitDef.options.forEach(o => {
+            if (o.group === optionDef.group && o.id !== optionId) {
+              delete newOptions[o.id];
+            }
+          });
+        }
+
+        if (optionDef.conflicts) {
+          optionDef.conflicts.forEach(conflictId => {
+            delete newOptions[conflictId];
+          });
+        }
+
+        Object.keys(newOptions).forEach(selectedId => {
+          if (selectedId === optionId) return; // Skip self
+
+          const existingDef = unitDef.options.find(o => o.id === selectedId);
+          if (existingDef?.conflicts?.includes(optionId)) {
+            delete newOptions[selectedId];
+          }
+        });
+      }
+
+      if (count <= 0) {
+        unitDef.options.forEach(o => {
+          if (o.requires?.includes(optionId)) {
+            delete newOptions[o.id];
+          }
+        });
       }
 
       return { ...u, selectedOptions: newOptions };
