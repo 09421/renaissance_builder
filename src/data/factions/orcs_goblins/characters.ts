@@ -19,7 +19,7 @@ export const characters: UnitDefinition[] = [
         name: 'War Boar', 
         points: 16, 
         group: 'mount',
-        mountProfile: 
+        optionProfile: 
         {
           name: 'War Boar',
           stats: { M:7, Ws:4, Bs:0, S:3, T:4, W:1, I:3, A:1, Ld:3 } 
