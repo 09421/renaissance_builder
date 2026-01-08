@@ -25,6 +25,7 @@ export const HE_STATS: Record<string, StatBlock> = {
 
     //mounts
     elvenSteed:     { M: 9, Ws: 3, Bs: 0, S: 3, T: 3, W: 1, I: 4, A: 1, Ld: 5 },
+    whiteLion:      { M: 8, Ws: 5, Bs: 0, S: 5, T: 4, W: 1, I: 4, A: 2, Ld: 5 },
     unicorn:        { M: 9, Ws: 5, Bs: 0, S: 4, T: 4, W: 1, I: 4, A: 2, Ld: 9 },
     pegasus:        { M: 8, Ws: 3, Bs: 0, S: 4, T: 4, W: 1, I: 4, A: 2, Ld: 5 },
     greatEagle:     { M: 2, Ws: 7, Bs: 0, S: 5, T: 4, W: 3, I: 5, A: 2, Ld: 8 },
@@ -36,5 +37,8 @@ export const HE_STATS: Record<string, StatBlock> = {
 
     //warmachine
     boltThrower:    { M: '-', Ws: '-', Bs: '-', S: '-', T: 7, W: 3, I: '-', A: '-', Ld: '-' },
+
+    //chariots
+    heavyChariot:   { M: '-', Ws: '-', Bs: '-', S: 5, T: 5, W: 4, I: '-', A: '-', Ld: '-' },
 
 } as const;

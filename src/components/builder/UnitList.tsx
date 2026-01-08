@@ -41,7 +41,7 @@ const UnitSection = ({ role, units, addUnit }: { role: UnitRole, units: UnitDefi
                 {unit.name}
               </span>
               <span className="text-xs text-amber-600 font-mono">                
-                {unit.role === 'character' ? `${unit.pointsPerModel}pts` : `${unit.pointsPerModel} / ${unit.pointsPerModel * unit.minSize}pts`}
+                {unit.minSize === unit.maxSize ? `${unit.pointsPerModel}pts` : `${unit.pointsPerModel} / ${unit.pointsPerModel * unit.minSize}pts`}
               </span>
             </button>
           ))}
