@@ -12,7 +12,7 @@ export const characters: UnitDefinition[] = [
     pointsPerModel: 60,
     stats: { M: 4, Ws: 5, Bs: 5, S: 4, T: 5, W: 2, I: 4, A: 3, Ld: 8 },
     equipment: ['Hand Weapon'],
-    specialRules: ['Animosity', 'Ignore panic induced by Goblins.'],
+    specialRules: ['Animosity', 'Ignore panic induced by Goblins'],
     options: [
       { 
         id: 'war_boar', 
