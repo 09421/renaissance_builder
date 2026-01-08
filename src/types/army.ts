@@ -45,6 +45,8 @@ export type UnitOption = {
   optionProfile?: SubProfile;
   requires?: string[];
   isExternalPoints?: boolean;
+  isExtraCrew?: boolean;
+  perCrew?: boolean;
 };
 
 export interface UnitDefinition {
@@ -61,4 +63,5 @@ export interface UnitDefinition {
   options: UnitOption[]; 
   specialRules: string[];
   additionalProfiles?: SubProfile[];
+  baseCrew?: number;
 }

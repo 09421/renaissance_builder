@@ -17,6 +17,25 @@ export const UnitCard = ({ unit, faction, isSelected, onSelect, onRemove }: Unit
 
   const points = calculateUnitCost(unit, def);
 
+  let modelDisplayString = `${unit.modelCount} Models`;
+  if (def.baseCrew) {
+    const extraCrew = def.options
+      .filter(o => o.isExtraCrew)
+      .reduce((sum, o) => sum + (unit.selectedOptions[o.id] || 0), 0);
+    
+    const totalCrew = def.baseCrew + extraCrew;
+    modelDisplayString = `${unit.modelCount} Machine, ${totalCrew} Crew`;
+
+  } else {
+    const extraModels = def.options
+      .filter(o => o.maxPerModel)
+      .reduce((sum, o) => sum + (unit.selectedOptions[o.id] || 0), 0);
+
+    if (extraModels > 0) {
+      modelDisplayString = `${unit.modelCount + extraModels} Models`;
+    }
+  }
+
   const selectedOptions = def.options.filter(o => (unit.selectedOptions[o.id] || 0) > 0);
 
   const replacedItems = selectedOptions
@@ -47,7 +66,7 @@ export const UnitCard = ({ unit, faction, isSelected, onSelect, onRemove }: Unit
         <h3 className="font-bold text-lg text-slate-100">{unit.name}</h3>
         <div className="flex items-center gap-4">
            <div className="text-sm text-amber-500 font-mono font-bold">
-             {unit.modelCount} Models • {points} pts
+             {modelDisplayString} • {points} pts
            </div>
            <button 
              onClick={(e) => { e.stopPropagation(); onRemove(); }}
