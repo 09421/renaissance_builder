@@ -40,7 +40,7 @@ export type UnitOption = {
   conflicts?: string[];
   isFixedCost?: boolean;
   replaces?: string;
-  mountProfile?: SubProfile;
+  optionProfile?: SubProfile;
   requires?: string[];
   isExternalPoints?: boolean;
 };

@@ -1,5 +1,7 @@
 import { create } from 'zustand';
 import { UnitDefinition, ArmyUnit } from '@/types/army';
+import { getUnitDef } from '@/utils/getFactionData';
+import { calculateUnitCost } from '@/utils/armyMath';
 
 interface ArmyState {
   faction: string;
@@ -12,13 +14,13 @@ interface ArmyState {
   removeUnit: (instanceId: string) => void;
   updateUnitSize: (instanceId: string, newSize: number) => void;
   setOptionCount: (
-    instanceId: string, 
-    optionId: string, 
-    count: number, 
+    instanceId: string,
+    optionId: string,
+    count: number,
     unitDef: UnitDefinition
   ) => void;
   selectUnit: (instanceId: string | null) => void;
-  
+
   getPointsTotal: () => number;
   getRegimentPoints: () => number;
 }
@@ -36,13 +38,13 @@ export const useArmyStore = create<ArmyState>((set, get) => ({
     const newId = crypto.randomUUID();
     return {
       selectedUnitId: newId,
-      roster: [...state.roster, { 
-        instanceId: newId, 
+      roster: [...state.roster, {
+        instanceId: newId,
         defId: unitDef.id,
-        name: unitDef.name, 
+        name: unitDef.name,
         role: unitDef.role,
-        pointsPerModel: unitDef.pointsPerModel, 
-        modelCount: unitDef.minSize, 
+        pointsPerModel: unitDef.pointsPerModel,
+        modelCount: unitDef.minSize,
         selectedOptions: {},
       }]
     };
@@ -53,7 +55,7 @@ export const useArmyStore = create<ArmyState>((set, get) => ({
   })),
 
   updateUnitSize: (instanceId, newSize) => set((state) => ({
-    roster: state.roster.map((u) => 
+    roster: state.roster.map((u) =>
       u.instanceId === instanceId ? { ...u, modelCount: newSize } : u
     )
   })),
@@ -111,15 +113,41 @@ export const useArmyStore = create<ArmyState>((set, get) => ({
   })),
 
   getPointsTotal: () => {
-    const state = get();
-    // TODO: We need a way to look up Option Costs here. 
-    // Usually, we pass the full definitions to the calculator or store costs in ArmyUnit.
-    // Let's refine this in the next step.
-    return 0; 
+    const { roster, faction } = get();
+
+    return roster.reduce((total, unit) => {
+      const def = getUnitDef(faction, unit.defId);
+      if (!def) return total;
+
+      return total + calculateUnitCost(unit, def);
+    }, 0);
   },
-  
+
   getRegimentPoints: () => {
-     // Similar TODO
-     return 0;
-  }
+    const { roster, faction } = get();
+
+    const coreUnits = roster.filter(u => u.role === 'regiments');
+
+    return coreUnits.reduce((total, unit) => {
+      const def = getUnitDef(faction, unit.defId);
+      if (!def) return total;
+
+      const baseCost = unit.modelCount * def.pointsPerModel;
+
+      let optionsCost = 0;
+      Object.entries(unit.selectedOptions).forEach(([optId, count]) => {
+        const optDef = def.options.find(o => o.id === optId);
+
+        if (optDef && !optDef.isExternalPoints) {
+          const cost = optDef.isFixedCost
+            ? optDef.points
+            : optDef.points * unit.modelCount;
+
+          optionsCost += (cost * count);
+        }
+      });
+
+      return total + baseCost + optionsCost;
+    }, 0);
+  },
 }));

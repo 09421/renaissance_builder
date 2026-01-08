@@ -7,24 +7,18 @@ interface Props {
 }
 
 export const UnitEditor = ({ unit, definition }: Props) => {
-  // Use setOptionCount instead of toggleOption
   const { updateUnitSize, setOptionCount } = useArmyStore();
 
-  // --- CALCULATION LOGIC (Updated for Counts) ---
   const calculateTotal = () => {
     let optionCost = 0;
 
-    // Iterate through selected options in the dictionary
     Object.entries(unit.selectedOptions).forEach(([optId, count]) => {
       const optDef = definition.options.find(o => o.id === optId);
       if (!optDef) return;
 
-      // Cost logic: If Fixed, pay once. If Per Model, pay * modelCount.
       const costPerItem = optDef.isFixedCost 
         ? optDef.points 
         : optDef.points * unit.modelCount;
-
-      // Multiply by how many of this option you have (e.g. 3 Fanatics)
       optionCost += (costPerItem * count);
     });
 
@@ -35,8 +29,7 @@ export const UnitEditor = ({ unit, definition }: Props) => {
 
   return (
     <div className="flex flex-col h-full bg-slate-900 border-l border-slate-700">
-      
-      {/* HEADER */}
+
       <div className="p-6 border-b border-slate-700 bg-slate-800">
         <h2 className="text-2xl font-bold text-slate-100">{definition.name}</h2>
         <div className="text-amber-500 font-mono text-xl mt-1">
@@ -44,10 +37,8 @@ export const UnitEditor = ({ unit, definition }: Props) => {
         </div>
       </div>
 
-      {/* SCROLLABLE CONTENT */}
       <div className="flex-1 overflow-y-auto p-6 space-y-8">
 
-        {/* UNIT SIZE CONTROLS */}
         <section>
           <div className="flex justify-between mb-3">
             <label className="text-sm font-bold text-slate-400 uppercase">Unit Size</label>
@@ -100,23 +91,19 @@ export const UnitEditor = ({ unit, definition }: Props) => {
           </div>
         </section>
 
-        {/* UPGRADES LIST (Updated logic) */}
         <section>
           <h3 className="text-sm font-bold text-slate-400 uppercase mb-4">Equipment & Upgrades</h3>
           <div className="space-y-3">
             {definition.options.map((option) => {
-              // 1. Get current count (default 0)
               const currentCount = unit.selectedOptions[option.id] || 0;
               const max = option.maxPerUnit || 1;
               const isSelected = currentCount > 0;
 
-              // 2. DEPENDENCY CHECK: Check if requirements are met
+              let requirementsMet = true;
               if (option.requires) {
-                const requirementsMet = option.requires.some(reqId => (unit.selectedOptions[reqId] || 0) > 0);
-                if (!requirementsMet) return null; // Hide option if dependency missing
+                requirementsMet = option.requires.some(reqId => (unit.selectedOptions[reqId] || 0) > 0);
               }
 
-              // Helper text
               const costText = option.isFixedCost 
                 ? `${option.points}pts`
                 : `${option.points}pts / model`;
@@ -129,22 +116,26 @@ export const UnitEditor = ({ unit, definition }: Props) => {
                     ${isSelected 
                       ? 'bg-amber-900/10 border-amber-500/50' 
                       : 'bg-slate-800 border-slate-700 hover:border-slate-600'}
+                    ${!requirementsMet ? 'opacity-40 grayscale pointer-events-none select-none' : ''}
                   `}
                 >
                   <div className="flex justify-between items-center w-full">
-                    {/* Label */}
                     <div className="text-sm">
-                      <div className="font-medium text-slate-200">{option.name}</div>
+                      <div className="font-medium text-slate-200">
+                        {option.name}
+                        {!requirementsMet && <span className="text-xs text-red-400 ml-2"> 
+                          (requires: {option.requires?.map(reqId => definition.options.find(opt => opt.id === reqId)?.name).join(', ')})
+                          </span>
+                        }
+                      </div>
                       <div className="text-slate-500 text-xs mt-0.5">{costText}</div>
                     </div>
 
-                    {/* Controls: Checkbox OR Counter */}
                     {max > 1 ? (
-                      // COUNTER UI (For Fanatics, etc.)
                       <div className="flex items-center space-x-2 bg-slate-900 rounded border border-slate-700 p-1">
                         <button
                           onClick={() => setOptionCount(unit.instanceId, option.id, currentCount - 1, definition)}
-                          disabled={currentCount <= 0}
+                          disabled={!requirementsMet || currentCount <= 0}
                           className="w-7 h-7 flex items-center justify-center rounded bg-slate-800 text-slate-400 hover:text-white disabled:opacity-30 disabled:hover:text-slate-400"
                         >
                           -
@@ -154,18 +145,18 @@ export const UnitEditor = ({ unit, definition }: Props) => {
                         </span>
                         <button
                           onClick={() => setOptionCount(unit.instanceId, option.id, currentCount + 1, definition)}
-                          disabled={currentCount >= max}
+                          disabled={!requirementsMet || currentCount >= max}
                           className="w-7 h-7 flex items-center justify-center rounded bg-slate-800 text-slate-400 hover:text-white disabled:opacity-30 disabled:hover:text-slate-400"
                         >
                           +
                         </button>
                       </div>
                     ) : (
-                      // CHECKBOX UI (Standard 0 or 1)
                       <div className="flex h-5 items-center">
                         <input
                           type="checkbox"
                           checked={isSelected}
+                          disabled={!requirementsMet}
                           onChange={(e) => setOptionCount(unit.instanceId, option.id, e.target.checked ? 1 : 0, definition)}
                           className="h-5 w-5 rounded border-slate-600 bg-slate-700 text-amber-600 focus:ring-amber-600 focus:ring-offset-slate-900 cursor-pointer"
                         />

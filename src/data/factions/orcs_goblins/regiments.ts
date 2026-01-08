@@ -384,7 +384,7 @@ export const regiments: UnitDefinition[] = [
       }
     ],
     equipment: ['Hand Weapon', 'Giant Spider'],
-    specialRules: ['Animosity', 'Fear Elves', 'Traverse woods without penalty', 'Traverse obstacles, rocky terrain, buildings, and cliffs without penalties', 'poisonous (+1S)'],
+    specialRules: ['Animosity', 'Fear Elves', 'Traverse woods without penalty', 'Traverse obstacles, rocky terrain, buildings, and cliffs without penalties', 'Giant Spiders poisonous (+1S)'],
     options: [
       { id: 'spear', name: 'Spears', points: 1, group: 'weapon' },
       { id: 'short_bow', name: 'Short Bows', points: 1, group: 'ranged_weapon' },
@@ -424,7 +424,11 @@ export const regiments: UnitDefinition[] = [
         maxPerUnit: 3, 
         isFixedCost: true, 
         isExternalPoints: true,
-        stats: OG_STATS.fanatic
+        optionProfile: 
+        {
+          name: 'Fanatic',
+          stats: OG_STATS.nightGoblinFanatic 
+        }
       },
       { 
         id: 'mad_cap_mushroom', 
@@ -440,6 +444,43 @@ export const regiments: UnitDefinition[] = [
         points: 10,
         maxPerUnit: 1,
         stats: OG_STATS.goblinChampion,
+        isFixedCost: true
+      }
+    ]
+  },
+  {
+    id: 'night_goblin_squig_hoppers',
+    name: 'Night Goblins Squig-Hoppers',
+    modelName: 'Cave Squig',
+    role: 'regiments',
+    type: 'Infantry',
+    minSize: 5,
+    maxSize: null,
+    pointsPerModel: 25,
+    stats: OG_STATS.caveSquig,
+    equipment: ['Hand Weapon'],
+    specialRules: ['immune to psychology', 'Fear Elves', 'Hate Dwarfs'],
+    options: []
+  },
+  {
+    id: 'night_goblin_squig_hunters',
+    name: 'Night Goblins Squig-Hunters',
+    modelName: 'Cave Squig',
+    role: 'regiments',
+    type: 'Infantry',
+    minSize: 5,
+    maxSize: null,
+    pointsPerModel: 6,
+    stats: OG_STATS.nightGoblin,
+    equipment: ['Spear'],
+    specialRules: ['Animosity', 'Fear Elves', 'Hate Dwarfs'],
+    options: [
+      { 
+        id: 'cave_squig',
+        name: 'Cave Squig', 
+        points: 12,
+        maxPerUnit: 100,
+        stats: OG_STATS.caveSquig,
         isFixedCost: true
       }
     ]

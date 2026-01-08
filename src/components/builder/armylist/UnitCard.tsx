@@ -17,7 +17,6 @@ export const UnitCard = ({ unit, faction, isSelected, onSelect, onRemove }: Unit
 
   const points = calculateUnitCost(unit, def);
 
-
   const selectedOptions = def.options.filter(o => (unit.selectedOptions[o.id] || 0) > 0);
 
   const replacedItems = selectedOptions
@@ -32,7 +31,7 @@ export const UnitCard = ({ unit, faction, isSelected, onSelect, onRemove }: Unit
   ].join(', ');
 
   const championProfiles = def.options.filter(o => (unit.selectedOptions[o.id] || 0) > 0 && o.stats);
-  const mountProfiles = def.options.filter(o => (unit.selectedOptions[o.id] || 0) > 0 && o.mountProfile);
+  const optionProfiles = def.options.filter(o => (unit.selectedOptions[o.id] || 0) > 0 && o.optionProfile);
 
   return (
     <div 
@@ -67,11 +66,11 @@ export const UnitCard = ({ unit, faction, isSelected, onSelect, onRemove }: Unit
            <div key={s} className="bg-slate-800 py-1 text-[10px] font-bold text-slate-400 text-center">{s}</div>
          ))}
 
-         <StatRow label={def.role === 'character' ? 'Hero' : (def.modelName || 'Troop')} stats={def.stats} />
+         <StatRow label={def.modelName} stats={def.stats} />
 
          {championProfiles.map(opt => (
             <div key={opt.id} className="contents bg-slate-800/30">
-              <StatRow label={opt.name} stats={{ ...def.stats, ...opt.stats } as StatBlock} isHighlight />
+              <StatRow label={opt.name} stats={{ ...opt.stats } as StatBlock} isHighlight />
             </div>
          ))}
 
@@ -81,9 +80,9 @@ export const UnitCard = ({ unit, faction, isSelected, onSelect, onRemove }: Unit
             </div>
          ))}
 
-         {mountProfiles.map(opt => (
+         {optionProfiles.map(opt => (
             <div key={opt.id} className="contents bg-slate-900/40">
-              <StatRow label={opt.mountProfile!.name} stats={opt.mountProfile!.stats} />
+              <StatRow label={opt.optionProfile!.name} stats={opt.optionProfile!.stats} />
             </div>
          ))}
       </div>
