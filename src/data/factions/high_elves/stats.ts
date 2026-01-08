@@ -30,6 +30,9 @@ export const HE_STATS: Record<string, StatBlock> = {
     griffon:        { M: 6, Ws: 5, Bs: 0, S: 6, T: 5, W: 5, I: 7, A: 4, Ld: 8 },
     dragon:         { M: 6, Ws: 6, Bs: 0, S: 6, T: 6, W: 7, I: 8, A: 7, Ld: 7 },
     greatDragon:    { M: 6, Ws: 7, Bs: 0, S: 7, T: 7, W: 8, I: 7, A: 8, Ld: 8 },
-    emperorDragon:  { M: 6, Ws: 8, Bs: 0, S: 8, T: 8, W: 9, I: 6, A: 9, Ld: 9 }
+    emperorDragon:  { M: 6, Ws: 8, Bs: 0, S: 8, T: 8, W: 9, I: 6, A: 9, Ld: 9 },
+
+    //warmachine
+    boltThrower:    { M: '-', Ws: '-', Bs: '-', S: '-', T: 7, W: 3, I: '-', A: '-', Ld: '-' },
 
 } as const;

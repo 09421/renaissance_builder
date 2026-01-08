@@ -20,7 +20,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Champion',
         points: 20,
-        maxPerUnit: 1,
         stats: HE_STATS.elvenChampion,
         isFixedCost: true
       }
@@ -46,7 +45,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Champion',
         points: 20,
-        maxPerUnit: 1,
         stats: HE_STATS.elvenChampion,
         isFixedCost: true
       }
@@ -70,7 +68,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Champion',
         points: 20,
-        maxPerUnit: 1,
         stats: HE_STATS.elvenChampion,
         isFixedCost: true
       }
@@ -102,7 +99,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Commander',
         points: 30,
-        maxPerUnit: 1,
         stats: HE_STATS.elvenCommander,
         isFixedCost: true
       }
@@ -134,7 +130,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Champion',
         points: 20,
-        maxPerUnit: 1,
         stats: HE_STATS.elvenChampion,
         isFixedCost: true
       }
@@ -158,7 +153,6 @@ export const regiments: UnitDefinition[] = [
         id: 'Commander',
         name: 'Commander',
         points: 30,
-        maxPerUnit: 1,
         stats: HE_STATS.elvenCommander,
         isFixedCost: true
       }
@@ -187,7 +181,6 @@ export const regiments: UnitDefinition[] = [
         id: 'Commander',
         name: 'Commander',
         points: 30,
-        maxPerUnit: 1,
         stats: HE_STATS.elvenCommander,
         isFixedCost: true
       }
@@ -211,7 +204,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Champion',
         points: 20,
-        maxPerUnit: 1,
         stats: HE_STATS.elvenChampion,
         isFixedCost: true
       }
@@ -234,7 +226,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Champion',
         points: 20,
-        maxPerUnit: 1,
         stats: HE_STATS.elvenChampion,
         isFixedCost: true
       }
@@ -258,7 +249,6 @@ export const regiments: UnitDefinition[] = [
         id: 'commander',
         name: 'Commander',
         points: 30,
-        maxPerUnit: 1,
         stats: HE_STATS.elvenCommander,
         isFixedCost: true
       }
@@ -281,7 +271,6 @@ export const regiments: UnitDefinition[] = [
         id: 'shield_maiden',
         name: 'Shield Maiden',
         points: 30,
-        maxPerUnit: 1,
         stats: HE_STATS.elvenCommander,
         isFixedCost: true
       }
@@ -304,7 +293,6 @@ export const regiments: UnitDefinition[] = [
         id: 'commander',
         name: 'Commander',
         points: 30,
-        maxPerUnit: 1,
         stats: HE_STATS.elvenCommander,
         isFixedCost: true
       }

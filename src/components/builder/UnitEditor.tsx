@@ -156,7 +156,7 @@ export const UnitEditor = ({ unit, definition }: Props) => {
                       )}
                     </div>
 
-                    {(option.maxPerModel) ? (
+                    {(option.maxPerModel || option.maxPerUnit) ? (
                       <div className="flex items-center space-x-2 bg-slate-900 rounded border border-slate-700 p-1">
                         <button
                           onClick={() => setOptionCount(unit.instanceId, option.id, currentCount - 1, definition)}

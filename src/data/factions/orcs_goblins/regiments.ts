@@ -24,7 +24,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Orc Champion',
         points: 20,
-        maxPerUnit: 1,
         stats: OG_STATS.commonOrcChampion,
         isFixedCost: true
       }
@@ -49,7 +48,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Orc Champion',
         points: 20,
-        maxPerUnit: 1,
         stats: OG_STATS.commonOrcChampion,
         isFixedCost: true
       }
@@ -79,7 +77,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Orc Champion',
         points: 20,
-        maxPerUnit: 1,
         stats: OG_STATS.commonOrcChampion,
         isFixedCost: true
       }
@@ -107,7 +104,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Big\'un Champion',
         points: 20,
-        maxPerUnit: 1,
         stats: OG_STATS.bigunChampion,
         isFixedCost: true
       }
@@ -132,7 +128,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Big\'un Champion',
         points: 20,
-        maxPerUnit: 1,
         stats: OG_STATS.bigunChampion,
         isFixedCost: true
       }
@@ -162,7 +157,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Big\'un Champion',
         points: 20,
-        maxPerUnit: 1,
         stats: OG_STATS.bigunChampion,
         isFixedCost: true
       }
@@ -189,7 +183,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Savage Orc Champion',
         points: 30,
-        maxPerUnit: 1,
         stats: OG_STATS.savageChampion,
         isFixedCost: true
       }
@@ -212,7 +205,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Savage Orc Champion',
         points: 30,
-        maxPerUnit: 1,
         stats: OG_STATS.savageChampion,
         isFixedCost: true
       }
@@ -243,7 +235,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Savage Orc Champion',
         points: 30,
-        maxPerUnit: 1,
         stats: OG_STATS.savageChampion,
         isFixedCost: true
       }
@@ -272,7 +263,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Black Orc Champion',
         points: 20,
-        maxPerUnit: 1,
         stats: OG_STATS.blackOrcChampion,
         isFixedCost: true
       }
@@ -300,7 +290,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Goblin Champion',
         points: 10,
-        maxPerUnit: 1,
         stats: OG_STATS.goblinChampion,
         isFixedCost: true
       }
@@ -334,7 +323,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Goblin Champion',
         points: 10,
-        maxPerUnit: 1,
         stats: OG_STATS.goblinChampion,
         isFixedCost: true
       }
@@ -361,7 +349,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Goblin Champion',
         points: 10,
-        maxPerUnit: 1,
         stats: OG_STATS.forestGoblinChampion,
         isFixedCost: true
       }
@@ -394,7 +381,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Goblin Champion',
         points: 10,
-        maxPerUnit: 1,
         stats: OG_STATS.goblinChampion,
         isFixedCost: true
       }
@@ -436,13 +422,11 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         isFixedCost: true,
         requires: ['fanatic'],
-        maxPerUnit: 1
       },
       {
         id: 'champion',
         name: 'Goblin Champion',
         points: 10,
-        maxPerUnit: 1,
         stats: OG_STATS.goblinChampion,
         isFixedCost: true
       }
@@ -506,7 +490,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Goblin Champion',
         points: 10,
-        maxPerUnit: 1,
         stats: OG_STATS.goblinChampion,
         isFixedCost: true
       }
@@ -580,7 +563,6 @@ export const regiments: UnitDefinition[] = [
         id: 'champion',
         name: 'Ogre Champion',
         points: 50,
-        maxPerUnit: 1,
         stats: OG_STATS.ogreChampion,
         isFixedCost: true
       }
