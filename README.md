@@ -1,4 +1,4 @@
-# Renaissance Builder 🏰
+# Renaissance Builder
 
 A small Next.js + TypeScript app for designing and managing armies for a renaissance-inspired tabletop builder.
 

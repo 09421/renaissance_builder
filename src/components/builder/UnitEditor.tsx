@@ -96,7 +96,26 @@ export const UnitEditor = ({ unit, definition }: Props) => {
           <div className="space-y-3">
             {definition.options.map((option) => {
               const currentCount = unit.selectedOptions[option.id] || 0;
-              const max = option.maxPerUnit || 1;
+
+              let dynamicLimit = Infinity;
+              let limitReason = '';
+
+              if (option.maxPerUnit) {
+                dynamicLimit = option.maxPerUnit;
+                limitReason = `Max ${option.maxPerUnit} per unit`;
+              }
+
+              if (option.maxPerModel) {
+                const ratioLimit = unit.modelCount * option.maxPerModel;
+
+                if (ratioLimit < dynamicLimit) {
+                  dynamicLimit = ratioLimit;
+                  limitReason = option.ratioError!;
+                }
+              }
+              const isLimitReached = currentCount >= dynamicLimit;
+              const isOverLimit = currentCount > dynamicLimit;
+
               const isSelected = currentCount > 0;
 
               let requirementsMet = true;
@@ -117,6 +136,7 @@ export const UnitEditor = ({ unit, definition }: Props) => {
                       ? 'bg-amber-900/10 border-amber-500/50' 
                       : 'bg-slate-800 border-slate-700 hover:border-slate-600'}
                     ${!requirementsMet ? 'opacity-40 grayscale pointer-events-none select-none' : ''}
+                    ${isOverLimit ? 'border-red-500 bg-red-900/10' : ''}
                   `}
                 >
                   <div className="flex justify-between items-center w-full">
@@ -129,9 +149,14 @@ export const UnitEditor = ({ unit, definition }: Props) => {
                         }
                       </div>
                       <div className="text-slate-500 text-xs mt-0.5">{costText}</div>
+                      {isOverLimit && (
+                        <div className="text-red-400 text-xs font-bold mt-1">
+                          ⚠️ Illegal! {limitReason}
+                        </div>
+                      )}
                     </div>
 
-                    {max > 1 ? (
+                    {(option.maxPerModel) ? (
                       <div className="flex items-center space-x-2 bg-slate-900 rounded border border-slate-700 p-1">
                         <button
                           onClick={() => setOptionCount(unit.instanceId, option.id, currentCount - 1, definition)}
@@ -140,12 +165,12 @@ export const UnitEditor = ({ unit, definition }: Props) => {
                         >
                           -
                         </button>
-                        <span className="font-mono text-amber-500 font-bold w-6 text-center">
+                        <span className={`font-mono font-bold w-6 text-center ${isOverLimit ? 'text-red-500' : 'text-amber-500'}`}>
                           {currentCount}
                         </span>
                         <button
                           onClick={() => setOptionCount(unit.instanceId, option.id, currentCount + 1, definition)}
-                          disabled={!requirementsMet || currentCount >= max}
+                          disabled={!requirementsMet || isLimitReached}
                           className="w-7 h-7 flex items-center justify-center rounded bg-slate-800 text-slate-400 hover:text-white disabled:opacity-30 disabled:hover:text-slate-400"
                         >
                           +

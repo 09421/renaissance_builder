@@ -1,8 +1,10 @@
 import { UnitDefinition } from '@/types/army';
 import { ORCS_AND_GOBLINS_ROSTER } from '@/data/factions/orcs_goblins/index'; 
+import { HIGH_ELVES_ROSTER } from '@/data/factions/high_elves/index'; 
 
 const DB: Record<string, UnitDefinition[]> = {
-  'orcs_goblins': ORCS_AND_GOBLINS_ROSTER
+  'orcs_goblins': ORCS_AND_GOBLINS_ROSTER,
+  'high_elves': HIGH_ELVES_ROSTER
 };
 
 export const getFactionRoster = (factionKey: string): UnitDefinition[] => {

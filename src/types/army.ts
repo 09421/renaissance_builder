@@ -35,6 +35,8 @@ export type UnitOption = {
   points: number;
   description?: string;
   maxPerUnit?: number;
+  maxPerModel?: number;
+  ratioError?: string;
   stats?: Partial<StatBlock>;
   group?: string;
   conflicts?: string[];

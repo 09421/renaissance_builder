@@ -1,6 +1,8 @@
 import { StatBlock } from '@/types/army';
 
 export const OG_STATS: Record<string, StatBlock> = {
+
+  //Infantry
   commonOrc:            { M: 4, Ws: 3, Bs: 3, S: 3, T: 4, W: 1, I: 2, A: 1, Ld: 7 },
   commonOrcChampion:    { M: 4, Ws: 4, Bs: 4, S: 4, T: 4, W: 1, I: 3, A: 2, Ld: 7 },
 
@@ -35,4 +37,9 @@ export const OG_STATS: Record<string, StatBlock> = {
   warBoar:              { M: 7, Ws: 4, Bs: 0, S: 3, T: 4, W: 1, I: 3, A: 1, Ld: 3 },
   giantWolf:            { M: 9, Ws: 4, Bs: 0, S: 3, T: 3, W: 1, I: 3, A: 1, Ld: 3 },
   giantSpider:          { M: 7, Ws: 3, Bs: 0, S: 3, T: 3, W: 1, I: 1, A: 1, Ld: 5 },
+
+
+  //monsters
+  giant:                { M: 6, Ws: 3, Bs: 3, S: 7, T: 6, W: 6, I: 3, A: 'Special', Ld: 6 },
+
 } as const;

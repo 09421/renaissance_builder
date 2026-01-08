@@ -20,9 +20,9 @@ export const regiments: UnitDefinition[] = [
       { id: 'halberd', name: 'Halberds', points: 1, group: 'weapon' },
       { id: 'great_wpn', name: 'Double handed weapons', points: 2, group: 'weapon' },
       { id: 'shield', name: 'Shields', points: 1 },
-      { 
+      {
         id: 'champion',
-        name: 'Orc Champion', 
+        name: 'Orc Champion',
         points: 20,
         maxPerUnit: 1,
         stats: OG_STATS.commonOrcChampion,
@@ -45,9 +45,9 @@ export const regiments: UnitDefinition[] = [
     options: [
       { id: 'crossbow', name: 'Crossbows', points: 2, group: 'weapon', replaces: 'Bows' },
       { id: 'light_armor', name: 'Light armor', points: 0.5 },
-      { 
+      {
         id: 'champion',
-        name: 'Orc Champion', 
+        name: 'Orc Champion',
         points: 20,
         maxPerUnit: 1,
         stats: OG_STATS.commonOrcChampion,
@@ -75,9 +75,9 @@ export const regiments: UnitDefinition[] = [
     specialRules: ['Animosity', 'Ignore panic induced by Goblins.'],
     options: [
       { id: 'spear', name: 'Spears', points: 2, group: 'weapon' },
-      { 
+      {
         id: 'champion',
-        name: 'Orc Champion', 
+        name: 'Orc Champion',
         points: 20,
         maxPerUnit: 1,
         stats: OG_STATS.commonOrcChampion,
@@ -103,9 +103,9 @@ export const regiments: UnitDefinition[] = [
       { id: 'halberd', name: 'Halberds', points: 1, group: 'weapon' },
       { id: 'great_wpn', name: 'Double handed weapons', points: 3, group: 'weapon' },
       { id: 'shield', name: 'Shields', points: 1 },
-      { 
+      {
         id: 'champion',
-        name: 'Big\'un Champion', 
+        name: 'Big\'un Champion',
         points: 20,
         maxPerUnit: 1,
         stats: OG_STATS.bigunChampion,
@@ -128,9 +128,9 @@ export const regiments: UnitDefinition[] = [
     options: [
       { id: 'crossbow', name: 'Crossbows', points: 2, group: 'weapon', replaces: 'Bows' },
       { id: 'light_armor', name: 'Light armor', points: 0.5 },
-      { 
+      {
         id: 'champion',
-        name: 'Big\'un Champion', 
+        name: 'Big\'un Champion',
         points: 20,
         maxPerUnit: 1,
         stats: OG_STATS.bigunChampion,
@@ -146,7 +146,7 @@ export const regiments: UnitDefinition[] = [
     type: 'Cavalry',
     minSize: 5,
     maxSize: null,
-    pointsPerModel: 15,
+    pointsPerModel: 18,
     stats: OG_STATS.bigun,
     additionalProfiles: [
       {
@@ -158,9 +158,9 @@ export const regiments: UnitDefinition[] = [
     specialRules: ['Animosity', 'Ignore panic induced by Goblins.'],
     options: [
       { id: 'spear', name: 'Spears', points: 2, group: 'weapon' },
-      { 
+      {
         id: 'champion',
-        name: 'Big\'un Champion', 
+        name: 'Big\'un Champion',
         points: 20,
         maxPerUnit: 1,
         stats: OG_STATS.bigunChampion,
@@ -185,9 +185,9 @@ export const regiments: UnitDefinition[] = [
       { id: 'spear', name: 'Spears', points: 1, group: 'weapon' },
       { id: 'great_wpn', name: 'Double handed weapons', points: 4, group: 'weapon' },
       { id: 'shield', name: 'Shields', points: 1 },
-      { 
+      {
         id: 'champion',
-        name: 'Savage Orc Champion', 
+        name: 'Savage Orc Champion',
         points: 30,
         maxPerUnit: 1,
         stats: OG_STATS.savageChampion,
@@ -208,9 +208,9 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Bows', 'magical tattoos'],
     specialRules: ['Animosity', 'frenzied', 'Ignore panic induced by Goblins.'],
     options: [
-      { 
+      {
         id: 'champion',
-        name: 'Savage Orc Champion', 
+        name: 'Savage Orc Champion',
         points: 30,
         maxPerUnit: 1,
         stats: OG_STATS.savageChampion,
@@ -239,9 +239,9 @@ export const regiments: UnitDefinition[] = [
     options: [
       { id: 'spear', name: 'Spears', points: 3, group: 'weapon' },
       { id: 'bow', name: 'Bows', points: 2, group: 'ranged_weapon' },
-      { 
+      {
         id: 'champion',
-        name: 'Savage Orc Champion', 
+        name: 'Savage Orc Champion',
         points: 30,
         maxPerUnit: 1,
         stats: OG_STATS.savageChampion,
@@ -268,9 +268,9 @@ export const regiments: UnitDefinition[] = [
       { id: 'great_wpn', name: 'Double handed weapons', points: 3, group: 'weapon' },
       { id: 'heavy_armor', name: 'Heavy armor', points: 2, replaces: 'Light armor' },
       { id: 'shield', name: 'Shields', points: 1 },
-      { 
+      {
         id: 'champion',
-        name: 'Black Orc Champion', 
+        name: 'Black Orc Champion',
         points: 20,
         maxPerUnit: 1,
         stats: OG_STATS.blackOrcChampion,
@@ -296,9 +296,9 @@ export const regiments: UnitDefinition[] = [
       { id: 'short_bow', name: 'Short Bows', points: 1, group: 'ranged_weapon' },
       { id: 'light_armor', name: 'Light armor', points: 0.5 },
       { id: 'shield', name: 'Shields', points: 0.5 },
-      { 
+      {
         id: 'champion',
-        name: 'Goblin Champion', 
+        name: 'Goblin Champion',
         points: 10,
         maxPerUnit: 1,
         stats: OG_STATS.goblinChampion,
@@ -330,9 +330,9 @@ export const regiments: UnitDefinition[] = [
       { id: 'light_armor', name: 'Light armor', points: 1 },
       { id: 'shield', name: 'Shields', points: 1 },
       { id: 'standard bearer', name: 'Standard Bearer', points: 10, isFixedCost: true },
-      { 
+      {
         id: 'champion',
-        name: 'Goblin Champion', 
+        name: 'Goblin Champion',
         points: 10,
         maxPerUnit: 1,
         stats: OG_STATS.goblinChampion,
@@ -357,9 +357,9 @@ export const regiments: UnitDefinition[] = [
       { id: 'great_wpn', name: 'Double handed weapons', points: 2, group: 'weapon' },
       { id: 'short_bow', name: 'Short Bows', points: 1, group: 'weapon', conflicts: ['shield'] },
       { id: 'shield', name: 'Shields', points: 0.5, conflicts: ['short_bow'] },
-      { 
+      {
         id: 'champion',
-        name: 'Goblin Champion', 
+        name: 'Goblin Champion',
         points: 10,
         maxPerUnit: 1,
         stats: OG_STATS.forestGoblinChampion,
@@ -390,9 +390,9 @@ export const regiments: UnitDefinition[] = [
       { id: 'short_bow', name: 'Short Bows', points: 1, group: 'ranged_weapon' },
       { id: 'shield', name: 'Shields', points: 1 },
       { id: 'standard bearer', name: 'Standard Bearer', points: 10, isFixedCost: true },
-      { 
+      {
         id: 'champion',
-        name: 'Goblin Champion', 
+        name: 'Goblin Champion',
         points: 10,
         maxPerUnit: 1,
         stats: OG_STATS.goblinChampion,
@@ -417,30 +417,30 @@ export const regiments: UnitDefinition[] = [
       { id: 'great_wpn', name: 'Double handed weapons', points: 2, group: 'weapon' },
       { id: 'short_bow', name: 'Short Bows', points: 1, group: 'weapon', conflicts: ['shield'] },
       { id: 'shield', name: 'Shields', points: 0.5, conflicts: ['short_bow'] },
-      { 
-        id: 'fanatic', 
-        name: 'Fanatic', 
-        points: 30, 
-        maxPerUnit: 3, 
-        isFixedCost: true, 
+      {
+        id: 'fanatic',
+        name: 'Fanatic',
+        points: 30,
+        maxPerUnit: 3,
+        isFixedCost: true,
         isExternalPoints: true,
-        optionProfile: 
+        optionProfile:
         {
           name: 'Fanatic',
-          stats: OG_STATS.nightGoblinFanatic 
+          stats: OG_STATS.nightGoblinFanatic
         }
       },
-      { 
-        id: 'mad_cap_mushroom', 
-        name: 'Mad Cap Mushroom', 
-        points: 20, 
+      {
+        id: 'mad_cap_mushroom',
+        name: 'Mad Cap Mushroom',
+        points: 20,
         isFixedCost: true,
         requires: ['fanatic'],
         maxPerUnit: 1
       },
-      { 
+      {
         id: 'champion',
-        name: 'Goblin Champion', 
+        name: 'Goblin Champion',
         points: 10,
         maxPerUnit: 1,
         stats: OG_STATS.goblinChampion,
@@ -450,7 +450,7 @@ export const regiments: UnitDefinition[] = [
   },
   {
     id: 'night_goblin_squig_hoppers',
-    name: 'Night Goblins Squig-Hoppers',
+    name: 'Squig-Hoppers',
     modelName: 'Cave Squig',
     role: 'regiments',
     type: 'Infantry',
@@ -464,23 +464,124 @@ export const regiments: UnitDefinition[] = [
   },
   {
     id: 'night_goblin_squig_hunters',
-    name: 'Night Goblins Squig-Hunters',
-    modelName: 'Cave Squig',
+    name: 'Squig-Hunters',
+    modelName: 'Night Goblin',
+    role: 'regiments',
+    type: 'Infantry',
+    minSize: 1,
+    maxSize: null,
+    pointsPerModel: 6,
+    stats: OG_STATS.nightGoblin,
+    equipment: ['Hand Weapon', 'Spear'],
+    specialRules: ['Animosity', 'Fear Elves', 'Hate Dwarfs'],
+    options: [
+      {
+        id: 'cave_squig',
+        name: 'Cave Squig',
+        points: 12,
+        maxPerModel: 3,
+        ratioError: 'Only 3 Cave Squig per goblin is allowed.',
+        isFixedCost: true,
+        optionProfile: {
+          name: 'Cave Squig',
+          stats: OG_STATS.caveSquig
+        }
+      }
+    ]
+  },
+  {
+    id: 'night_goblin_netters_clubbers',
+    name: 'Netters and Clubbers',
+    modelName: 'Night Goblin',
     role: 'regiments',
     type: 'Infantry',
     minSize: 5,
     maxSize: null,
     pointsPerModel: 6,
     stats: OG_STATS.nightGoblin,
-    equipment: ['Spear'],
-    specialRules: ['Animosity', 'Fear Elves', 'Hate Dwarfs'],
+    equipment: ['Double Handed Weapons'],
+    specialRules: ['Animosity', 'Fear Elves', 'Hate Dwarfs', 'Always strike first', 'Always strike first'],
     options: [
-      { 
-        id: 'cave_squig',
-        name: 'Cave Squig', 
-        points: 12,
-        maxPerUnit: 100,
-        stats: OG_STATS.caveSquig,
+      {
+        id: 'champion',
+        name: 'Goblin Champion',
+        points: 10,
+        maxPerUnit: 1,
+        stats: OG_STATS.goblinChampion,
+        isFixedCost: true
+      }
+    ]
+  },
+  {
+    id: 'snotlings',
+    name: 'Snotlings',
+    modelName: 'Snotling',
+    role: 'regiments',
+    type: 'Infantry',
+    minSize: 5,
+    maxSize: null,
+    pointsPerModel: 15,
+    stats: OG_STATS.snotling,
+    equipment: ['Hand Weapon'],
+    specialRules: [],
+    options: []
+  },
+  {
+    id: 'trolls',
+    name: 'Trolls',
+    modelName: 'Troll',
+    role: 'regiments',
+    type: 'Monstrous Infantry',
+    minSize: 3,
+    maxSize: null,
+    pointsPerModel: 40,
+    stats: OG_STATS.troll,
+    equipment: ['Hand Weapon'],
+    specialRules: ['Stupid', 'Immune to psychology', 'Causes fear', 'Regenerate 4+', 'Vomit'],
+    options: [
+      {
+        id: 'rover_troll',
+        name: 'Rover Troll',
+        points: 0,
+        group: 'special_troll'
+      },
+      {
+        id: 'stone_troll',
+        name: 'Stone Troll',
+        points: 0,
+        group: 'special_troll'
+      },
+      {
+        id: 'chaos_troll',
+        name: 'Chaos Troll',
+        points: 5,
+        group: 'special_troll'
+      }
+    ]
+  },
+  {
+    id: 'ogre_mercs',
+    name: 'Ogre Mercenaries',
+    modelName: 'Ogre',
+    role: 'regiments',
+    type: 'Monstrous Infantry',
+    minSize: 3,
+    maxSize: null,
+    pointsPerModel: 24,
+    stats: OG_STATS.ogre,
+    equipment: ['Hand Weapon', 'Light armour'],
+    specialRules: ['Causes fear'],
+    options: [
+      { id: 'add_hw', name: 'Additional hand weapons', points: 6, group: 'weapon' },
+      { id: 'great_wpn', name: 'Double handed weapons', points: 8, group: 'weapon' },
+      { id: 'flail', name: 'Flails', points: 8, group: 'weapon' },
+      { id: 'heavy_armor', name: 'Heavy Armor', points: 4, replaces: 'Light armour'},
+      {
+        id: 'champion',
+        name: 'Ogre Champion',
+        points: 50,
+        maxPerUnit: 1,
+        stats: OG_STATS.ogreChampion,
         isFixedCost: true
       }
     ]
