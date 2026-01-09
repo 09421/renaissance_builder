@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useArmyStore } from '@/store/armyStore';
-import { useStorageStore } from '@/store/storageStore';
+import { useStorageStore, SavedList } from '@/store/storageStore';
 import { FACTIONS } from '@/data/factions'
 
 export default function LandingPage() {
@@ -35,8 +35,16 @@ export default function LandingPage() {
     router.push(`/builder?${params.toString()}`);
   };
 
-  const handleLoad = (list: any) => {
-    router.push(`/builder?load=${list.id}`);
+  const handleLoad = (list: SavedList) => {
+    
+    const params = new URLSearchParams({    
+      load: list.id,
+      points: list.points.toString(),
+      faction: list.faction,
+      name: list.name
+    });
+    console.log('list: ', list)
+    router.push(`/builder?${params.toString()}`);
   };
 
   const formatDate = (ts: number) => new Date(ts).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });

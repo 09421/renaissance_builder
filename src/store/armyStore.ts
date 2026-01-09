@@ -46,6 +46,7 @@ export const useArmyStore = create<ArmyState>()(
       setListName: (name) => set({ listName: name }),
       setPointsLimit: (points) => set({ pointLimit: points }),
       loadArmy: (savedList) => {
+        console.log('saved list: ', savedList);
         const cleanRoster = savedList.roster.map(unit => {
           if (Array.isArray(unit.selectedOptions)) {
             const newOptions: Record<string, number> = {};
@@ -202,13 +203,14 @@ export const useArmyStore = create<ArmyState>()(
       },
     }),
     {
-      name: 'warhammer-workbench',
+      name: 'warhammer-renaissance-workbench',
       
       partialize: (state) => ({ 
         roster: state.roster, 
         faction: state.faction,
+        listName: state.listName,
         activeListId: state.activeListId,
-        listName: state.listName
+        pointsLimit: state.pointLimit
       }),
     }
   )

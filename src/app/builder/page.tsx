@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, Suspense } from 'react'; 
+import { useMemo, Suspense, useEffect, useState } from 'react'; 
 import { useSearchParams } from 'next/navigation';
 import { useArmyStore } from '@/store/armyStore';
 import { getFactionRoster, getUnitDef } from '@/utils/getFactionData';
@@ -10,13 +10,19 @@ import { UnitEditor } from '@/components/builder/UnitEditor';
 import { useRouter } from 'next/navigation';
 import { useSaveArmy } from '@/components/hooks/useSaveArmy'
 import {SaveControls} from '@/components/builder/SaveControls'
+import {useStorageStore} from '@/store/storageStore';
 
 function BuilderContent() {
+  const router = useRouter();
+
   const searchParams = useSearchParams();
   const factionKey = searchParams.get('faction') || 'orcs_goblins';
   const pointsLimit = Number(searchParams.get('points') || 2000);
   const listName = searchParams.get('name');
-  const router = useRouter();
+  const [isLoadingFromUrl, setIsLoadingFromUrl] = useState(false);
+  const { loadArmy, activeListId } = useArmyStore(); 
+  const { savedLists } = useStorageStore();
+
   const { selectedUnitId, roster, getPointsTotal, getRegimentPoints, setListName } = useArmyStore();
 
   const availableUnits = useMemo(() => getFactionRoster(factionKey), [factionKey]);
@@ -29,6 +35,42 @@ function BuilderContent() {
   const isCoreValid = regimentsPoints >= minRegimentPoints;
   const regimentsPercentage = totalPoints > 0 ? ((regimentsPoints / pointsLimit) * 100).toFixed(2) : 0;
 
+
+
+  useEffect(() => {
+    const listIdToLoad = searchParams.get('load');
+
+    if (!listIdToLoad) return;
+
+    // Safety: If we are already on this list, just clear URL and stop.
+    if (activeListId === listIdToLoad) {
+      router.replace('/builder');
+      return;
+    }
+
+    // Wait for storage to be ready
+    if (savedLists.length === 0) return;
+
+    setIsLoadingFromUrl(true);
+
+    // 2. Find the data in your "Barracks"
+    const foundList = savedLists.find(l => l.id === listIdToLoad);
+
+    if (foundList) {
+      // 3. THE MISSING LINE: Actually load the data into the workbench
+      console.log("Loading Army:", foundList.name); // Debug log
+      loadArmy(foundList);
+      
+      // Clear the URL so we don't re-load on refresh
+      router.replace('/builder');
+    } else {
+      console.warn("Army not found:", listIdToLoad);
+    }
+
+    setTimeout(() => setIsLoadingFromUrl(false), 200);
+
+  }, [searchParams, savedLists, activeListId, loadArmy, router]);
+  
   const { saveArmy } = useSaveArmy();
   const handleBack = (e: React.MouseEvent) => {
     e.preventDefault();
