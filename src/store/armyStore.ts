@@ -25,6 +25,7 @@ interface ArmyState {
   ) => void;
   selectUnit: (instanceId: string | null) => void;
   setPointsLimit: (points: number) => void;
+  getPointsLimit: () => number
   getPointsTotal: () => number;
   getRegimentPoints: () => number;
 
@@ -46,7 +47,6 @@ export const useArmyStore = create<ArmyState>()(
       setListName: (name) => set({ listName: name }),
       setPointsLimit: (points) => set({ pointLimit: points }),
       loadArmy: (savedList) => {
-        console.log('saved list: ', savedList);
         const cleanRoster = savedList.roster.map(unit => {
           if (Array.isArray(unit.selectedOptions)) {
             const newOptions: Record<string, number> = {};
@@ -173,7 +173,10 @@ export const useArmyStore = create<ArmyState>()(
           return total + calculateUnitCost(unit, def, faction);
         }, 0);
       },
-
+      getPointsLimit: () => {        
+        const { pointLimit } = get();
+        return pointLimit;
+      },
       getRegimentPoints: () => {
         const { roster, faction } = get();
 

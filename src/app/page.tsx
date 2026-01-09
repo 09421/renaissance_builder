@@ -37,7 +37,7 @@ export default function LandingPage() {
 
   const handleLoad = (list: SavedList) => {
     
-    const params = new URLSearchParams({    
+    const params = new URLSearchParams({
       load: list.id,
       points: list.points.toString(),
       faction: list.faction,

@@ -5,7 +5,7 @@ import { useStorageStore } from '@/store/storageStore';
 export const useSaveArmy = () => {
   const [isSaved, setIsSaved] = useState(false);
   
-  const { roster, faction, listName, activeListId, getPointsTotal } = useArmyStore();
+  const { roster, faction, listName, activeListId, getPointsLimit } = useArmyStore();
   const { saveList } = useStorageStore();
 
   const saveArmy = useCallback(() => {
@@ -16,7 +16,7 @@ export const useSaveArmy = () => {
       name: listName,
       faction,
       roster,
-      points: getPointsTotal(),
+      points: getPointsLimit(),
       createdAt: Date.now(), 
       updatedAt: Date.now()
     };
@@ -29,7 +29,7 @@ export const useSaveArmy = () => {
     setTimeout(() => setIsSaved(false), 2000);
     
     return id;
-  }, [roster, faction, listName, activeListId, getPointsTotal, saveList]);
+  }, [roster, faction, listName, activeListId, getPointsLimit, saveList]);
 
   return { saveArmy, isSaved };
 };
