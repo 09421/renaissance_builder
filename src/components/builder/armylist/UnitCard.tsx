@@ -1,5 +1,5 @@
 import { ArmyUnit, StatBlock } from '@/types/army'; 
-import { getUnitDef } from '@/utils/getFactionData';
+import { getUnitDef, getMagicItemDef } from '@/utils/getFactionData';
 import { calculateUnitCost } from '@/utils/armyMath';
 import { StatRow } from './StatRow';
 
@@ -38,6 +38,16 @@ export const UnitCard = ({ unit, faction, isSelected, onSelect, onRemove }: Unit
 
   const selectedOptions = def.options.filter(o => (unit.selectedOptions[o.id] || 0) > 0);
 
+  const selectedMagicItems = Object.keys(unit.selectedOptions).reduce((list, optId) => {
+    if ((unit.selectedOptions[optId] || 0) > 0) {
+      const magicItem = getMagicItemDef(optId, faction);
+      if (magicItem) {
+        list.push(magicItem.name);
+      }
+    }
+    return list;
+  }, [] as string[]);
+
   const replacedItems = selectedOptions
     .map(o => o.replaces)
     .filter((item): item is string => !!item);
@@ -46,7 +56,8 @@ export const UnitCard = ({ unit, faction, isSelected, onSelect, onRemove }: Unit
 
   const fullGearList = [
     ...activeBaseGear, 
-    ...selectedOptions.map(o => o.name)
+    ...selectedOptions.map(o => o.name),
+    ...selectedMagicItems
   ].join(', ');
 
   const championProfiles = def.options.filter(o => (unit.selectedOptions[o.id] || 0) > 0 && o.stats);

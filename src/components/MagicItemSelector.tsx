@@ -109,14 +109,24 @@ export const MagicItemSelector = ({ unit, definition, faction }: Props) => {
           // (You'll need a "isWizard" flag on your unit definition or special rules)
           const isWizardRestricted = item.onlyWizards && !definition.specialRules?.includes('Wizard');
 
-          //have mundane item          
-          const gotMundateItem = item.requiresMundaneOption && (unit.selectedOptions[item.requiresMundaneOption] || definition.equipment.includes(item.requiresMundaneOption));
 
-          console.log("definition.equipment: ", definition.equipment);
-          console.log('item.requiresMundaneOption: ', item.requiresMundaneOption);
-          console.log('definition.equipment.includes(item.requiresMundaneOption): ', definition.equipment.includes(item.requiresMundaneOption!))
+          let missingMundane = false;
 
-          const isDisabled = isFull || !isTypeAllowed || isWizardRestricted || !gotMundateItem;
+          if (item.requiresMundaneOption) {
+            const reqId = item.requiresMundaneOption;            
+            const hasOption = (unit.selectedOptions[reqId] || 0) > 0;
+            
+            const hasDefault = definition.equipment.some(eq => 
+              eq.toLowerCase() === reqId.replace(/_/g, ' ').toLowerCase() ||
+              eq.toLowerCase() === reqId.toLowerCase()
+            );
+
+            if (!hasOption && !hasDefault) {
+              missingMundane = true;
+            }
+          }
+
+          const isDisabled = isFull || !isTypeAllowed || isWizardRestricted || missingMundane;
 
           return (
              <div key={item.id} className={`p-2 rounded border ${isSelected ? 'border-amber-500 bg-amber-900/10' : 'border-slate-700 bg-slate-800'} flex justify-between items-center`}>
