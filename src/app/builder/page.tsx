@@ -7,7 +7,8 @@ import { getFactionRoster, getUnitDef } from '@/utils/getFactionData';
 import { UnitList } from '@/components/builder/UnitList';
 import { ArmyList } from '@/components/builder/armylist/ArmyList';
 import { UnitEditor } from '@/components/builder/UnitEditor';
-import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useSaveArmy } from '@/components/hooks/useSaveArmy'
 import {SaveControls} from '@/components/builder/SaveControls'
 
 function BuilderContent() {
@@ -15,8 +16,8 @@ function BuilderContent() {
   const factionKey = searchParams.get('faction') || 'orcs_goblins';
   const pointsLimit = Number(searchParams.get('points') || 2000);
   const listName = searchParams.get('name');
-
-  const { selectedUnitId, roster, getPointsTotal, getRegimentPoints, loadArmy } = useArmyStore();
+  const router = useRouter();
+  const { selectedUnitId, roster, getPointsTotal, getRegimentPoints, setListName } = useArmyStore();
 
   const availableUnits = useMemo(() => getFactionRoster(factionKey), [factionKey]);
   const selectedUnit = roster.find(u => u.instanceId === selectedUnitId);
@@ -28,21 +29,27 @@ function BuilderContent() {
   const isCoreValid = regimentsPoints >= minRegimentPoints;
   const regimentsPercentage = totalPoints > 0 ? ((regimentsPoints / pointsLimit) * 100).toFixed(2) : 0;
 
+  const { saveArmy } = useSaveArmy();
+  const handleBack = (e: React.MouseEvent) => {
+    e.preventDefault();
+    saveArmy();
+    router.push('/');
+  };
   return (
     <main className="flex h-screen w-full bg-slate-900 text-slate-100 overflow-hidden">
 
       {/* LEFT COLUMN */}
       <aside className="w-80 flex-none border-r border-slate-700 flex flex-col bg-slate-800/50">
         <div className="h-16 flex items-center justify-between px-4 border-b border-slate-700 gap-3">
-          <Link
-            href="/"
+          <button
+            onClick={handleBack}
             className="text-slate-400 hover:text-amber-500 hover:bg-slate-700/50 p-2 rounded-full transition-all"
             title="Back to Main Menu"
           >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
             </svg>
-          </Link>
+          </button>
           <div>            
             <SaveControls/>
           </div>

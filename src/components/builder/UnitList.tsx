@@ -3,7 +3,6 @@ import { UnitDefinition, UnitRole } from '@/types/army';
 import { useArmyStore } from '@/store/armyStore';
 import { SECTION_ORDER, SECTION_TITLES } from '@/utils/sections';
 
-// --- SUB-COMPONENT: Collapsible Section ---
 const UnitSection = ({ role, units, addUnit }: { role: UnitRole, units: UnitDefinition[], addUnit: (u: UnitDefinition) => void }) => {
   const [isOpen, setIsOpen] = useState(true);
 
@@ -11,7 +10,6 @@ const UnitSection = ({ role, units, addUnit }: { role: UnitRole, units: UnitDefi
 
   return (
     <div className="mb-2">
-      {/* Sticky Header with Toggle */}
       <button 
         onClick={() => setIsOpen(!isOpen)}
         className="sticky top-0 w-full flex items-center justify-between bg-slate-800/95 backdrop-blur py-2 px-1 z-10 border-b border-slate-700 hover:bg-slate-700/80 transition-colors group text-left"
@@ -19,7 +17,6 @@ const UnitSection = ({ role, units, addUnit }: { role: UnitRole, units: UnitDefi
         <span className="text-xs font-bold text-slate-400 uppercase tracking-wider group-hover:text-slate-200">
           {SECTION_TITLES[role]}
         </span>
-        {/* Rotating Chevron */}
         <svg 
           className={`w-4 h-4 text-slate-500 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} 
           fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}
@@ -28,7 +25,6 @@ const UnitSection = ({ role, units, addUnit }: { role: UnitRole, units: UnitDefi
         </svg>
       </button>
 
-      {/* Collapsible Content */}
       {isOpen && (
         <div className="space-y-2 mt-2 pb-4 animate-in slide-in-from-top-2 duration-200 fade-in">
           {units.map(unit => (
@@ -51,7 +47,6 @@ const UnitSection = ({ role, units, addUnit }: { role: UnitRole, units: UnitDefi
   );
 };
 
-// --- MAIN COMPONENT ---
 export const UnitList = ({ units }: { units: UnitDefinition[] }) => {
   const addUnit = useArmyStore(s => s.addUnit);
 

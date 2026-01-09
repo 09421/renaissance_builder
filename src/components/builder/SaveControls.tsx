@@ -1,52 +1,12 @@
-import { useState } from 'react';
-import { useArmyStore } from '@/store/armyStore';
-import { useStorageStore } from '@/store/storageStore';
+import { useSaveArmy } from '@/components/hooks/useSaveArmy'
 
 export const SaveControls = () => {
-  const { roster, faction, listName, activeListId, setListName, getPointsTotal } = useArmyStore();
-  const { saveList } = useStorageStore();
-  const [isSaved, setIsSaved] = useState(false);
-
-  const handleSave = () => {
-    // 1. Determine ID (Use existing or generate new)
-    const id = activeListId || crypto.randomUUID();
-    
-    // 2. Prepare Data
-    const payload = {
-      id,
-      name: listName,
-      faction,
-      roster,
-      points: getPointsTotal(), // Calculate current points for the preview
-      createdAt: Date.now(), // Typescript might complain on update, but our store handles it
-      updatedAt: Date.now()
-    };
-
-    // 3. Save to LocalStorage
-    saveList(payload as any); // Type assertion if createdAt logic is strict
-
-    // 4. Update Active ID in ArmyStore (so subsequent saves overwrite)
-    useArmyStore.setState({ activeListId: id });
-
-    // 5. Visual Feedback
-    setIsSaved(true);
-    setTimeout(() => setIsSaved(false), 2000);
-  };
+  const { saveArmy, isSaved } = useSaveArmy()
 
   return (
     <div className="flex items-center gap-3">
-      {/* Name Input */}
-      {/* <input 
-        type="text"
-        value={listName}
-        onChange={(e) => setListName(e.target.value)}
-        className="bg-slate-900 border border-slate-700 text-slate-100 px-3 py-1 rounded focus:border-amber-500 focus:outline-none font-bold"
-        placeholder="Army Name..."
-      /> */}
-
-      {/* Save Button */}
       <button
-        onClick={handleSave}
+        onClick={saveArmy}
         className={`
           flex items-center gap-2 px-4 py-1.5 rounded font-bold transition-all
           ${isSaved 

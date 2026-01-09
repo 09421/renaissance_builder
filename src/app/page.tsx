@@ -9,21 +9,17 @@ import { FACTIONS } from '@/data/factions'
 export default function LandingPage() {
   const router = useRouter();
   
-  // Store Actions
   const { resetArmy, setListName, setPointsLimit } = useArmyStore();
   const { savedLists, deleteList } = useStorageStore();
 
-  // Local Form State
   const [selectedFaction, setSelectedFaction] = useState<string>();
   const [armyName, setArmyName] = useState('');
   const [pointsInput, setPointsInput] = useState(2000);
 
-  // --- ACTIONS ---
   const handleMuster = (e: React.FormEvent) => {
     e.preventDefault();
     if (!selectedFaction) return;
 
-    console.log('selectedFaction: ', selectedFaction);
     resetArmy(selectedFaction);
     
     const finalName = armyName.trim() || `New ${FACTIONS.find(f => f.key === selectedFaction)?.name} Army`;
@@ -34,7 +30,7 @@ export default function LandingPage() {
       faction: selectedFaction,
     });
   
-    // setListName(finalName);
+    setListName(finalName);
     setPointsLimit(pointsInput);
     router.push(`/builder?${params.toString()}`);
   };
@@ -47,8 +43,6 @@ export default function LandingPage() {
 
   return (
     <main className="min-h-screen bg-slate-900 text-slate-100 flex flex-col items-center justify-center p-4">
-      
-      {/* --- GLOBAL HEADER --- */}
       <div className="text-center mb-10 mt-8">
         <h1 className="text-5xl md:text-6xl font-bold text-amber-500 mb-3 font-serif tracking-wider uppercase drop-shadow-xl">
           Warhammer Renaissance
@@ -57,13 +51,8 @@ export default function LandingPage() {
           Army List Builder
         </p>
       </div>
-
-      {/* --- MAIN CONTENT GRID --- */}
       <div className="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8">
-        
-        {/* === CARD 1: MUSTER NEW ARMY === */}
-        <div className="bg-slate-800 rounded-xl shadow-2xl p-8 border border-slate-700 flex flex-col h-full">
-          
+        <div className="bg-slate-800 rounded-xl shadow-2xl p-8 border border-slate-700 flex flex-col h-full">          
           <div className="mb-6 pb-4 border-b border-slate-700">
              <h2 className="text-2xl font-bold text-slate-200 font-serif tracking-wide">
                Muster Forces
@@ -72,8 +61,6 @@ export default function LandingPage() {
           </div>
 
           <form onSubmit={handleMuster} className="space-y-8 flex-1 flex flex-col">
-            
-            {/* Top Row: Name & Points */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="flex flex-col gap-2">
                 <label htmlFor="listName" className="text-xs font-bold text-slate-500 uppercase tracking-wider">
@@ -105,7 +92,6 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Faction Selection */}
             <div className="space-y-3 flex-1">
               <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Choose Faction</span>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 h-full">
@@ -129,7 +115,6 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               disabled={!selectedFaction}
@@ -145,7 +130,6 @@ export default function LandingPage() {
           </form>
         </div>
 
-        {/* === CARD 2: THE BARRACKS === */}
         <div className="bg-slate-800 rounded-xl shadow-2xl p-8 border border-slate-700 flex flex-col h-full min-h-[500px]">
            <div className="mb-6 pb-4 border-b border-slate-700 flex justify-between items-end">
               <div>
@@ -200,7 +184,6 @@ export default function LandingPage() {
              )}
            </div>
         </div>
-
       </div>
     </main>
   );

@@ -16,50 +16,34 @@ export const MagicItemSelector = ({ unit, definition, faction }: Props) => {
 
   const allItems = getMagicItems(faction);
 
-  // --- 1. CALCULATE DYNAMIC ALLOWANCE ---
-  // Start with Character base allowance (if any)
   let maxItems = definition.magicAllowance?.maxItems || 0;
   let allowedCategories = new Set<string>(definition.magicAllowance?.allowedCategories || []);
 
-  // Add allowance from Selected Options (Champions/Banners)
   definition.options.forEach(opt => {
-    // Is this option selected?
     if ((unit.selectedOptions[opt.id] || 0) > 0 && opt.magicAllowance) {
       
-      // Add to Total Limit
       maxItems += (opt.magicAllowance.maxItems || 0);
       
-      // Add to Allowed Categories (if specific)
-      // If the set is empty initially (meaning "Any"), we keep it "Any".
-      // But if we are in "Restricted Mode" (Regiment), we build the list.
       if (opt.magicAllowance.allowedCategories) {
         opt.magicAllowance.allowedCategories.forEach(c => allowedCategories.add(c));
       } else {
-        // If an option grants "Any", we handle that logic... usually simpler to just allow all.
       }
     }
   });
 
-  // If we have 0 allowance, don't show the component
   if (maxItems === 0) return null;
 
-  // --- 2. CALCULATE CURRENT USAGE ---
   const selectedMagicItems = Object.entries(unit.selectedOptions).filter(([id, count]) => {
-    return allItems.find(i => i.id === id); // Is it a magic item?
+    return allItems.find(i => i.id === id);
   });
   
   const currentCount = selectedMagicItems.reduce((sum, [_, count]) => sum + count, 0);
   const remainingSlots = maxItems - currentCount;
-
-  // --- 3. FILTER VISIBLE ITEMS ---
-  // If allowedCategories has entries, only show those types. 
-  // (Empty set usually implies "All Allowed" for characters, but for Regiments we might start empty. 
-  // Logic Fix: If it's a Character, allow all. If Regiment, rely on the Set.)
   
   const isCharacter = definition.role === 'character';
   const validCategories = isCharacter 
-     ? null // Allow all
-     : Array.from(allowedCategories); // Only allow what Champion/Banner adds
+     ? null
+     : Array.from(allowedCategories);
 
   const categoryItems = allItems.filter(i => i.type === activeCategory);
 
@@ -72,10 +56,8 @@ export const MagicItemSelector = ({ unit, definition, faction }: Props) => {
         </div>
       </div>
 
-      {/* Category Tabs */}
       <div className="flex gap-2 overflow-x-auto pb-2 mb-2 no-scrollbar">
         {['weapon', 'armour', 'talisman', 'arcane', 'enchanted', 'banner'].map(cat => {
-           // Disable tabs that aren't relevant
            if (validCategories && !validCategories.includes(cat as string)) return null;
 
            return (
@@ -92,24 +74,14 @@ export const MagicItemSelector = ({ unit, definition, faction }: Props) => {
         })}
       </div>
 
-      {/* Items List */}
       <div className="space-y-2">
         {categoryItems.map(item => {
           const count = unit.selectedOptions[item.id] || 0;
           const isSelected = count > 0;
           
-          // --- VALIDATION ---
-          // 1. Can we afford the slot? (Unless we already have it)
           const isFull = !isSelected && remainingSlots <= 0;
-          
-          // 2. Is this specific Category allowed? (Redundant visual check)
           const isTypeAllowed = validCategories ? validCategories.includes(item.type) : true;
-
-          // 3. Wizard Check
-          // (You'll need a "isWizard" flag on your unit definition or special rules)
           const isWizardRestricted = item.onlyWizards && !definition.specialRules?.includes('Wizard');
-
-
           let missingMundane = false;
 
           if (item.requiresMundaneOption) {
@@ -133,7 +105,6 @@ export const MagicItemSelector = ({ unit, definition, faction }: Props) => {
                <div className={`text-sm ${isDisabled && !isSelected ? 'opacity-40 grayscale' : ''}`}>
                  <div className="font-bold text-slate-200">{item.name}</div>
                  <div className="text-xs text-slate-500">{item.points} pts</div>
-                 {/* Descriptions are nice! */}
                  {item.description && <div className="text-[10px] text-slate-400 italic">{item.description}</div>}
                </div>
 
