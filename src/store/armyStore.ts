@@ -1,6 +1,6 @@
 import { create } from 'zustand';
 import { UnitDefinition, ArmyUnit } from '@/types/army';
-import { getUnitDef } from '@/utils/getFactionData';
+import { getUnitDef, getMagicItemDef } from '@/utils/getFactionData';
 import { calculateUnitCost } from '@/utils/armyMath';
 
 interface ArmyState {
@@ -65,8 +65,11 @@ export const useArmyStore = create<ArmyState>((set, get) => ({
       if (u.instanceId !== instanceId) return u;
 
       const newOptions = { ...u.selectedOptions };
-      const optionDef = unitDef.options.find(o => o.id === optionId);
-
+      let optionDef:any = unitDef.options.find(o => o.id === optionId);
+      if (!optionDef) {
+        optionDef = getMagicItemDef(optionId, state.faction);
+      }
+      console.log('optionDef: ', optionDef);
       if (!optionDef) return u;
 
       if (count <= 0) {
@@ -85,7 +88,7 @@ export const useArmyStore = create<ArmyState>((set, get) => ({
         }
 
         if (optionDef.conflicts) {
-          optionDef.conflicts.forEach(conflictId => {
+          optionDef.conflicts.forEach((conflictId: string | number) => {
             delete newOptions[conflictId];
           });
         }
@@ -119,7 +122,7 @@ export const useArmyStore = create<ArmyState>((set, get) => ({
       const def = getUnitDef(faction, unit.defId);
       if (!def) return total;
 
-      return total + calculateUnitCost(unit, def);
+      return total + calculateUnitCost(unit, def, faction);
     }, 0);
   },
 

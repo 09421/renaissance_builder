@@ -7,7 +7,6 @@ import { FACTIONS, FactionKey } from '@/data/factions';
 export default function LandingPage() {
   const router = useRouter();
 
-  // Local state for form inputs
   const [listName, setListName] = useState('');
   const [points, setPoints] = useState(2000);
   const [selectedFaction, setSelectedFaction] = useState<FactionKey | null>(null);
@@ -17,8 +16,6 @@ export default function LandingPage() {
 
     if (!selectedFaction) return;
 
-    // Navigate to the builder page with data in URL
-    // e.g., /builder?name=MyArmy&points=2000&faction=empire
     const params = new URLSearchParams({
       name: listName || `${FACTIONS.find(f => f.key === selectedFaction)?.name} List`, // Default name if empty
       points: points.toString(),
@@ -82,9 +79,10 @@ export default function LandingPage() {
                 <button
                   key={faction.key}
                   type="button"
+                  disabled={faction.disabled}
                   onClick={() => setSelectedFaction(faction.key)}
                   className={`
-                    p-3 rounded-lg border text-left transition-all hover:scale-[1.02] flex flex-col justify-between
+                    p-3 rounded-lg border text-left transition-all enabled:hover:scale-[1.02] flex flex-col justify-between disabled:opacity-30
                     ${selectedFaction === faction.key 
                       ? 'bg-amber-600/20 border-amber-500 ring-1 ring-amber-500' 
                       : 'bg-slate-900 border-slate-700 hover:border-slate-500'}

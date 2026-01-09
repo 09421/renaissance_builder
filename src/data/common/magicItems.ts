@@ -1,4 +1,4 @@
-import { MagicItem } from '@/types/army';
+import { MagicItem } from '@/types/magicItems';
 
 export const COMMON_MAGIC_ITEMS: MagicItem[] = [
   //weapons
@@ -8,7 +8,7 @@ export const COMMON_MAGIC_ITEMS: MagicItem[] = [
     type: 'weapon',
     points: 10,
     description: '-2 to armor save',
-    requiresMundaneOption: 'Hand weapon',
+    requiresMundaneOption: 'Hand Weapon',
   },
   {
     id: 'leaping_copper',
@@ -16,7 +16,7 @@ export const COMMON_MAGIC_ITEMS: MagicItem[] = [
     type: 'weapon',
     points: 10,
     description: '+1 A',
-    requiresMundaneOption: 'Hand weapon',
+    requiresMundaneOption: 'Hand Weapon',
   },
   {
     id: 'lorenzo',
@@ -32,7 +32,7 @@ export const COMMON_MAGIC_ITEMS: MagicItem[] = [
     type: 'weapon',
     points: 10,
     description: 'Always Strike FIrst',
-    requiresMundaneOption: 'Hand weapon',
+    requiresMundaneOption: 'Hand Weapon',
   },
   {
     id: 'sword_might',
@@ -40,6 +40,6 @@ export const COMMON_MAGIC_ITEMS: MagicItem[] = [
     type: 'weapon',
     points: 15,
     description: '+1 S',
-    requiresMundaneOption: 'Hand weapon',
+    requiresMundaneOption: 'Hand Weapon',
   },
 ]

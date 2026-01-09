@@ -15,7 +15,7 @@ export const UnitCard = ({ unit, faction, isSelected, onSelect, onRemove }: Unit
   const def = getUnitDef(faction, unit.defId);
   if (!def) return null;
 
-  const points = calculateUnitCost(unit, def);
+  const points = calculateUnitCost(unit, def, faction);
 
   let modelDisplayString = `${unit.modelCount} Models`;
   if (def.baseCrew) {

@@ -1,4 +1,5 @@
-import { UnitDefinition, MagicItem } from '@/types/army';
+import { UnitDefinition } from '@/types/army';
+import {MagicItem} from '@/types/magicItems';
 import { ORCS_AND_GOBLINS_ROSTER } from '@/data/factions/orcs_goblins/index'; 
 import { HIGH_ELVES_ROSTER } from '@/data/factions/high_elves/index';
 import { COMMON_MAGIC_ITEMS } from '@/data/common/magicItems';

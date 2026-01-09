@@ -21,7 +21,7 @@ export const ArmySection = ({ role, units, faction, selectedUnitId, selectUnit, 
 
   const sectionPoints = units.reduce((sum, unit) => {
     const def = getUnitDef(faction, unit.defId);
-    return sum + (def ? calculateUnitCost(unit, def) : 0);
+    return sum + (def ? calculateUnitCost(unit, def, faction) : 0);
   }, 0);
 
   return (

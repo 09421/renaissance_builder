@@ -1,12 +1,14 @@
 import { useArmyStore } from '@/store/armyStore';
 import { UnitDefinition, ArmyUnit } from '@/types/army';
+import { MagicItemSelector } from '@/components/MagicItemSelector';
 
 interface Props {
   unit: ArmyUnit;
   definition: UnitDefinition;
+  faction: string;
 }
 
-export const UnitEditor = ({ unit, definition }: Props) => {
+export const UnitEditor = ({ unit, definition, faction }: Props) => {
   const { updateUnitSize, setOptionCount } = useArmyStore();
 
   const calculateTotal = () => {
@@ -193,6 +195,11 @@ export const UnitEditor = ({ unit, definition }: Props) => {
             })}
           </div>
         </section>
+        <MagicItemSelector 
+          unit={unit} 
+          definition={definition} 
+          faction={faction} 
+        />
       </div>
     </div>
   );

@@ -13,6 +13,9 @@ export const characters: UnitDefinition[] = [
     pointsPerModel: 124,
     stats: HE_STATS.elvenPrince,
     equipment: ['Hand Weapon'],
+    magicAllowance: {
+      maxItems: 3
+    },
     specialRules: ['Elven stoicism'],
     options: [
       { id: 'steed', name: 'Elven Steed', points: 27, group: 'mount', optionProfile: { name: 'Elven Steed', stats: HE_STATS.elvenSteed } },
@@ -45,12 +48,14 @@ export const characters: UnitDefinition[] = [
     modelName: 'Hero',
     role: 'character',
     type: 'infantry',
-    magicItemAllowance: 2,
     minSize: 1,
     maxSize: 1,
     pointsPerModel: 74,
     stats: HE_STATS.elvenHero,
     equipment: ['Hand Weapon'],
+    magicAllowance: {
+      maxItems: 2
+    },
     specialRules: ['Elven stoicism'],
     options: [
       { id: 'steed', name: 'Elven Steed', points: 20, group: 'mount', optionProfile: { name: 'Elven Steed', stats: HE_STATS.elvenSteed } },
@@ -86,6 +91,9 @@ export const characters: UnitDefinition[] = [
     pointsPerModel: 88,
     stats: HE_STATS.elvenBsb,
     equipment: ['Hand Weapon'],
+    magicAllowance: {
+      maxItems: 1
+    },
     specialRules: ['Elven stoicism'],
     options: [
       { id: 'steed', name: 'Elven Steed', points: 13, group: 'mount', optionProfile: { name: 'Elven Steed', stats: HE_STATS.elvenSteed } },
@@ -107,6 +115,9 @@ export const characters: UnitDefinition[] = [
     pointsPerModel: 264,
     stats: HE_STATS.mageLord,
     equipment: ['Hand Weapon'],
+    magicAllowance: {
+      maxItems: 4
+    },
     specialRules: ['Elven stoicism', 'Level 4 mage'],
     options: [
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college' },
@@ -134,6 +145,9 @@ export const characters: UnitDefinition[] = [
     pointsPerModel: 186,
     stats: HE_STATS.masterMage,
     equipment: ['Hand Weapon'],
+    magicAllowance: {
+      maxItems: 3
+    },
     specialRules: ['Elven stoicism', 'Level 3 mage'],
     options: [
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college' },
@@ -158,6 +172,9 @@ export const characters: UnitDefinition[] = [
     pointsPerModel: 122,
     stats: HE_STATS.mageChampion,
     equipment: ['Hand Weapon'],
+    magicAllowance: {
+      maxItems: 2
+    },
     specialRules: ['Elven stoicism', 'Level 2 mage'],
     options: [
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college' },
@@ -182,6 +199,9 @@ export const characters: UnitDefinition[] = [
     pointsPerModel: 58,
     stats: HE_STATS.mage,
     equipment: ['Hand Weapon'],
+    magicAllowance: {
+      maxItems: 1
+    },
     specialRules: ['Elven stoicism', 'Level 1 mage'],
     options: [
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college' },

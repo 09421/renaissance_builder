@@ -87,7 +87,7 @@ function BuilderContent() {
       {/* RIGHT COLUMN */}
       <aside className="w-96 flex-none border-l border-slate-700 flex flex-col bg-slate-900 shadow-2xl z-10">
         {selectedUnit && selectedUnitDef ? (
-          <UnitEditor unit={selectedUnit} definition={selectedUnitDef} />
+          <UnitEditor unit={selectedUnit} definition={selectedUnitDef} faction={factionKey}/>
         ) : (
           <div className="flex-1 flex items-center justify-center text-slate-500 p-8 text-center italic">
             Select a unit from the list to edit its loadout.

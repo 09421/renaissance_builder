@@ -1,18 +1,7 @@
+import {MagicAllowance} from '@/types/magicItems';
+
 export type StatValue = number | string;
-
-export type MagicItemCategory = 'weapon' | 'armour' | 'helmet' | 'talisman' | 'arcane' | 'enchanted' | 'banner';
-
-export interface MagicItem {
-  id: string;
-  name: string;
-  type: MagicItemCategory;
-  points: number;
-  description?: string;
-  
-  onlyWizards?: boolean;
-  onlyBattleStandard?: boolean;
-  requiresMundaneOption?: string;
-}
+export type UnitRole = 'character' | 'regiments' | 'chariots' |'warmachines' | 'monsters';
 
 export interface ArmyUnit {
   instanceId: string;
@@ -36,7 +25,6 @@ export type StatBlock = {
   Ld: StatValue; // Leadership
 };
 
-export type UnitRole = 'character' | 'regiments' | 'chariots' |'warmachines' | 'monsters';
 
 export interface SubProfile {
   name: string;
@@ -61,6 +49,7 @@ export type UnitOption = {
   isExternalPoints?: boolean;
   isExtraCrew?: boolean;
   perCrew?: boolean;
+  magicAllowance?: MagicAllowance;
 };
 
 export interface UnitDefinition {
@@ -78,5 +67,5 @@ export interface UnitDefinition {
   specialRules: string[];
   additionalProfiles?: SubProfile[];
   baseCrew?: number;
-  magicItemAllowance?: number;
+  magicAllowance?: MagicAllowance;
 }
