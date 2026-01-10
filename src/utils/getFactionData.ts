@@ -2,11 +2,13 @@ import { UnitDefinition } from '@/types/army';
 import {MagicItem} from '@/types/magicItems';
 import { ORCS_AND_GOBLINS_ROSTER } from '@/data/factions/orcs_goblins/index'; 
 import { HIGH_ELVES_ROSTER } from '@/data/factions/high_elves/index';
+import { EMPIRE_ROSTER } from '@/data/factions/empire/index';
 import { COMMON_MAGIC_ITEMS } from '@/data/common/magicItems';
 
 const DB: Record<string, UnitDefinition[]> = {
   'orcs_goblins': ORCS_AND_GOBLINS_ROSTER,
-  'high_elves': HIGH_ELVES_ROSTER
+  'high_elves': HIGH_ELVES_ROSTER,
+  'empire': EMPIRE_ROSTER,
 };
 
 export const getFactionRoster = (factionKey: string): UnitDefinition[] => {

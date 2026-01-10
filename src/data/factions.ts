@@ -14,7 +14,7 @@ export const FACTIONS: FactionInfo[] = [
   { 
     key: 'empire', 
     name: 'The Empire',
-    disabled: true,
+    description: 'Work in progress'
   },
   { 
     key: 'high_elves', 
