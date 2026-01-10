@@ -77,7 +77,6 @@ export const characters: UnitDefinition[] = [
       { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon' },
       { id: 'lance', name: 'Lance', points: 0, group: 'weapon' },
 
-      
       { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon' },
       { id: 'long_bow', name: 'Long Bow', points: 10, group: 'ranged_weapon' },
       { id: 'crossbow', name: 'Crossbow', points: 10, group: 'ranged_weapon' },
@@ -114,4 +113,126 @@ export const characters: UnitDefinition[] = [
       { id: 'full_plate', name: 'Full plate', points: 0, group: 'armor' },
     ]
   },
+  {
+    id: 'warpriest',
+    name: 'Warrior Priest',
+    modelName: 'Warrior Priest',
+    role: 'character',
+    type: 'infantry',
+    minSize: 1,
+    maxSize: 1,
+    pointsPerModel: 65,
+    stats: EMP_STATS.warriorPriest,
+    equipment: ['Hand Weapon'],
+    magicAllowance: {
+      maxItems: 1
+    },
+    specialRules: ['Religious Fervor'],
+    options: [
+      { id: 'warhorse', name: 'War Horse', points: 10, group: 'mount', optionProfile: { name: 'War Horse', stats: EMP_STATS.Warhorse } },
+      { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'] },      
+      { id: 'chariot', name: 'LargeChariot', points: 80, group: 'mount', optionProfile: { name: 'War Horse', stats: EMP_STATS.Warhorse } },
+
+      { id: 'light_armor', name: 'Light armor', points: 0, group: 'armor' },
+      { id: 'heavy_armor', name: 'Heavy armor', points: 0, group: 'armor' },
+      
+      { id: 'flail', name: 'Flail', points: 0, group: 'weapon'},
+      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
+      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon' },
+    ]
+  },
+  {
+    id: 'wizard_lord',
+    name: 'Wizard Lord (lvl4)',
+    modelName: 'Wizard Lord',
+    role: 'character',
+    type: 'infantry',
+    minSize: 1,
+    maxSize: 1,
+    pointsPerModel: 240,
+    stats: EMP_STATS.wizardLord,
+    equipment: ['Hand Weapon'],
+    magicAllowance: {
+      maxItems: 4
+    },
+    specialRules: ['Level 4 Wizard'],
+    options: [
+      { id: 'college', name: 'College Magic', points: 0, group: 'magic_college' },
+
+      { id: 'warhorse', name: 'War Horse', points: 0, group: 'mount', optionProfile: { name: 'War Horse', stats: EMP_STATS.Warhorse } },
+      { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'] },
+      { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: { name: 'Pegasus', stats: EMP_STATS.Pegasus } },
+      { id: 'griffon', name: 'Griffon', points: 160, group: 'mount', optionProfile: { name: 'Griffon', stats: EMP_STATS.Griffon } },
+    ]
+  },
+  {
+    id: 'master_wizard',
+    name: 'Master Wizard (lvl3)',
+    modelName: 'Master Wizard',
+    role: 'character',
+    type: 'infantry',
+    minSize: 1,
+    maxSize: 1,
+    pointsPerModel: 170,
+    stats: EMP_STATS.masterWizard,
+    equipment: ['Hand Weapon'],
+    magicAllowance: {
+      maxItems: 3
+    },
+    specialRules: ['Level 3 Wizard'],
+    options: [
+      { id: 'college', name: 'College Magic', points: 0, group: 'magic_college' },
+
+      { id: 'warhorse', name: 'War Horse', points: 0, group: 'mount', optionProfile: { name: 'War Horse', stats: EMP_STATS.Warhorse } },
+      { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'] },
+      { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: { name: 'Pegasus', stats: EMP_STATS.Pegasus } },
+    ]
+  },
+  {
+    id: 'wizard_champion',
+    name: 'Wizard Champion (lvl2)',
+    modelName: 'Wizard Champion',
+    role: 'character',
+    type: 'infantry',
+    minSize: 1,
+    maxSize: 1,
+    pointsPerModel: 110,
+    stats: EMP_STATS.wizardChampion,
+    equipment: ['Hand Weapon'],
+    magicAllowance: {
+      maxItems: 2
+    },
+    specialRules: ['Level 2 Wizard'],
+    options: [
+      { id: 'college', name: 'College Magic', points: 0, group: 'magic_college' },
+
+      { id: 'warhorse', name: 'War Horse', points: 0, group: 'mount', optionProfile: { name: 'War Horse', stats: EMP_STATS.Warhorse } },
+      { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'] },
+      { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: { name: 'Pegasus', stats: EMP_STATS.Pegasus } },
+    ]
+  },
+  {
+    id: 'wizard',
+    name: 'Wizard (lvl1)',
+    modelName: 'Wizard',
+    role: 'character',
+    type: 'infantry',
+    minSize: 1,
+    maxSize: 1,
+    pointsPerModel: 50,
+    stats: EMP_STATS.wizard,
+    equipment: ['Hand Weapon'],
+    magicAllowance: {
+      maxItems: 1
+    },
+    specialRules: ['Level 1 Wizard'],
+    options: [
+      { id: 'college', name: 'College Magic', points: 0, group: 'magic_college' },
+
+      { id: 'warhorse', name: 'War Horse', points: 0, group: 'mount', optionProfile: { name: 'War Horse', stats: EMP_STATS.Warhorse } },
+      { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'] },
+      { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: { name: 'Pegasus', stats: EMP_STATS.Pegasus } },
+    ]
+  },
+
 ]
