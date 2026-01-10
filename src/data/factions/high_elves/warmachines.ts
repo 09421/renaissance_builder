@@ -4,8 +4,8 @@ import { HE_STATS } from './stats';
 export const warmachines: UnitDefinition[] = [
   {
     id: 'bolt_thrower',
-    name: 'Repeating Bolt Throwers',
-    modelName: 'Warrior',
+    name: 'Repeating Bolt Thrower',
+    modelName: 'Bolt Thrower',
     role: 'warmachines',
     type: 'War Machine',
     minSize: 1,
@@ -19,7 +19,7 @@ export const warmachines: UnitDefinition[] = [
         stats: HE_STATS.elvenWarrior
       }
     ],
-    equipment: ['Hand Weapon'],
+    equipment: ['Hand Weapon', 'Repeating Bolt Thrower'],
     specialRules: ['Elven stoicism'],
     options: [
       { id: 'light_armor', name: 'Light armor', points: 1, perCrew: true },

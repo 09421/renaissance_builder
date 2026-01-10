@@ -30,6 +30,9 @@ export const EMP_STATS: Record<string, StatBlock> = {
   Pegasus:              { M: 8, Ws: 3, Bs: 0, S: 4, T: 4, W: 1, I: 4, A: 2, Ld: 5 },
   Griffon:              { M: 6, Ws: 5, Bs: 0, S: 6, T: 5, W: 5, I: 7, A: 4, Ld: 8 },
 
+  //warmachines  
+  warmachine:           { M: '-', Ws: '-', Bs: '-', S: '-', T: 7, W: 3, I: '-', A: '-', Ld: '-' },
+
   //monsters
 
 } as const;

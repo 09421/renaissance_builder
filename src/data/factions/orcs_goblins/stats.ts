@@ -56,6 +56,11 @@ export const OG_STATS: Record<string, StatBlock> = {
   monstrousSpider:      { M: 7, Ws: 3, Bs: 0, S: 4, T: 4, W: 4, I: 1, A: 2, Ld: 5 },
   wyvern:               { M: 6, Ws: 5, Bs: 0, S: 5, T: 6, W: 4, I: 4, A: 3, Ld: 5 },
 
+  //warmachines  
+  lightChariot:         { M: '-', Ws: '-', Bs: '-', S: 4, T: 7, W: 3, I: '-', A: '-', Ld: '-' },
+  heavyChariot:         { M: '-', Ws: '-', Bs: '-', S: 5, T: 7, W: 3, I: '-', A: '-', Ld: '-' },
+  warmachine:           { M: '-', Ws: '-', Bs: '-', S: '-', T: 7, W: 3, I: '-', A: '-', Ld: '-' },
+
   //monsters
   giant:                { M: 6, Ws: 3, Bs: 3, S: 7, T: 6, W: 6, I: 3, A: 'Special', Ld: 6 },
   gargantuanSpider:     { M: 7, Ws: 4, Bs: 0, S: 5, T: 5, W: 8, I: 4, A: 8, Ld: 6 },
