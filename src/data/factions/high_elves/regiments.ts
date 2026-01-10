@@ -143,6 +143,9 @@ export const regiments: UnitDefinition[] = [
     type: 'Infantry',
     minSize: 5,
     maxSize: null,
+    restrictions:{
+      maxPerArmy: 1
+    },
     pointsPerModel: 12,
     stats: HE_STATS.swordMasters,
     equipment: ['Hand Weapon', 'Double handed weapons', 'Light armor'],
@@ -166,6 +169,9 @@ export const regiments: UnitDefinition[] = [
     type: 'Cavalry',
     minSize: 5,
     maxSize: null,
+    restrictions:{
+      maxPerArmy: 1
+    },
     pointsPerModel: 27,
     stats: HE_STATS.elvenElite,
     additionalProfiles:[
@@ -239,6 +245,9 @@ export const regiments: UnitDefinition[] = [
     type: 'Infantry',
     minSize: 5,
     maxSize: null,
+    restrictions:{
+      maxPerArmy: 1
+    },
     pointsPerModel: 10,
     stats: HE_STATS.elvenElite,
     equipment: ['Hand Weapon', 'Halberds', 'Light armor'],
@@ -262,6 +271,9 @@ export const regiments: UnitDefinition[] = [
     type: 'Infantry',
     minSize: 5,
     maxSize: null,
+    restrictions:{
+      maxPerArmy: 1
+    },
     pointsPerModel: 13,
     stats: HE_STATS.handMaidens,
     equipment: ['Hand Weapon', 'Spear', 'Long bow', 'Light armor'],
@@ -284,6 +296,9 @@ export const regiments: UnitDefinition[] = [
     type: 'Infantry',
     minSize: 5,
     maxSize: null,
+    restrictions:{
+      maxPerArmy: 1
+    },
     pointsPerModel: 14,
     stats: HE_STATS.whiteLions,
     equipment: ['Hand Weapon', 'Double handed weapon', 'Light armor', 'Lion pelt'],

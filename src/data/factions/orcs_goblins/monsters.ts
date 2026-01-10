@@ -31,6 +31,24 @@ export const monsters: UnitDefinition[] = [
     options: []
   },
   {
+    id: 'spider_swam',
+    name: 'Spider Swarm',
+    modelName: 'Spider Swarm',
+    role: 'monsters',
+    type: 'Swarm',
+    minSize: 3,
+    maxSize: null,
+    restrictions:{
+      maxPerArmy: 1,
+      requiresTag: 'forest_goblin'
+    },
+    pointsPerModel: 40,
+    stats: OG_STATS.spiderSwarm,
+    equipment: ['Fangs'],
+    specialRules: ['poisonous (+1 strength)', 'skirmisher'],
+    options: []
+  },
+  {
     id: 'gargantuan_spider',
     name: 'Gargantuan Spider',
     modelName: 'Gargantuan Spider',
@@ -38,6 +56,9 @@ export const monsters: UnitDefinition[] = [
     type: 'monsters',
     minSize: 1,
     maxSize: 1,
+    restrictions:{
+      maxPerArmy: 1
+    },
     pointsPerModel: 225,
     stats: OG_STATS.gargantuanSpider,
     equipment: ['Fangs'],

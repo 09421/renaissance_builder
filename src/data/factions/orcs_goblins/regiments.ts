@@ -334,6 +334,7 @@ export const regiments: UnitDefinition[] = [
     modelName: 'Forest Goblin',
     role: 'regiments',
     type: 'Infantry',
+    tags:['forest_goblin'],
     minSize: 5,
     maxSize: null,
     pointsPerModel: 2.5,
@@ -360,6 +361,7 @@ export const regiments: UnitDefinition[] = [
     modelName: 'Forest Goblin',
     role: 'regiments',
     type: 'Cavalry',
+    tags:['forest_goblin'],
     minSize: 5,
     maxSize: null,
     pointsPerModel: 8,
@@ -503,6 +505,9 @@ export const regiments: UnitDefinition[] = [
     type: 'Infantry',
     minSize: 5,
     maxSize: null,
+    restrictions:{
+      maxPerArmy: 1
+    },
     pointsPerModel: 15,
     stats: OG_STATS.snotling,
     equipment: ['Hand Weapon'],

@@ -88,6 +88,9 @@ export const characters: UnitDefinition[] = [
     type: 'infantry',
     minSize: 1,
     maxSize: 1,
+    restrictions:{
+      maxPerArmy: 1
+    },
     pointsPerModel: 88,
     stats: HE_STATS.elvenBsb,
     equipment: ['Hand Weapon'],

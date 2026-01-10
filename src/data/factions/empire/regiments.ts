@@ -259,6 +259,10 @@ export const regiments: UnitDefinition[] = [
     maxSize: null,
     pointsPerModel: 20,
     stats: EMP_STATS.knight,
+    restrictions: {
+      uniqueGroup: 'knightly_order',
+      uniqueType: 'teutogen_wolves'
+    },
     additionalProfiles: [
       {
         name: 'War horse',
@@ -287,6 +291,9 @@ export const regiments: UnitDefinition[] = [
     maxSize: null,
     pointsPerModel: 25,
     stats: EMP_STATS.knight,
+    restrictions: {
+      uniqueGroup: 'knightly_order',
+    },
     additionalProfiles: [
       {
         name: 'War horse',
@@ -315,6 +322,9 @@ export const regiments: UnitDefinition[] = [
     maxSize: null,
     pointsPerModel: 25,
     stats: EMP_STATS.knight,
+    restrictions: {
+      uniqueGroup: 'knightly_order',
+    },
     additionalProfiles: [
       {
         name: 'War horse',
@@ -343,6 +353,10 @@ export const regiments: UnitDefinition[] = [
     maxSize: null,
     pointsPerModel: 13,
     stats: EMP_STATS.knight,
+    restrictions: {
+      uniqueGroup: 'knightly_order',
+      uniqueType: 'teutogen_wolves'
+    },
     equipment: ['Hand Weapon', 'Double handed weapons', 'Full plate'],
     specialRules: [],
     options: [
@@ -365,6 +379,10 @@ export const regiments: UnitDefinition[] = [
     maxSize: null,
     pointsPerModel: 11,
     stats: EMP_STATS.knight,
+    restrictions: {
+      uniqueGroup: 'knightly_order',
+      uniqueType: 'reiksguard'
+    },
     equipment: ['Hand Weapon', 'Full plate', 'shield'],
     specialRules: [],
     options: [
@@ -388,6 +406,10 @@ export const regiments: UnitDefinition[] = [
     maxSize: null,
     pointsPerModel: 25,
     stats: EMP_STATS.knight,
+    restrictions: {
+      uniqueGroup: 'knightly_order',
+      uniqueType: 'reiksguard'
+    },
     additionalProfiles: [
       {
         name: 'War horse',

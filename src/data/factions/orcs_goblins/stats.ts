@@ -59,5 +59,6 @@ export const OG_STATS: Record<string, StatBlock> = {
   //monsters
   giant:                { M: 6, Ws: 3, Bs: 3, S: 7, T: 6, W: 6, I: 3, A: 'Special', Ld: 6 },
   gargantuanSpider:     { M: 7, Ws: 4, Bs: 0, S: 5, T: 5, W: 8, I: 4, A: 8, Ld: 6 },
+  spiderSwarm:          { M: 4, Ws: 2, Bs: 0, S: 3, T: 2, W: 5, I: 1, A: 5, Ld: 10 },
 
 } as const;

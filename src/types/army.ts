@@ -3,6 +3,15 @@ import {MagicAllowance} from '@/types/magicItems';
 export type StatValue = number | string;
 export type UnitRole = 'character' | 'regiments' | 'chariots' |'warmachines' | 'monsters';
 
+export interface Restrictions{
+  maxPerArmy?: number;
+  requiresTag?: string;
+  cantHaveTag?: string;
+  uniqueGroup?: string;
+  uniqueType?: string;
+}
+
+
 export interface ArmyUnit {
   instanceId: string;
   defId: string;
@@ -68,4 +77,6 @@ export interface UnitDefinition {
   additionalProfiles?: SubProfile[];
   baseCrew?: number;
   magicAllowance?: MagicAllowance;
+  tags?: string[];
+  restrictions?: Restrictions;
 }
