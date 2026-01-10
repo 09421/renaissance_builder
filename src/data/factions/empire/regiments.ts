@@ -2,31 +2,251 @@ import { UnitDefinition } from '@/types/army';
 import { EMP_STATS } from './stats';
 
 export const regiments: UnitDefinition[] = [
-  // {
-  //   id: 'orc_boyz',
-  //   name: 'Orc Boyz',
-  //   modelName: 'Boy',
-  //   role: 'regiments',
-  //   type: 'Infantry',
-  //   minSize: 5,
-  //   maxSize: null,
-  //   pointsPerModel: 5,
-  //   stats: OG_STATS.commonOrc,
-  //   equipment: ['Hand Weapon', 'Light armor'],
-  //   specialRules: ['Animosity', 'Ignore panic induced by Goblins.'],
-  //   options: [
-  //     { id: 'add_hw', name: 'Additional hand weapons', points: 1, group: 'weapon' },
-  //     { id: 'spear', name: 'Spears', points: 2, group: 'weapon' },
-  //     { id: 'halberd', name: 'Halberds', points: 1, group: 'weapon' },
-  //     { id: 'great_wpn', name: 'Double handed weapons', points: 2, group: 'weapon' },
-  //     { id: 'shield', name: 'Shields', points: 1 },
-  //     {
-  //       id: 'champion',
-  //       name: 'Orc Champion',
-  //       points: 20,
-  //       stats: OG_STATS.commonOrcChampion,
-  //       isFixedCost: true
-  //     }
-  //   ]
-  // },
+  {
+    id: 'halberdiers',
+    name: 'Halberdiers',
+    modelName: 'State Troop',
+    role: 'regiments',
+    type: 'Infantry',
+    minSize: 5,
+    maxSize: null,
+    pointsPerModel: 5,
+    stats: EMP_STATS.trooper,
+    equipment: ['Hand Weapon', 'halberds'],
+    specialRules: ['Detachment'],
+    options: [
+      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      { id: 'shield', name: 'Shields', points: 0.5 },
+      {
+        id: 'champion',
+        name: 'Champion',
+        points: 20,
+        stats: EMP_STATS.champion,
+        isFixedCost: true
+      }
+    ]
+  },
+  {
+    id: 'spearmen',
+    name: 'Spearmen',
+    modelName: 'State Troop',
+    role: 'regiments',
+    type: 'Infantry',
+    minSize: 5,
+    maxSize: null,
+    pointsPerModel: 5,
+    stats: EMP_STATS.trooper,
+    equipment: ['Hand Weapon', 'Spears'],
+    specialRules: ['Detachment'],
+    options: [
+      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      { id: 'shield', name: 'Shields', points: 0.5 },
+      {
+        id: 'champion',
+        name: 'Champion',
+        points: 20,
+        stats: EMP_STATS.champion,
+        isFixedCost: true
+      }
+    ]
+  },
+  {
+    id: 'pikemen',
+    name: 'Pikemen',
+    modelName: 'State Troop',
+    role: 'regiments',
+    type: 'Infantry',
+    minSize: 5,
+    maxSize: null,
+    pointsPerModel: 8,
+    stats: EMP_STATS.trooper,
+    equipment: ['Hand Weapon', 'Pikes'],
+    specialRules: ['Detachment'],
+    options: [
+      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      {
+        id: 'champion',
+        name: 'Champion',
+        points: 20,
+        stats: EMP_STATS.champion,
+        isFixedCost: true
+      }
+    ]
+  },
+  {
+    id: 'greatswords',
+    name: 'Greatswords',
+    modelName: 'State Troop',
+    role: 'regiments',
+    type: 'Infantry',
+    minSize: 5,
+    maxSize: null,
+    pointsPerModel: 6,
+    stats: EMP_STATS.trooper,
+    equipment: ['Hand Weapon', 'Double handed weapons'],
+    specialRules: ['Detachment'],
+    options: [
+      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      {
+        id: 'champion',
+        name: 'Champion',
+        points: 20,
+        stats: EMP_STATS.champion,
+        isFixedCost: true
+      }
+    ]
+  },
+  {
+    id: 'swordsmen',
+    name: 'Swordsmen',
+    modelName: 'Swordsman',
+    role: 'regiments',
+    type: 'Infantry',
+    minSize: 5,
+    maxSize: null,
+    pointsPerModel: 5.5,
+    stats: EMP_STATS.swordsman,
+    equipment: ['Hand Weapon', 'Shield'],
+    specialRules: ['Detachment'],
+    options: [
+      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      {
+        id: 'captain',
+        name: 'Captain',
+        points: 30,
+        stats: EMP_STATS.captain,
+        isFixedCost: true
+      }
+    ]
+  },
+  {
+    id: 'archers',
+    name: 'Archers',
+    modelName: 'State Troop',
+    role: 'regiments',
+    type: 'Infantry',
+    minSize: 5,
+    maxSize: null,
+    pointsPerModel: 7,
+    stats: EMP_STATS.trooper,
+    equipment: ['Hand Weapon', 'Long bows'],
+    specialRules: ['Detachment', 'Skirmish'],
+    options: [
+      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      {
+        id: 'champion',
+        name: 'Champion',
+        points: 20,
+        stats: EMP_STATS.champion,
+        isFixedCost: true
+      }
+    ]
+  },
+  {
+    id: 'crossbowmen',
+    name: 'Crossbowmen',
+    modelName: 'State Troop',
+    role: 'regiments',
+    type: 'Infantry',
+    minSize: 5,
+    maxSize: null,
+    pointsPerModel: 9,
+    stats: EMP_STATS.trooper,
+    equipment: ['Hand Weapon', 'Crossbows'],
+    specialRules: ['Detachment'],
+    options: [
+      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      {
+        id: 'champion',
+        name: 'Champion',
+        points: 20,
+        stats: EMP_STATS.champion,
+        isFixedCost: true
+      }
+    ]
+  },
+  {
+    id: 'hand_gunners',
+    name: 'Hand gunners',
+    modelName: 'State Troop',
+    role: 'regiments',
+    type: 'Infantry',
+    minSize: 5,
+    maxSize: null,
+    pointsPerModel: 9,
+    stats: EMP_STATS.trooper,
+    equipment: ['Hand Weapon', 'Handguns'],
+    specialRules: ['Detachment'],
+    options: [
+      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      {
+        id: 'champion',
+        name: 'Champion',
+        points: 20,
+        stats: EMP_STATS.champion,
+        isFixedCost: true
+      }
+    ]
+  },
+  {
+    id: 'pistoliers',
+    name: 'Pistoliers',
+    modelName: 'State Troop',
+    role: 'regiments',
+    type: 'Cavalry',
+    minSize: 5,
+    maxSize: null,
+    pointsPerModel: 17,
+    stats: EMP_STATS.trooper,
+    additionalProfiles: [
+      {
+        name: 'Horse',
+        stats: EMP_STATS.horse
+      }
+    ],
+    equipment: ['Hand Weapon', 'Two pistols', 'Light armor'],
+    specialRules: ['Detachment', 'Skirmish'],
+    options: [
+      { id: 'standard', name: 'Standard bearer', points: 10, isFixedCost: true },
+      {
+        id: 'captain',
+        name: 'Captain',
+        points: 20,
+        stats: EMP_STATS.captain,
+        isFixedCost: true
+      },
+      { id: 'long_rifle', name: 'Hochland long rifle', points: 10, requires: ['captain'], group:'experimental' },
+      { id: 'repeating_handgun', name: 'Repeating handgun', points: 10, requires: ['captain'], group:'experimental' },
+      { id: 'repeating_pistol', name: 'Repeating pistol.', points: 10, requires: ['captain'], group:'experimental' },
+    ]
+  },
+  {
+    id: 'outriders',
+    name: 'Outriders',
+    modelName: 'State Troop',
+    role: 'regiments',
+    type: 'Cavalry',
+    minSize: 5,
+    maxSize: null,
+    pointsPerModel: 17,
+    stats: EMP_STATS.trooper,
+    additionalProfiles: [
+      {
+        name: 'Horse',
+        stats: EMP_STATS.horse
+      }
+    ],
+    equipment: ['Hand Weapon', 'Repeating handguns', 'Light armor', 'Barding'],
+    specialRules: ['Detachment', 'Skirmish'],
+    options: [
+      { id: 'standard', name: 'Standard bearer', points: 10, isFixedCost: true },
+      {
+        id: 'captain',
+        name: 'Captain',
+        points: 20,
+        stats: EMP_STATS.captain,
+        isFixedCost: true
+      }
+    ]
+  },
 ]
