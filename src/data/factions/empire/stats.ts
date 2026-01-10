@@ -35,4 +35,21 @@ export const EMP_STATS: Record<string, StatBlock> = {
 
   //monsters
 
+  //auxiliary
+  fighter:              { M: 4, Ws: 3, Bs: 3, S: 3, T: 3, W: 1, I: 3, A: 1, Ld: 7 },
+  kislevWingedLancer:   { M: 4, Ws: 4, Bs: 2, S: 4, T: 4, W: 1, I: 4, A: 1, Ld: 7 },
+  flagellant:           { M: 4, Ws: 2, Bs: 2, S: 4, T: 4, W: 1, I: 3, A: 2, Ld: 10 },
+  dwarf:                { M: 4, Ws: 4, Bs: 3, S: 3, T: 4, W: 1, I: 2, A: 1, Ld: 9 },
+  halfling:             { M: 4, Ws: 2, Bs: 4, S: 2, T: 2, W: 1, I: 5, A: 1, Ld: 8 },
+  ogre:                 { M: 6, Ws: 3, Bs: 2, S: 4, T: 5, W: 3, I: 3, A: 2, Ld: 7 },
+
+  //auxiliary Champions
+  fighterChampion:      { M: 4, Ws: 4, Bs: 4, S: 4, T: 3, W: 1, I: 4, A: 2, Ld: 7 },
+  kislevCaptain:        { M: 4, Ws: 5, Bs: 4, S: 4, T: 3, W: 1, I: 5, A: 2, Ld: 8 },  
+  prophetOfDoom:        { M: 4, Ws: 3, Bs: 3, S: 5, T: 4, W: 1, I: 4, A: 3, Ld: 10 },
+  dwarfChampion:        { M: 4, Ws: 5, Bs: 4, S: 4, T: 4, W: 1, I: 3, A: 2, Ld: 9 },
+  halflingChampion:     { M: 4, Ws: 3, Bs: 5, S: 3, T: 2, W: 1, I: 6, A: 2, Ld: 8 },
+  ogreChampion:         { M: 6, Ws: 4, Bs: 3, S: 5, T: 5, W: 3, I: 4, A: 3, Ld: 7 },
+
+
 } as const;

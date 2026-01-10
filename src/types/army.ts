@@ -1,7 +1,7 @@
 import {MagicAllowance} from '@/types/magicItems';
 
 export type StatValue = number | string;
-export type UnitRole = 'character' | 'regiments' | 'chariots' |'warmachines' | 'monsters';
+export type UnitRole = 'character' | 'regiments' | 'chariots' |'warmachines' | 'monsters' | 'auxiliary';
 
 export interface Restrictions{
   maxPerArmy?: number;
