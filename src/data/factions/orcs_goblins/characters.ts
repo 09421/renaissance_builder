@@ -18,6 +18,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Quells animosity', 'Ignore panic induced by Goblins and other orc types'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 33, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
       { id: 'wyvern', name: 'Wyvern', points: 167, group: 'mount', optionProfile: { name: 'Wyvern', stats: OG_STATS.wyvern } },
 
@@ -47,6 +48,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Quells animosity', 'Ignore panic induced by Goblins and other orc types'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 24, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
       { id: 'wyvern', name: 'Wyvern', points: 158, group: 'mount', optionProfile: { name: 'Wyvern', stats: OG_STATS.wyvern } },
 
@@ -99,6 +101,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 21, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
       { id: 'boar_chariot', name: 'Boar Chariot', points: 52, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
       { id: 'wyvern', name: 'Wyvern', points: 155, group: 'mount', optionProfile: { name: 'Wyvern', stats: OG_STATS.wyvern } },
@@ -130,6 +133,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 16, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
       { id: 'boar_chariot', name: 'Boar Chariot', points: 52, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
       { id: 'wyvern', name: 'Wyvern', points: 150, group: 'mount', optionProfile: { name: 'Wyvern', stats: OG_STATS.wyvern } },
@@ -183,6 +187,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins','Level 4 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
       { id: 'boar_chariot', name: 'Boar Chariot', points: 52, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
       { id: 'wyvern', name: 'Wyvern', points: 140, group: 'mount', optionProfile: { name: 'Wyvern', stats: OG_STATS.wyvern } },
@@ -204,6 +209,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins','Level 3 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
       { id: 'boar_chariot', name: 'Boar Chariot', points: 52, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
     ]
@@ -224,6 +230,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins','Level 2 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
       { id: 'boar_chariot', name: 'Boar Chariot', points: 52, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
     ]
@@ -244,6 +251,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins','Level 1 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
       { id: 'boar_chariot', name: 'Boar Chariot', points: 52, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
     ]
@@ -264,6 +272,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 27, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
       { id: 'wyvern', name: 'Wyvern', points: 161, group: 'mount', optionProfile: { name: 'Wyvern', stats: OG_STATS.wyvern } },
 
@@ -291,6 +300,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 20, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
       { id: 'wyvern', name: 'Wyvern', points: 154, group: 'mount', optionProfile: { name: 'Wyvern', stats: OG_STATS.wyvern } },
 
@@ -337,6 +347,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins','Level 4 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
       { id: 'wyvern', name: 'Wyvern', points: 140, group: 'mount', optionProfile: { name: 'Wyvern', stats: OG_STATS.wyvern } },
     ]
@@ -357,6 +368,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins','Level 3 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
     ]
   },
@@ -376,6 +388,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins','Level 2 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
     ]
   },
@@ -395,6 +408,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins','Level 1 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: { name: 'War Boar', stats: OG_STATS.warBoar } },
     ]
   },
@@ -414,6 +428,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'giant_wolf', name: 'Giant Wolf', points: 14, group: 'mount', optionProfile: { name: 'Giant Wolf', stats: OG_STATS.giantWolf } },
       { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, group: 'mount', optionProfile: { name: 'Wolf Boar', stats: OG_STATS.giantWolf } },
       { id: 'monstrou_spider', name: 'Monstrous Spider', points: 40, group: 'mount', optionProfile: { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider } },
@@ -443,6 +458,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'giant_wolf', name: 'Giant Wolf', points: 11, group: 'mount', optionProfile: { name: 'Giant Wolf', stats: OG_STATS.giantWolf } },
       { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, group: 'mount', optionProfile: { name: 'Wolf Boar', stats: OG_STATS.giantWolf } },
       { id: 'monstrou_spider', name: 'Monstrous Spider', points: 37, group: 'mount', optionProfile: { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider } },
@@ -493,6 +509,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity','Level 4 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount', optionProfile: { name: 'Giant Wolf', stats: OG_STATS.giantWolf } },
       { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, group: 'mount', optionProfile: { name: 'Wolf Boar', stats: OG_STATS.giantWolf } },
       { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider } },
@@ -514,6 +531,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity','Level 3 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount', optionProfile: { name: 'Giant Wolf', stats: OG_STATS.giantWolf } },
       { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, group: 'mount', optionProfile: { name: 'Wolf Boar', stats: OG_STATS.giantWolf } },
       { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider } },
@@ -535,6 +553,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity','Level 2 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount', optionProfile: { name: 'Giant Wolf', stats: OG_STATS.giantWolf } },
       { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, group: 'mount', optionProfile: { name: 'Wolf Boar', stats: OG_STATS.giantWolf } },
       { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider } },
@@ -556,6 +575,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity','Level 1 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount', optionProfile: { name: 'Giant Wolf', stats: OG_STATS.giantWolf } },
       { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, group: 'mount', optionProfile: { name: 'Wolf Boar', stats: OG_STATS.giantWolf } },
       { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider } },
@@ -575,8 +595,10 @@ export const characters: UnitDefinition[] = [
     magicAllowance: {
       maxItems: 3
     },
+    tags:['forest_goblin'],
     specialRules: ['Animosity'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'giant_spider', name: 'Giant Spider', points: 13, group: 'mount', optionProfile: { name: 'Giant Spider', stats: OG_STATS.giantSpider } },
       { id: 'monstrou_spider', name: 'Monstrous Spider', points: 40, group: 'mount', optionProfile: { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider } },
 
@@ -602,8 +624,10 @@ export const characters: UnitDefinition[] = [
     magicAllowance: {
       maxItems: 2
     },
+    tags:['forest_goblin'],
     specialRules: ['Animosity'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'giant_spider', name: 'Giant Spider', points: 10, group: 'mount', optionProfile: { name: 'Giant Spider', stats: OG_STATS.giantSpider } },
       { id: 'monstrou_spider', name: 'Monstrous Spider', points: 37, group: 'mount', optionProfile: { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider } },
 
@@ -629,6 +653,7 @@ export const characters: UnitDefinition[] = [
     magicAllowance: {
       maxItems: 1
     },
+    tags:['forest_goblin'],
     specialRules: ['Animosity'],
     options: [
       { id: 'giant_spider', name: 'Giant Spider', points: 8, group: 'mount', optionProfile: { name: 'Giant Spider', stats: OG_STATS.giantSpider } },
@@ -648,8 +673,10 @@ export const characters: UnitDefinition[] = [
     magicAllowance: {
       maxItems: 4
     },
+    tags:['forest_goblin'],
     specialRules: ['Animosity','Level 4 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'giant_spider', name: 'Giant Spider', points: 0, group: 'mount', optionProfile: { name: 'Giant Spider', stats: OG_STATS.giantSpider } },
       { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider } },
     ]
@@ -668,8 +695,10 @@ export const characters: UnitDefinition[] = [
     magicAllowance: {
       maxItems: 3
     },
+    tags:['forest_goblin'],
     specialRules: ['Animosity','Level 3 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'giant_spider', name: 'Giant Spider', points: 0, group: 'mount', optionProfile: { name: 'Giant Spider', stats: OG_STATS.giantSpider } },
       { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider } },
     ]
@@ -688,8 +717,10 @@ export const characters: UnitDefinition[] = [
     magicAllowance: {
       maxItems: 2
     },
+    tags:['forest_goblin'],
     specialRules: ['Animosity','Level 2 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'giant_spider', name: 'Giant Spider', points: 0, group: 'mount', optionProfile: { name: 'Giant Spider', stats: OG_STATS.giantSpider } },
       { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider } },
     ]
@@ -708,8 +739,10 @@ export const characters: UnitDefinition[] = [
     magicAllowance: {
       maxItems: 1
     },
+    tags:['forest_goblin'],
     specialRules: ['Animosity','Level 1 Shaman'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'giant_spider', name: 'Giant Spider', points: 0, group: 'mount', optionProfile: { name: 'Giant Spider', stats: OG_STATS.giantSpider } },
       { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider } },
     ]
@@ -730,6 +763,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'monstrou_spider', name: 'Monstrous Spider', points: 40, group: 'mount', optionProfile: { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider } },
 
       { id: 'shield', name: 'Shield', points: 0 },
@@ -756,6 +790,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Animosity'],
     options: [
+      { id: 'general', name: 'General', points: 0 },
       { id: 'monstrou_spider', name: 'Monstrous Spider', points: 37, group: 'mount', optionProfile: { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider } },
 
       { id: 'shield', name: 'Shield', points: 0 },
@@ -798,7 +833,9 @@ export const characters: UnitDefinition[] = [
       maxItems: 4
     },
     specialRules: ['Animosity','Level 4 Shaman'],
-    options: []
+    options: [      
+      { id: 'general', name: 'General', points: 0 },
+    ]
   },
   {
     id: 'night_goblin_shaman_master',
@@ -815,7 +852,9 @@ export const characters: UnitDefinition[] = [
       maxItems: 3
     },
     specialRules: ['Animosity','Level 3 Shaman'],
-    options: []
+    options: [
+      { id: 'general', name: 'General', points: 0 },
+    ]
   },
   {
     id: 'night_goblin_shaman_champion',
@@ -832,7 +871,9 @@ export const characters: UnitDefinition[] = [
       maxItems: 2
     },
     specialRules: ['Animosity','Level 2 Shaman'],
-    options: []
+    options: [
+      { id: 'general', name: 'General', points: 0 },
+    ]
   },
   {
     id: 'night_goblin_shaman',
@@ -849,6 +890,8 @@ export const characters: UnitDefinition[] = [
       maxItems: 1
     },
     specialRules: ['Animosity','Level 1 Shaman'],
-    options: []
+    options: [
+      { id: 'general', name: 'General', points: 0 },
+    ]
   },
 ]

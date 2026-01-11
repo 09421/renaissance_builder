@@ -9,6 +9,7 @@ export interface Restrictions{
   cantHaveTag?: string;
   uniqueGroup?: string;
   uniqueType?: string;
+  requiresGeneralTag?:string;
 }
 
 

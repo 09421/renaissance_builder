@@ -4,6 +4,13 @@ import { UnitDefinition, UnitRole } from '@/types/army';
 import { getUnitDef } from '@/utils/getFactionData';
 import { SECTION_ORDER, SECTION_TITLES } from '@/utils/sections';
 
+const formatLabel = (tag: string) => {
+  return tag
+    .split('_')                             // Split into words
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1)) // Capitalize first letter
+    .join(' ');                             // Join back
+};
+
 // --- VALIDATION HELPER ---
 const checkUnitRestrictions = (
   unit: UnitDefinition, 
@@ -78,6 +85,20 @@ const checkUnitRestrictions = (
     }
   }
 
+  if (restrictions?.requiresGeneralTag) {
+    const requiredTag = restrictions.requiresGeneralTag;
+
+    const generalUnit = roster.find(u => u.selectedOptions['general']);
+    const label = formatLabel(requiredTag);
+    if (!generalUnit) {
+      return { allowed: false, reason: `General must be ${label}` };
+    }
+    const generalDef = getUnitDef(faction, generalUnit.defId);
+    
+    if (!generalDef?.tags?.includes(requiredTag)) {      
+      return { allowed: false, reason: `General must be ${label}` };
+    }
+  }
   return { allowed: true };
 };
 

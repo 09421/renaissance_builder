@@ -57,7 +57,8 @@ export const monsters: UnitDefinition[] = [
     minSize: 1,
     maxSize: 1,
     restrictions:{
-      maxPerArmy: 1
+      maxPerArmy: 1,
+      requiresGeneralTag: 'forest_goblin',
     },
     pointsPerModel: 225,
     stats: OG_STATS.gargantuanSpider,

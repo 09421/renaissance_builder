@@ -55,7 +55,7 @@ export const useArmyStore = create<ArmyState>()(
             });
             return { ...unit, selectedOptions: newOptions };
           }
-          
+
           if (!unit.selectedOptions) {
             return { ...unit, selectedOptions: {} };
           }
@@ -108,60 +108,74 @@ export const useArmyStore = create<ArmyState>()(
         )
       })),
 
-      setOptionCount: (instanceId, optionId, count, unitDef) => set((state) => ({
-        roster: state.roster.map((u) => {
-          if (u.instanceId !== instanceId) return u;
+      setOptionCount: (instanceId, optionId, count, unitDef) => set((state) => {
 
-          const newOptions = { ...u.selectedOptions };
-          let optionDef:any = unitDef.options.find(o => o.id === optionId);
-          if (!optionDef) {
-            optionDef = getMagicItemDef(optionId, state.faction);
-          }
-          console.log('optionDef: ', optionDef);
-          if (!optionDef) return u;
+        let rosterToUpdate = state.roster;
+        if (optionId === 'general' && count > 0) {
+          rosterToUpdate = state.roster.map(u => {
+            if (u.instanceId !== instanceId && u.selectedOptions['general']) {
+              const cleanedOptions = { ...u.selectedOptions };
+              delete cleanedOptions['general'];
+              return { ...u, selectedOptions: cleanedOptions };
+            }
+            return u;
+          });
+        }
+        return {
+          roster: rosterToUpdate.map((u) => {
+            if (u.instanceId !== instanceId) return u;
 
-          if (count <= 0) {
-            delete newOptions[optionId];
-          } else {
-            newOptions[optionId] = count;
-          }
+            const newOptions = { ...u.selectedOptions };
+            let optionDef: any = unitDef.options.find(o => o.id === optionId);
+            if (!optionDef) {
+              optionDef = getMagicItemDef(optionId, state.faction);
+            }
+            console.log('optionDef: ', optionDef);
+            if (!optionDef) return u;
 
-          if (count > 0) {
-            if (optionDef.group) {
+            if (count <= 0) {
+              delete newOptions[optionId];
+            } else {
+              newOptions[optionId] = count;
+            }
+
+            if (count > 0) {
+              if (optionDef.group) {
+                unitDef.options.forEach(o => {
+                  if (o.group === optionDef.group && o.id !== optionId) {
+                    delete newOptions[o.id];
+                  }
+                });
+              }
+
+              if (optionDef.conflicts) {
+                optionDef.conflicts.forEach((conflictId: string | number) => {
+                  delete newOptions[conflictId];
+                });
+              }
+
+              Object.keys(newOptions).forEach(selectedId => {
+                if (selectedId === optionId) return; // Skip self
+
+                const existingDef = unitDef.options.find(o => o.id === selectedId);
+                if (existingDef?.conflicts?.includes(optionId)) {
+                  delete newOptions[selectedId];
+                }
+              });
+            }
+
+            if (count <= 0) {
               unitDef.options.forEach(o => {
-                if (o.group === optionDef.group && o.id !== optionId) {
+                if (o.requires?.includes(optionId)) {
                   delete newOptions[o.id];
                 }
               });
             }
 
-            if (optionDef.conflicts) {
-              optionDef.conflicts.forEach((conflictId: string | number) => {
-                delete newOptions[conflictId];
-              });
-            }
-
-            Object.keys(newOptions).forEach(selectedId => {
-              if (selectedId === optionId) return; // Skip self
-
-              const existingDef = unitDef.options.find(o => o.id === selectedId);
-              if (existingDef?.conflicts?.includes(optionId)) {
-                delete newOptions[selectedId];
-              }
-            });
-          }
-
-          if (count <= 0) {
-            unitDef.options.forEach(o => {
-              if (o.requires?.includes(optionId)) {
-                delete newOptions[o.id];
-              }
-            });
-          }
-
-          return { ...u, selectedOptions: newOptions };
-        })
-      })),
+            return { ...u, selectedOptions: newOptions };
+          })
+        };
+      }),
 
       getPointsTotal: () => {
         const { roster, faction } = get();
@@ -173,7 +187,7 @@ export const useArmyStore = create<ArmyState>()(
           return total + calculateUnitCost(unit, def, faction);
         }, 0);
       },
-      getPointsLimit: () => {        
+      getPointsLimit: () => {
         const { pointLimit } = get();
         return pointLimit;
       },
@@ -207,9 +221,9 @@ export const useArmyStore = create<ArmyState>()(
     }),
     {
       name: 'warhammer-renaissance-workbench',
-      
-      partialize: (state) => ({ 
-        roster: state.roster, 
+
+      partialize: (state) => ({
+        roster: state.roster,
         faction: state.faction,
         listName: state.listName,
         activeListId: state.activeListId,
