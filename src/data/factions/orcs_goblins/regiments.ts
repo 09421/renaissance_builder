@@ -12,7 +12,7 @@ export const regiments: UnitDefinition[] = [
     maxSize: null,
     pointsPerModel: 5,
     stats: OG_STATS.commonOrc,
-    equipment: ['Hand Weapon', 'Light armor'],
+    equipment: ['Hand Weapon', 'Light armour'],
     specialRules: ['Animosity', 'Ignore panic induced by Goblins.'],
     options: [
       { id: 'add_hw', name: 'Additional hand weapons', points: 1, group: 'weapon', category:'weapon' },
@@ -43,8 +43,8 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Bows'],
     specialRules: ['Animosity', 'Ignore panic induced by Goblins.'],
     options: [
-      { id: 'crossbow', name: 'Crossbows', points: 2, group: 'weapon', replaces: 'Bows' },
-      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      { id: 'crossbow', name: 'Crossbows', points: 2, group: 'weapon', replaces: ['Bows'] },
+      { id: 'light_armour', name: 'Light armour', points: 0.5 },
       {
         id: 'champion',
         name: 'Orc Champion',
@@ -70,7 +70,7 @@ export const regiments: UnitDefinition[] = [
         stats: OG_STATS.warBoar
       }
     ],
-    equipment: ['Hand Weapon', 'Light armor', 'Shield', 'War Boars'],
+    equipment: ['Hand Weapon', 'Light armour', 'Shield', 'War Boars'],
     specialRules: ['Animosity', 'Ignore panic induced by Goblins.'],
     options: [
       { id: 'spear', name: 'Spears', points: 2, group: 'weapon' },
@@ -93,7 +93,7 @@ export const regiments: UnitDefinition[] = [
     maxSize: null,
     pointsPerModel: 7,
     stats: OG_STATS.bigun,
-    equipment: ['Hand Weapon', 'Light armor'],
+    equipment: ['Hand Weapon', 'Light armour'],
     specialRules: ['Animosity', 'Ignore panic induced by Goblins.'],
     options: [
       { id: 'add_hw', name: 'Additional hand weapons', points: 2, group: 'weapon' },
@@ -123,8 +123,8 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Bows'],
     specialRules: ['Animosity', 'Ignore panic induced by Goblins.'],
     options: [
-      { id: 'crossbow', name: 'Crossbows', points: 2, group: 'weapon', replaces: 'Bows' },
-      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      { id: 'crossbow', name: 'Crossbows', points: 2, group: 'weapon', replaces:[ 'Bows'] },
+      { id: 'light_armour', name: 'Light armour', points: 0.5 },
       {
         id: 'champion',
         name: 'Big\'un Champion',
@@ -150,7 +150,7 @@ export const regiments: UnitDefinition[] = [
         stats: OG_STATS.warBoar
       }
     ],
-    equipment: ['Hand Weapon', 'Light armor', 'Shield', 'War Boars'],
+    equipment: ['Hand Weapon', 'Light armour', 'Shield', 'War Boars'],
     specialRules: ['Animosity', 'Ignore panic induced by Goblins.'],
     options: [
       { id: 'spear', name: 'Spears', points: 2, group: 'weapon' },
@@ -251,14 +251,14 @@ export const regiments: UnitDefinition[] = [
     maxSize: null,
     pointsPerModel: 9,
     stats: OG_STATS.blackOrc,
-    equipment: ['Hand Weapon', 'Light armor'],
+    equipment: ['Hand Weapon', 'Light armour'],
     specialRules: ['Ignore panic induced by Goblins and other orc types'],
     options: [
       { id: 'add_hw', name: 'Additional hand weapons', points: 2, group: 'weapon' },
       { id: 'spear', name: 'Spears', points: 2, group: 'weapon' },
       { id: 'halberd', name: 'Halberds', points: 1, group: 'weapon' },
       { id: 'great_wpn', name: 'Double handed weapons', points: 3, group: 'weapon' },
-      { id: 'heavy_armor', name: 'Heavy armor', points: 2, replaces: 'Light armor' },
+      { id: 'heavy_armour', name: 'Heavy armour', points: 2, replaces: ['Light armour'] },
       { id: 'shield', name: 'Shields', points: 1 },
       {
         id: 'champion',
@@ -285,7 +285,7 @@ export const regiments: UnitDefinition[] = [
       { id: 'spear', name: 'Spears', points: 0.5, group: 'weapon' },
       { id: 'great_wpn', name: 'Double handed weapons', points: 2, group: 'weapon' },
       { id: 'short_bow', name: 'Short Bows', points: 1, group: 'ranged_weapon' },
-      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      { id: 'light_armour', name: 'Light armour', points: 0.5 },
       { id: 'shield', name: 'Shields', points: 0.5 },
       {
         id: 'champion',
@@ -317,7 +317,7 @@ export const regiments: UnitDefinition[] = [
     options: [
       { id: 'spear', name: 'Spears', points: 1, group: 'weapon' },
       { id: 'short_bow', name: 'Short Bows', points: 1, group: 'ranged_weapon' },
-      { id: 'light_armor', name: 'Light armor', points: 1 },
+      { id: 'light_armour', name: 'Light armour', points: 1 },
       { id: 'shield', name: 'Shields', points: 1 },
       { id: 'standard bearer', name: 'Standard Bearer', points: 10, isFixedCost: true },
       {
@@ -561,7 +561,7 @@ export const regiments: UnitDefinition[] = [
       { id: 'add_hw', name: 'Additional hand weapons', points: 6, group: 'weapon' },
       { id: 'great_wpn', name: 'Double handed weapons', points: 8, group: 'weapon' },
       { id: 'flail', name: 'Flails', points: 8, group: 'weapon' },
-      { id: 'heavy_armor', name: 'Heavy Armor', points: 4, replaces: 'Light armour'},
+      { id: 'heavy_armour', name: 'Heavy armour', points: 4, replaces: ['Light armour']},
       {
         id: 'champion',
         name: 'Ogre Champion',

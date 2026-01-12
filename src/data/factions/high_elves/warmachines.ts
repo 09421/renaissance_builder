@@ -22,7 +22,7 @@ export const warmachines: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Repeating Bolt Thrower'],
     specialRules: ['Elven stoicism'],
     options: [
-      { id: 'light_armor', name: 'Light armor', points: 1, perCrew: true },
+      { id: 'light_armor', name: 'Light armor', points: 1, perCrew: true, category:'armour' },
       {
         id: 'crew',
         name: 'additional crew members',
@@ -30,6 +30,7 @@ export const warmachines: UnitDefinition[] = [
         maxPerUnit: 3,
         isFixedCost: true,
         isExtraCrew: true,
+        category:'other'
       }
     ]
   },

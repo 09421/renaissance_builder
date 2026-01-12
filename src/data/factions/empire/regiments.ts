@@ -15,14 +15,15 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'halberds'],
     specialRules: ['Detachment'],
     options: [
-      { id: 'light_armor', name: 'Light armor', points: 0.5 },
-      { id: 'shield', name: 'Shields', points: 0.5 },
+      { id: 'light_armour', name: 'Light armour', points: 0.5, category:'armour' },
+      { id: 'shield', name: 'Shields', points: 0.5, category:'armour' },
       {
         id: 'champion',
         name: 'Champion',
         points: 20,
         stats: EMP_STATS.champion,
-        isFixedCost: true
+        isFixedCost: true, 
+        category:'command'
       }
     ]
   },
@@ -39,14 +40,15 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Spears'],
     specialRules: ['Detachment'],
     options: [
-      { id: 'light_armor', name: 'Light armor', points: 0.5 },
-      { id: 'shield', name: 'Shields', points: 0.5 },
+      { id: 'light_armour', name: 'Light armour', points: 0.5,category:'armour' },
+      { id: 'shield', name: 'Shields', points: 0.5, category:'armour' },
       {
         id: 'champion',
         name: 'Champion',
         points: 20,
         stats: EMP_STATS.champion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -63,13 +65,14 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Pikes'],
     specialRules: ['Detachment'],
     options: [
-      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      { id: 'light_armour', name: 'Light armour', points: 0.5, category:'armour' },
       {
         id: 'champion',
         name: 'Champion',
         points: 20,
         stats: EMP_STATS.champion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -86,13 +89,14 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Double handed weapons'],
     specialRules: ['Detachment'],
     options: [
-      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      { id: 'light_armour', name: 'Light armour', points: 0.5, category:'armour' },
       {
         id: 'champion',
         name: 'Champion',
         points: 20,
         stats: EMP_STATS.champion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -109,13 +113,14 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Shield'],
     specialRules: ['Detachment'],
     options: [
-      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      { id: 'light_armour', name: 'Light armour', points: 0.5, category:'armour' },
       {
         id: 'captain',
         name: 'Captain',
         points: 30,
         stats: EMP_STATS.captain,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -132,13 +137,14 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Long bows'],
     specialRules: ['Detachment', 'Skirmish'],
     options: [
-      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      { id: 'light_armour', name: 'Light armour', points: 0.5, category:'armour' },
       {
         id: 'champion',
         name: 'Champion',
         points: 20,
         stats: EMP_STATS.champion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -155,13 +161,14 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Crossbows'],
     specialRules: ['Detachment'],
     options: [
-      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      { id: 'light_armour', name: 'Light armour', points: 0.5, category:'armour' },
       {
         id: 'champion',
         name: 'Champion',
         points: 20,
         stats: EMP_STATS.champion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -178,13 +185,14 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Handguns'],
     specialRules: ['Detachment'],
     options: [
-      { id: 'light_armor', name: 'Light armor', points: 0.5 },
+      { id: 'light_armour', name: 'Light armour', points: 0.5, category:'armour' },
       {
         id: 'champion',
         name: 'Champion',
         points: 20,
         stats: EMP_STATS.champion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -204,20 +212,21 @@ export const regiments: UnitDefinition[] = [
         stats: EMP_STATS.horse
       }
     ],
-    equipment: ['Hand Weapon', 'Two pistols', 'Light armor'],
+    equipment: ['Hand Weapon', 'Two pistols', 'Light armour'],
     specialRules: ['Detachment', 'Skirmish'],
     options: [
-      { id: 'standard', name: 'Standard bearer', points: 10, isFixedCost: true },
+      { id: 'standard', name: 'Standard bearer', points: 10, isFixedCost: true, category:'command' },
       {
         id: 'captain',
         name: 'Captain',
         points: 20,
         stats: EMP_STATS.captain,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       },
-      { id: 'long_rifle', name: 'Hochland long rifle', points: 10, requires: ['captain'], group:'experimental' },
-      { id: 'repeating_handgun', name: 'Repeating handgun', points: 10, requires: ['captain'], group:'experimental' },
-      { id: 'repeating_pistol', name: 'Repeating pistol.', points: 10, requires: ['captain'], group:'experimental' },
+      { id: 'long_rifle', name: 'Hochland long rifle', points: 10, requires: ['captain'], group:'experimental',category:'experimantal' },
+      { id: 'repeating_handgun', name: 'Repeating handgun', points: 10, requires: ['captain'], group:'experimental', category:'experimantal' },
+      { id: 'repeating_pistol', name: 'Repeating pistol.', points: 10, requires: ['captain'], group:'experimental',category:'experimantal' },
     ]
   },
   {
@@ -236,16 +245,17 @@ export const regiments: UnitDefinition[] = [
         stats: EMP_STATS.horse
       }
     ],
-    equipment: ['Hand Weapon', 'Repeating handguns', 'Light armor', 'Barding'],
+    equipment: ['Hand Weapon', 'Repeating handguns', 'Light armour', 'Barding'],
     specialRules: ['Detachment', 'Skirmish'],
     options: [
-      { id: 'standard', name: 'Standard bearer', points: 10, isFixedCost: true },
+      { id: 'standard', name: 'Standard bearer', points: 10, isFixedCost: true, category:'command' },
       {
         id: 'captain',
         name: 'Captain',
         points: 20,
         stats: EMP_STATS.captain,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -277,7 +287,8 @@ export const regiments: UnitDefinition[] = [
         name: 'Captain',
         points: 30,
         stats: EMP_STATS.captain,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -308,7 +319,8 @@ export const regiments: UnitDefinition[] = [
         name: 'Captain',
         points: 30,
         stats: EMP_STATS.captain,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -339,7 +351,8 @@ export const regiments: UnitDefinition[] = [
         name: 'Captain',
         points: 30,
         stats: EMP_STATS.captain,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -365,7 +378,8 @@ export const regiments: UnitDefinition[] = [
         name: 'Captain',
         points: 30,
         stats: EMP_STATS.captain,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -386,13 +400,14 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Full plate', 'shield'],
     specialRules: [],
     options: [
-      { id: 'great_weapon', name: 'Double handed weapon', points: 2, replaces:'shield' },
+      { id: 'great_weapon', name: 'Double handed weapon', points: 2, replaces:['shield'],category:'weapon' },
       {
         id: 'commander',
         name: 'Commander',
         points: 50,
         stats: EMP_STATS.commander,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -424,7 +439,8 @@ export const regiments: UnitDefinition[] = [
         name: 'Commander',
         points: 50,
         stats: EMP_STATS.commander,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },

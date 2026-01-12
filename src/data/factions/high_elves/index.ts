@@ -11,4 +11,5 @@ export const HIGH_ELVES_ROSTER: UnitDefinition[] = [
   ...regiments,
   ...warmachines,
   ...monsters,
+  ...chariots
 ];

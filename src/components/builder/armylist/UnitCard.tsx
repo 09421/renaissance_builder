@@ -50,8 +50,7 @@ export const UnitCard = ({ unit, faction, isSelected, onSelect, onRemove }: Unit
   }, [] as string[]);
 
   const replacedItems = selectedOptions
-    .map(o => o.replaces)
-    .filter((item): item is string => !!item);
+    .flatMap(o => o.replaces || []);
 
   const activeBaseGear = def.equipment.filter(item => !replacedItems.includes(item));
 

@@ -8,12 +8,13 @@ const CATEGORY_TITLES: Record<OptionCategory, string> = {
   mount: 'Mounts & Chariots',
   weapon: 'Weapons',
   ranged_weapon:'Ranged weapon',
+  experimantal:'Experimantal',
   armour: 'Armour',
   command: 'Command',
   magic: 'Magic School',
   other: 'Upgrades'
 };
-const CATEGORY_ORDER: OptionCategory[] = ['command', 'magic', 'mount', 'weapon', 'ranged_weapon', 'armour', 'other'];
+const CATEGORY_ORDER: OptionCategory[] = ['command', 'magic', 'mount', 'weapon', 'ranged_weapon', 'experimantal', 'armour', 'other'];
 
 interface Props {
   unit: ArmyUnit;
