@@ -15,17 +15,18 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Light armor'],
     specialRules: ['Animosity', 'Ignore panic induced by Goblins.'],
     options: [
-      { id: 'add_hw', name: 'Additional hand weapons', points: 1, group: 'weapon' },
-      { id: 'spear', name: 'Spears', points: 2, group: 'weapon' },
-      { id: 'halberd', name: 'Halberds', points: 1, group: 'weapon' },
-      { id: 'great_wpn', name: 'Double handed weapons', points: 2, group: 'weapon' },
-      { id: 'shield', name: 'Shields', points: 1 },
+      { id: 'add_hw', name: 'Additional hand weapons', points: 1, group: 'weapon', category:'weapon' },
+      { id: 'spear', name: 'Spears', points: 2, group: 'weapon', category:'weapon' },
+      { id: 'halberd', name: 'Halberds', points: 1, group: 'weapon', category:'weapon' },
+      { id: 'great_wpn', name: 'Double handed weapons', points: 2, group: 'weapon', category:'weapon' },
+      { id: 'shield', name: 'Shields', points: 1, category:'armour' },
       {
         id: 'champion',
         name: 'Orc Champion',
         points: 20,
         stats: OG_STATS.commonOrcChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -401,10 +402,10 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     specialRules: ['Animosity', 'Fear Elves', 'Hate Dwarfs'],
     options: [
-      { id: 'spear', name: 'Spears', points: 0.5, group: 'weapon' },
-      { id: 'great_wpn', name: 'Double handed weapons', points: 2, group: 'weapon' },
-      { id: 'short_bow', name: 'Short Bows', points: 1, group: 'weapon', conflicts: ['shield'] },
-      { id: 'shield', name: 'Shields', points: 0.5, conflicts: ['short_bow'] },
+      { id: 'spear', name: 'Spears', points: 0.5, group: 'weapon', category:'weapon' },
+      { id: 'great_wpn', name: 'Double handed weapons', points: 2, group: 'weapon', category:'weapon'  },
+      { id: 'short_bow', name: 'Short Bows', points: 1, group: 'weapon', conflicts: ['shield'], category:'weapon' },
+      { id: 'shield', name: 'Shields', points: 0.5, conflicts: ['short_bow'], category:'armour' },
       {
         id: 'fanatic',
         name: 'Fanatic',
@@ -412,11 +413,7 @@ export const regiments: UnitDefinition[] = [
         maxPerUnit: 3,
         isFixedCost: true,
         isExternalPoints: true,
-        optionProfile:
-        {
-          name: 'Fanatic',
-          stats: OG_STATS.nightGoblinFanatic
-        }
+        optionProfile: [{ name: 'Fanatic', stats: OG_STATS.nightGoblinFanatic }]
       },
       {
         id: 'mad_cap_mushroom',
@@ -430,6 +427,7 @@ export const regiments: UnitDefinition[] = [
         name: 'Goblin Champion',
         points: 10,
         stats: OG_STATS.goblinChampion,
+        category: 'command',
         isFixedCost: true
       }
     ]
@@ -468,10 +466,10 @@ export const regiments: UnitDefinition[] = [
         maxPerModel: 3,
         ratioError: 'Only 3 Cave Squig per goblin is allowed.',
         isFixedCost: true,
-        optionProfile: {
+        optionProfile: [{
           name: 'Cave Squig',
           stats: OG_STATS.caveSquig
-        }
+        }]
       }
     ]
   },

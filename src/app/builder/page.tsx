@@ -4,9 +4,9 @@ import { useMemo, Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useArmyStore } from '@/store/armyStore';
 import { getFactionRoster, getUnitDef } from '@/utils/getFactionData';
-import { UnitList } from '@/components/builder/UnitList';
+import { UnitListContainer } from '@/components/builder/unitList/UnitListContainer';
 import { ArmyList } from '@/components/builder/armylist/ArmyList';
-import { UnitEditor } from '@/components/builder/UnitEditor';
+import { UnitEditor } from '@/components/builder/unitEditor/UnitEditor';
 import { useRouter } from 'next/navigation';
 import { useSaveArmy } from '@/components/hooks/useSaveArmy'
 import {SaveControls} from '@/components/builder/SaveControls'
@@ -40,7 +40,6 @@ function BuilderContent() {
 
     if (!listIdToLoad) return;
     if (activeListId === listIdToLoad) {
-      // router.replace('/builder');
       return;
     }
     if (savedLists.length === 0) return;
@@ -50,11 +49,8 @@ function BuilderContent() {
     const foundList = savedLists.find(l => l.id === listIdToLoad);
 
     if (foundList) {
-      console.log("Loading Army:", foundList.name); // Debug log
       loadArmy(foundList);
       
-      // Clear the URL so we don't re-load on refresh
-      // router.replace('/builder');
     } else {
       console.warn("Army not found:", listIdToLoad);
     }
@@ -70,17 +66,6 @@ function BuilderContent() {
     router.push('/');
   };
 
-  // if (isLoadingFromUrl) {
-  //   return (
-  //     <div className="h-screen bg-slate-950 flex flex-col items-center justify-center text-amber-500 gap-4">
-  //       <svg className="animate-spin h-10 w-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-  //         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-  //         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-  //       </svg>
-  //       <span className="font-bold tracking-widest uppercase">Mobilizing Forces...</span>
-  //     </div>
-  //   );
-  // }
   return (
     <main className="flex h-screen w-full bg-slate-900 text-slate-100 overflow-hidden">
 
@@ -102,7 +87,7 @@ function BuilderContent() {
         </div>
 
         <div className="flex-1 overflow-y-auto p-4">
-          <UnitList units={availableUnits} />
+          <UnitListContainer units={availableUnits} />
         </div>
       </aside>
 

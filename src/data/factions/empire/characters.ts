@@ -18,30 +18,30 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: [],
     options: [
-      { id: 'warhorse', name: 'War Horse', points: 20, group: 'mount', optionProfile: { name: 'War Horse', stats: EMP_STATS.Warhorse } },
-      { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'] },
-      { id: 'pegasus', name: 'Pegasus', points: 55, group: 'mount', optionProfile: { name: 'Pegasus', stats: EMP_STATS.Pegasus } },
-      { id: 'griffon', name: 'Griffon', points: 175, group: 'mount', optionProfile: { name: 'Griffon', stats: EMP_STATS.Griffon } },
+      { id: 'warhorse', name: 'War Horse', points: 20, group: 'mount', optionProfile: [{ name: 'War Horse', stats: EMP_STATS.Warhorse }], category:'mount' },
+      { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'], category:'mount' },
+      { id: 'pegasus', name: 'Pegasus', points: 55, group: 'mount', optionProfile: [{ name: 'Pegasus', stats: EMP_STATS.Pegasus }], category:'mount' },
+      { id: 'griffon', name: 'Griffon', points: 175, group: 'mount', optionProfile: [{ name: 'Griffon', stats: EMP_STATS.Griffon }], category:'mount' },
 
-      { id: 'shield', name: 'Shield', points: 0 },
-      { id: 'light_armor', name: 'Light armor', points: 0, group: 'armor' },
-      { id: 'heavy_armor', name: 'Heavy armor', points: 0, group: 'armor' },
-      { id: 'full_plate', name: 'Full plate', points: 0, group: 'armor' },
+      { id: 'shield', name: 'Shield', points: 0, category:'armour' },
+      { id: 'light_armor', name: 'Light armour', points: 0, group: 'armour', category:'armour' },
+      { id: 'heavy_armor', name: 'Heavy armour', points: 0, group: 'armour', category:'armour' },
+      { id: 'full_plate', name: 'Full plate', points: 0, group: 'armour', category:'armour' },
 
-      { id: 'flail', name: 'Flail', points: 0, group: 'weapon'},
-      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
-      { id: 'spear', name: 'Spear', points: 0, group: 'weapon' },
-      { id: 'halberd', name: 'Halberd', points: 0, group: 'weapon' },
-      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon' },
-      { id: 'lance', name: 'Lance', points: 0, group: 'weapon' },
+      { id: 'flail', name: 'Flail', points: 0, group: 'weapon', category:'weapon'},
+      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon', category:'weapon'},
+      { id: 'spear', name: 'Spear', points: 0, group: 'weapon', category:'weapon' },
+      { id: 'halberd', name: 'Halberd', points: 0, group: 'weapon', category:'weapon' },
+      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon', category:'weapon' },
+      { id: 'lance', name: 'Lance', points: 0, group: 'weapon', category:'weapon' },
 
       
-      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon' },
-      { id: 'long_bow', name: 'Long Bow', points: 10, group: 'ranged_weapon' },
-      { id: 'crossbow', name: 'Crossbow', points: 10, group: 'ranged_weapon' },
-      { id: 'handgun', name: 'Handgun', points: 10, group: 'ranged_weapon' },
-      { id: 'pistol', name: 'Pistol', points: 10, group: 'ranged_weapon' },
-      { id: 'two_pistol', name: 'Two Pistols', points: 10, group: 'ranged_weapon' },
+      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon', category:'ranged_weapon' },
+      { id: 'long_bow', name: 'Long Bow', points: 10, group: 'ranged_weapon', category:'ranged_weapon' },
+      { id: 'crossbow', name: 'Crossbow', points: 10, group: 'ranged_weapon', category:'ranged_weapon' },
+      { id: 'handgun', name: 'Handgun', points: 10, group: 'ranged_weapon', category:'ranged_weapon' },
+      { id: 'pistol', name: 'Pistol', points: 10, group: 'ranged_weapon', category:'ranged_weapon' },
+      { id: 'two_pistol', name: 'Two Pistols', points: 10, group: 'ranged_weapon', category:'ranged_weapon' },
     ]
   },
   {
@@ -60,10 +60,10 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: [],
     options: [
-      { id: 'warhorse', name: 'War Horse', points: 15, group: 'mount', optionProfile: { name: 'War Horse', stats: EMP_STATS.Warhorse } },
+      { id: 'warhorse', name: 'War Horse', points: 15, group: 'mount', optionProfile: [{ name: 'War Horse', stats: EMP_STATS.Warhorse }] },
       { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'] },
-      { id: 'pegasus', name: 'Pegasus', points: 50, group: 'mount', optionProfile: { name: 'Pegasus', stats: EMP_STATS.Pegasus } },
-      { id: 'griffon', name: 'Griffon', points: 170, group: 'mount', optionProfile: { name: 'Griffon', stats: EMP_STATS.Griffon } },
+      { id: 'pegasus', name: 'Pegasus', points: 50, group: 'mount', optionProfile: [{ name: 'Pegasus', stats: EMP_STATS.Pegasus }] },
+      { id: 'griffon', name: 'Griffon', points: 170, group: 'mount', optionProfile: [{ name: 'Griffon', stats: EMP_STATS.Griffon }] },
 
       { id: 'shield', name: 'Shield', points: 0 },
       { id: 'light_armor', name: 'Light armor', points: 0, group: 'armor' },
@@ -105,7 +105,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: [],
     options: [
-      { id: 'warhorse', name: 'War Horse', points: 10, group: 'mount', optionProfile: { name: 'War Horse', stats: EMP_STATS.Warhorse } },
+      { id: 'warhorse', name: 'War Horse', points: 10, group: 'mount', optionProfile: [{ name: 'War Horse', stats: EMP_STATS.Warhorse }] },
       { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'] },
 
       { id: 'light_armor', name: 'Light armor', points: 0, group: 'armor' },
@@ -129,9 +129,9 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Religious Fervor'],
     options: [
-      { id: 'warhorse', name: 'War Horse', points: 10, group: 'mount', optionProfile: { name: 'War Horse', stats: EMP_STATS.Warhorse } },
+      { id: 'warhorse', name: 'War Horse', points: 10, group: 'mount', optionProfile: [{ name: 'War Horse', stats: EMP_STATS.Warhorse }] },
       { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'] },      
-      { id: 'chariot', name: 'LargeChariot', points: 80, group: 'mount', optionProfile: { name: 'War Horse', stats: EMP_STATS.Warhorse } },
+      { id: 'chariot', name: 'LargeChariot', points: 80, group: 'mount', optionProfile: [{ name: 'War Horse', stats: EMP_STATS.Warhorse }] },
 
       { id: 'light_armor', name: 'Light armor', points: 0, group: 'armor' },
       { id: 'heavy_armor', name: 'Heavy armor', points: 0, group: 'armor' },
@@ -159,10 +159,10 @@ export const characters: UnitDefinition[] = [
     options: [
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college' },
 
-      { id: 'warhorse', name: 'War Horse', points: 0, group: 'mount', optionProfile: { name: 'War Horse', stats: EMP_STATS.Warhorse } },
+      { id: 'warhorse', name: 'War Horse', points: 0, group: 'mount', optionProfile: [{ name: 'War Horse', stats: EMP_STATS.Warhorse } ]},
       { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'] },
-      { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: { name: 'Pegasus', stats: EMP_STATS.Pegasus } },
-      { id: 'griffon', name: 'Griffon', points: 160, group: 'mount', optionProfile: { name: 'Griffon', stats: EMP_STATS.Griffon } },
+      { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: [{ name: 'Pegasus', stats: EMP_STATS.Pegasus }] },
+      { id: 'griffon', name: 'Griffon', points: 160, group: 'mount', optionProfile: [{ name: 'Griffon', stats: EMP_STATS.Griffon }] },
     ]
   },
   {
@@ -183,9 +183,9 @@ export const characters: UnitDefinition[] = [
     options: [
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college' },
 
-      { id: 'warhorse', name: 'War Horse', points: 0, group: 'mount', optionProfile: { name: 'War Horse', stats: EMP_STATS.Warhorse } },
+      { id: 'warhorse', name: 'War Horse', points: 0, group: 'mount', optionProfile: [{ name: 'War Horse', stats: EMP_STATS.Warhorse }] },
       { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'] },
-      { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: { name: 'Pegasus', stats: EMP_STATS.Pegasus } },
+      { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: [{ name: 'Pegasus', stats: EMP_STATS.Pegasus }] },
     ]
   },
   {
@@ -206,9 +206,9 @@ export const characters: UnitDefinition[] = [
     options: [
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college' },
 
-      { id: 'warhorse', name: 'War Horse', points: 0, group: 'mount', optionProfile: { name: 'War Horse', stats: EMP_STATS.Warhorse } },
+      { id: 'warhorse', name: 'War Horse', points: 0, group: 'mount', optionProfile: [{ name: 'War Horse', stats: EMP_STATS.Warhorse }] },
       { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'] },
-      { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: { name: 'Pegasus', stats: EMP_STATS.Pegasus } },
+      { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: [{ name: 'Pegasus', stats: EMP_STATS.Pegasus }] },
     ]
   },
   {
@@ -229,9 +229,9 @@ export const characters: UnitDefinition[] = [
     options: [
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college' },
 
-      { id: 'warhorse', name: 'War Horse', points: 0, group: 'mount', optionProfile: { name: 'War Horse', stats: EMP_STATS.Warhorse } },
+      { id: 'warhorse', name: 'War Horse', points: 0, group: 'mount', optionProfile: [{ name: 'War Horse', stats: EMP_STATS.Warhorse }] },
       { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'] },
-      { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: { name: 'Pegasus', stats: EMP_STATS.Pegasus } },
+      { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: [{ name: 'Pegasus', stats: EMP_STATS.Pegasus }] },
     ]
   },
 

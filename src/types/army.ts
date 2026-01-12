@@ -2,6 +2,7 @@ import {MagicAllowance} from '@/types/magicItems';
 
 export type StatValue = number | string;
 export type UnitRole = 'character' | 'regiments' | 'chariots' |'warmachines' | 'monsters' | 'auxiliary';
+export type OptionCategory = 'mount' | 'weapon' | 'ranged_weapon' | 'armour' | 'command' | 'magic' | 'other';
 
 export interface Restrictions{
   maxPerArmy?: number;
@@ -46,6 +47,7 @@ export type UnitOption = {
   name: string;
   points: number;
   description?: string;
+  category?: OptionCategory;
   maxPerUnit?: number;
   maxPerModel?: number;
   ratioError?: string;
@@ -54,12 +56,13 @@ export type UnitOption = {
   conflicts?: string[];
   isFixedCost?: boolean;
   replaces?: string;
-  optionProfile?: SubProfile;
+  optionProfile?: SubProfile[];
   requires?: string[];
   isExternalPoints?: boolean;
   isExtraCrew?: boolean;
   perCrew?: boolean;
   magicAllowance?: MagicAllowance;
+  isMount?:boolean;
 };
 
 export interface UnitDefinition {
