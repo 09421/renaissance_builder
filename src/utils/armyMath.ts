@@ -6,7 +6,7 @@ export const calculateUnitCost = (unit: ArmyUnit, definition: UnitDefinition, fa
   let totalCrew = definition.baseCrew || 0;
 
   definition.options.forEach(opt => {
-    if (opt.isExtraCrew) {
+    if (opt.addsCrew) {
       const count = unit.selectedOptions[opt.id] || 0;
       totalCrew += count;
     }
