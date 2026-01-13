@@ -161,6 +161,7 @@ export const characters: UnitDefinition[] = [
     modelName: 'Bsb',
     role: 'character',
     type: 'infantry',
+    tags:['banner', 'bsb'],
     minSize: 1,
     maxSize: 1,
     restrictions:{

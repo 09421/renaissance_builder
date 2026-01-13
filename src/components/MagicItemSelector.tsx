@@ -65,6 +65,10 @@ export const MagicItemSelector = ({ unit, definition, faction }: Props) => {
     return isSelected && isMountType;
   });
 
+  const isWizard = definition.tags?.some(tag =>
+    ['wizard', 'mage', 'shaman', 'necromancer'].includes(tag)
+  ) || definition.specialRules?.includes('Wizard');
+
   // --- FILTERING FOR DISPLAY ---
   // 1. Filter by Source Tab
   const sourceList = activeSource === 'faction' ? factionItems : commonItems;
@@ -117,12 +121,12 @@ export const MagicItemSelector = ({ unit, definition, faction }: Props) => {
         {['weapon', 'armour', 'enchanted', 'arcane', 'familiar', 'banner'].map(cat => {
           if (validCategories && !validCategories.includes(cat as string)) return null;
 
-          // Calculate if we have selected items in this category (for dot indicator)
+          if ((cat === 'arcane' || cat === 'familiar') && !isWizard) return null;
+          if (cat === 'banner' && !definition.tags?.some(o => o === 'banner')) return null;
           const hasSelection = selectedMagicItems.some(([id]) => {
             const i = allItems.find(x => x.id === id);
             return i?.type === cat;
           });
-
           return (
             <button
               key={cat}
