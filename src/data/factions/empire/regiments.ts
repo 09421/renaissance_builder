@@ -270,9 +270,11 @@ export const regiments: UnitDefinition[] = [
     pointsPerModel: 20,
     stats: EMP_STATS.knight,
     restrictions: {
-      uniqueGroup: 'knightly_order',
-      uniqueType: 'teutogen_wolves',
-      uniqueGroupLogic: 'knightly_order'
+      sharedSelection: {
+        group: 'knightly_order',
+        type: 'teutogen_wolves',
+        mode: 'exclusive_subtypes'
+      }
     },
     additionalProfiles: [
       {
@@ -304,8 +306,11 @@ export const regiments: UnitDefinition[] = [
     pointsPerModel: 25,
     stats: EMP_STATS.knight,
     restrictions: {
-      uniqueGroup: 'knightly_order',
-      uniqueGroupLogic: 'knightly_order'
+      sharedSelection: {
+        group: 'knightly_order',
+        type: 'panthers',
+        mode: 'exclusive_subtypes'
+      }
     },
     additionalProfiles: [
       {
@@ -337,8 +342,11 @@ export const regiments: UnitDefinition[] = [
     pointsPerModel: 25,
     stats: EMP_STATS.knight,
     restrictions: {
-      uniqueGroup: 'knightly_order',
-      uniqueGroupLogic: 'knightly_order'
+      sharedSelection: {
+        group: 'knightly_order',
+        type: 'blazing_sun',
+        mode: 'exclusive_subtypes'
+      }
     },
     additionalProfiles: [
       {
@@ -370,9 +378,11 @@ export const regiments: UnitDefinition[] = [
     pointsPerModel: 13,
     stats: EMP_STATS.knight,
     restrictions: {
-      uniqueGroup: 'knightly_order',
-      uniqueType: 'teutogen_wolves',
-      uniqueGroupLogic: 'knightly_order'
+      sharedSelection: {
+        group: 'knightly_order',
+        type: 'teutogen_wolves',
+        mode: 'exclusive_subtypes'
+      }
     },
     equipment: ['Hand Weapon', 'Double handed weapons', 'Full plate'],
     specialRules: [],
@@ -398,9 +408,11 @@ export const regiments: UnitDefinition[] = [
     pointsPerModel: 11,
     stats: EMP_STATS.knight,
     restrictions: {
-      uniqueGroup: 'knightly_order',
-      uniqueType: 'reiksguard',
-      uniqueGroupLogic: 'knightly_order'
+      sharedSelection: {
+        group: 'knightly_order',
+        type: 'reiksguard',
+        mode: 'exclusive_subtypes'
+      }
     },
     equipment: ['Hand Weapon', 'Full plate', 'shield'],
     specialRules: [],
@@ -427,9 +439,11 @@ export const regiments: UnitDefinition[] = [
     pointsPerModel: 25,
     stats: EMP_STATS.knight,
     restrictions: {
-      uniqueGroup: 'knightly_order',
-      uniqueType: 'reiksguard',
-      uniqueGroupLogic: 'knightly_order'
+      sharedSelection: {
+        group: 'knightly_order',
+        type: 'reiksguard',
+        mode: 'exclusive_subtypes'
+      }
     },
     additionalProfiles: [
       {

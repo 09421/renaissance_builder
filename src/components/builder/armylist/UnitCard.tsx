@@ -3,6 +3,7 @@ import { getUnitDef, getMagicItemDef } from '@/utils/getFactionData';
 import { calculateUnitCost } from '@/utils/armyMath';
 import { StatRow } from './StatRow';
 import React from 'react';
+import { getModelDisplayString } from './utils';
 
 interface UnitCardProps {
   unit: ArmyUnit;
@@ -18,24 +19,34 @@ export const UnitCard = ({ unit, faction, isSelected, onSelect, onRemove }: Unit
 
   const points = calculateUnitCost(unit, def, faction);
 
-  let modelDisplayString = `${unit.modelCount} Models`;
-  if (def.baseCrew) {
-    const extraCrew = def.options
-      .filter(o => o.isExtraCrew)
-      .reduce((sum, o) => sum + (unit.selectedOptions[o.id] || 0), 0);
+  // let modelDisplayString = `${unit.modelCount} Models`;
 
-    const totalCrew = def.baseCrew + extraCrew;
-    modelDisplayString = `${unit.modelCount} Machine, ${totalCrew} Crew`;
+  
+  // if (def.baseCrew) {
+  //   const extraCrew = def.options
+  //     .filter(o => o.isExtraCrew)
+  //     .reduce((sum, o) => sum + (unit.selectedOptions[o.id] || 0), 0);
 
-  } else {
-    const extraModels = def.options
-      .filter(o => o.maxPerModel)
-      .reduce((sum, o) => sum + (unit.selectedOptions[o.id] || 0), 0);
+  //   const totalCrew = def.baseCrew + extraCrew;
+  //   modelDisplayString = `${unit.modelCount} Machine, ${totalCrew} Crew`;
 
-    if (extraModels > 0) {
-      modelDisplayString = `${unit.modelCount + extraModels} Models`;
-    }
-  }
+  //   if (def.baseMounts) {
+  //     const extraMount = def.options
+  //       .filter(o => o.isExtraMount)
+  //       .reduce((sum, o) => sum + (unit.selectedOptions[o.id] || 0), 0);
+  //     const totalMonts = def.baseMounts + extraMount;
+  //     modelDisplayString += `, ${totalMonts} Mounts`
+  //   }
+  // } 
+  // else {
+  //   const extraModels = def.options
+  //     .filter(o => o.maxPerModel)
+  //     .reduce((sum, o) => sum + (unit.selectedOptions[o.id] || 0), 0);
+
+  //   if (extraModels > 0) {
+  //     modelDisplayString = `${unit.modelCount + extraModels} Models`;
+  //   }
+  // }
 
   const selectedOptions = def.options.filter(o => (unit.selectedOptions[o.id] || 0) > 0);
 
@@ -77,7 +88,7 @@ export const UnitCard = ({ unit, faction, isSelected, onSelect, onRemove }: Unit
         <h3 className="font-bold text-lg text-slate-100">{unit.name}</h3>
         <div className="flex items-center gap-4">
           <div className="text-sm text-amber-500 font-mono font-bold">
-            {modelDisplayString} • {points} pts
+            {getModelDisplayString(unit, def)} • {points} pts
           </div>
           <button
             onClick={(e) => { e.stopPropagation(); onRemove(); }}
@@ -108,15 +119,15 @@ export const UnitCard = ({ unit, faction, isSelected, onSelect, onRemove }: Unit
           <div key={i} className="contents bg-slate-900/40">
             <StatRow label={p.name} stats={p.stats} />
           </div>
-        ))}        
+        ))}
 
         {optionProfiles.map(opt => (
           <React.Fragment key={opt.id}>
             {opt.optionProfile?.map((profile, index) => (
               <div key={`${opt.id}-${index}`} className="contents bg-slate-900/40">
-                <StatRow 
-                  label={profile.name} 
-                  stats={profile.stats} 
+                <StatRow
+                  label={profile.name}
+                  stats={profile.stats}
                 />
               </div>
             ))}

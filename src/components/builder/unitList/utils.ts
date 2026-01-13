@@ -39,53 +39,45 @@ export const checkUnitRestrictions = (
     }
   }
 
-// 3. Exclusive Groups
-  if (restrictions?.uniqueGroup) {
-    const groupName = restrictions.uniqueGroup;
-    const myType = restrictions.uniqueType || id;
 
-    // A. Get all units in this group from the roster
+  if (restrictions?.sharedSelection) {
+    const { group, max, type, mode } = restrictions.sharedSelection;
+    const myType = type || id; 
+
+
     const groupUnits = roster.filter(u => {
       const def = getUnitDef(faction, u.defId);
-      return def?.restrictions?.uniqueGroup === groupName;
+      return def?.restrictions?.sharedSelection?.group === group;
     });
 
-    // --- NEW: GENERIC GROUP CAP (Steam Tank Logic) ---
-    // This checks: "Do we have 8 tanks already?"
-    if (restrictions.uniqueGroupMax) {
-      if (groupUnits.length >= restrictions.uniqueGroupMax) {
-        return { allowed: false, reason: `Max ${restrictions.uniqueGroupMax} per army` };
-      }
+
+    if (max && groupUnits.length >= max) {
+      return { allowed: false, reason: `Max ${max} per army` };
     }
 
-    // --- CONDITIONAL: KNIGHTLY ORDER LOGIC ---
-    // Only run the complex "mixing penalty" logic if the unit asks for it
-    if (restrictions.uniqueGroupLogic === 'knightly_order') {
-      
+    if (mode === 'exclusive_subtypes') {      
       const typeCounts: Record<string, number> = {};
-      
       groupUnits.forEach(u => {
         const def = getUnitDef(faction, u.defId);
-        const uType = def?.restrictions?.uniqueType || def?.id || 'unknown';
+        const sel = def?.restrictions?.sharedSelection;
+        const uType = sel?.type || def?.id || 'unknown';
         typeCounts[uType] = (typeCounts[uType] || 0) + 1;
       });
 
-      // Check 1: Locked by others
-      const isLockedByOthers = Object.entries(typeCounts).some(([type, count]) => {
-        return type !== myType && count > 1;
+      const isLockedByOthers = Object.entries(typeCounts).some(([t, count]) => {
+        return t !== myType && count > 1;
       });
 
       if (isLockedByOthers) {
-        return { allowed: false, reason: 'Order locked by duplicates' };
+        return { allowed: false, reason: 'Locked by another Order' };
       }
 
-      // Check 2: Mixing limit
-      const hasMixedTypes = Object.keys(typeCounts).some(type => type !== myType);
-
-      if (hasMixedTypes) {
-        const myCurrentCount = typeCounts[myType] || 0;
-        if (myCurrentCount >= 1) {
-          return { allowed: false, reason: 'Limit 1 if mixing Orders' };
+      const hasOtherTypes = Object.keys(typeCounts).some(t => t !== myType);
+      
+      if (hasOtherTypes) {
+        const myCount = typeCounts[myType] || 0;
+        if (myCount >= 1) {
+          return { allowed: false, reason: 'Limit 1 if mixing types' };
         }
       }
     }

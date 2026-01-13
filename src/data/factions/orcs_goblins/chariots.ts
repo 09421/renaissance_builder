@@ -13,6 +13,7 @@ export const chariots: UnitDefinition[] = [
     pointsPerModel: 44,
     stats: OG_STATS.lightChariot,
     baseCrew: 2,
+    baseMounts:2,
     additionalProfiles: [
       {
         name: 'Goblin',
@@ -33,13 +34,13 @@ export const chariots: UnitDefinition[] = [
         points: 6,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
       },
       { 
         id: 'extra_crew_champ', 
         name: 'Goblin Champion', 
         points: 9,
-        maxPerUnit: 1,
+        isFixedCost:true,
         requires: ['additional_goblin_crew'],
         stats:OG_STATS.goblinChampion
       },
@@ -48,6 +49,7 @@ export const chariots: UnitDefinition[] = [
         name: 'additional Wolf',
         points: 8,
         maxPerUnit: 2,
+        addsMounts:1,
         isFixedCost: true,
       }
     ]
@@ -63,6 +65,7 @@ export const chariots: UnitDefinition[] = [
     pointsPerModel: 52,
     stats: OG_STATS.heavyChariot,
     baseCrew: 2,
+    baseMounts:2,
     additionalProfiles: [
       {
         name: 'Orc',
@@ -83,13 +86,13 @@ export const chariots: UnitDefinition[] = [
         points: 8,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
       },
       { 
         id: 'extra_crew_champ', 
         name: 'Orc Champion', 
         points: 22,
-        maxPerUnit: 1,
+        isFixedCost:true,
         requires: ['additional_orc_crew'],
         stats:OG_STATS.commonOrcChampion
       },
@@ -97,6 +100,7 @@ export const chariots: UnitDefinition[] = [
         id: 'additional_boar',
         name: 'additional Boar',
         points: 5,
+        addsMounts:1,
         maxPerUnit: 2,
         isFixedCost: true,
       }

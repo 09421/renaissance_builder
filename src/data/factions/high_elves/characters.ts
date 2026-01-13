@@ -21,7 +21,7 @@ export const characters: UnitDefinition[] = [
       { id: 'steed', name: 'Elven Steed', points: 27, group: 'mount', optionProfile: [{ name: 'Elven Steed', stats: HE_STATS.elvenSteed }], category:'mount', isFixedCost:true },
       { id: 'barding', name: 'Barding', points: 0, requires: ['steed'], category:'mount', isFixedCost:true },
 
-      { id: 'Tiranoc_chariot', name: 'Tiranoc Chariot', points: 60, group: 'mount', isFixedCost:true, 
+      { id: 'Tiranoc_chariot', name: 'Tiranoc Chariot', points: 60, group: 'mount', isFixedCost:true, addsCrew:2, addsMounts:2,
         optionProfile: [{name:'Warrior', stats: HE_STATS.elvenWarrior},{ name: 'Elven Steed', stats: HE_STATS.elvenSteed },{ name: 'Heavy chariot', stats: HE_STATS.heavyChariot }], category:'mount', },
       { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires:['Tiranoc_chariot'] },
       {
@@ -29,7 +29,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Crew',
         points: 10,
         maxPerUnit: 1,
-        isExtraCrew: true,
+        addsCrew:1,
         requires:['Tiranoc_chariot'],
       },
       { id: 'crew_halberds', name: 'Halberds', points: 0, isFixedCost: true, requires:['Tiranoc_chariot'] },
@@ -39,11 +39,12 @@ export const characters: UnitDefinition[] = [
         points: 5,
         maxPerUnit: 2,
         isFixedCost: true,
+        addsMounts:1,
         requires:['Tiranoc_chariot'],
         conflicts:['lion_mounts']
       },
 
-      { id: 'whitelion_chariot', name: 'White Lion Chariot', points: 80, group: 'mount', isFixedCost:true, 
+      { id: 'whitelion_chariot', name: 'White Lion Chariot', points: 80, group: 'mount', isFixedCost:true, addsCrew:2, addsMounts:2,
         optionProfile: [{name:'Warrior', stats: HE_STATS.elvenWarrior},{ name: 'White lion', stats: HE_STATS.whiteLion },{ name: 'Heavy chariot', stats: HE_STATS.heavyChariot }], category:'mount', },
       { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires:['whitelion_chariot'] },
       {
@@ -51,12 +52,12 @@ export const characters: UnitDefinition[] = [
         name: 'additional Crew',
         points: 10,
         maxPerUnit: 1,
-        isExtraCrew: true,
+        addsCrew:1,
         requires:['whitelion_chariot'],
       },
       { id: 'crew_halberds', name: 'Halberds', points: 0, isFixedCost: true, requires:['whitelion_chariot'] },
       { id: 'lion_barding', name: 'White Lions Barding', points: 5, isFixedCost: true, requires:['whitelion_chariot'] },
-      { id: 'additional_lion_mounts', name: 'additional White Lions', points: 17, isFixedCost: true,maxPerUnit: 2, requires:['whitelion_chariot'] },
+      { id: 'additional_lion_mounts', name: 'additional White Lions', points: 17, addsMounts:1, isFixedCost: true,maxPerUnit: 2, requires:['whitelion_chariot'] },
 
       { id: 'pegasus', name: 'Pegasus', points: 61, group: 'mount', optionProfile: [{ name: 'Pegasus', stats: HE_STATS.pegasus }], category:'mount', isFixedCost:true },
       { id: 'great_eagle', name: 'Great Eagle', points: 69, group: 'mount', optionProfile: [{ name: 'Great Eagle', stats: HE_STATS.greatEagle }], category:'mount', isFixedCost:true },
@@ -97,7 +98,7 @@ export const characters: UnitDefinition[] = [
     options: [
       { id: 'steed', name: 'Elven Steed', points: 20, group: 'mount', optionProfile: [{ name: 'Elven Steed', stats: HE_STATS.elvenSteed }], category:'mount' },
       { id: 'barding', name: 'Barding', points: 0, requires: ['steed'], category:'mount' },
-      { id: 'Tiranoc_chariot', name: 'Tiranoc Chariot', points: 60, group: 'mount', isFixedCost:true, 
+      { id: 'Tiranoc_chariot', name: 'Tiranoc Chariot', points: 60, group: 'mount', isFixedCost:true, addsCrew:2, addsMounts:2,
         optionProfile: [{name:'Warrior', stats: HE_STATS.elvenWarrior},{ name: 'Elven Steed', stats: HE_STATS.elvenSteed },{ name: 'Heavy chariot', stats: HE_STATS.heavyChariot }], category:'mount', },
       { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires:['Tiranoc_chariot'] },
       {
@@ -105,7 +106,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Crew',
         points: 10,
         maxPerUnit: 1,
-        isExtraCrew: true,
+        addsCrew:1,
         requires:['Tiranoc_chariot'],
       },
       { id: 'crew_halberds', name: 'Halberds', points: 0, isFixedCost: true, requires:['Tiranoc_chariot'] },
@@ -115,11 +116,12 @@ export const characters: UnitDefinition[] = [
         points: 5,
         maxPerUnit: 2,
         isFixedCost: true,
+        addsMounts:1,
         requires:['Tiranoc_chariot'],
-        conflicts:['lion_mounts']
+        conflicts:['lion_mounts'],
       },
 
-      { id: 'whitelion_chariot', name: 'White Lion Chariot', points: 80, group: 'mount', isFixedCost:true, 
+      { id: 'whitelion_chariot', name: 'White Lion Chariot', points: 80, group: 'mount', isFixedCost:true, addsCrew:2, addsMounts:2,
         optionProfile: [{name:'Warrior', stats: HE_STATS.elvenWarrior},{ name: 'White lion', stats: HE_STATS.whiteLion },{ name: 'Heavy chariot', stats: HE_STATS.heavyChariot }], category:'mount', },
       { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires:['whitelion_chariot'] },
       {
@@ -127,12 +129,12 @@ export const characters: UnitDefinition[] = [
         name: 'additional Crew',
         points: 10,
         maxPerUnit: 1,
-        isExtraCrew: true,
+        addsCrew:1,
         requires:['whitelion_chariot'],
       },
       { id: 'crew_halberds', name: 'Halberds', points: 0, isFixedCost: true, requires:['whitelion_chariot'] },
       { id: 'lion_barding', name: 'White Lions Barding', points: 5, isFixedCost: true, requires:['whitelion_chariot'] },
-      { id: 'additional_lion_mounts', name: 'additional White Lions', points: 17, isFixedCost: true,maxPerUnit: 2, requires:['whitelion_chariot'] },
+      { id: 'additional_lion_mounts', name: 'additional White Lions', points: 17, isFixedCost: true, addsMounts:1, maxPerUnit: 2, requires:['whitelion_chariot'] },
       { id: 'pegasus', name: 'Pegasus', points: 54, group: 'mount', optionProfile: [{ name: 'Pegasus', stats: HE_STATS.pegasus }], category:'mount' },
       { id: 'great_eagle', name: 'Great Eagle', points: 62, group: 'mount', optionProfile: [{ name: 'Great Eagle', stats: HE_STATS.greatEagle }], category:'mount' },
       { id: 'griffon', name: 'Griffon', points: 174, group: 'mount', optionProfile: [{ name: 'Griffon', stats: HE_STATS.griffon }], category:'mount' },
@@ -173,7 +175,7 @@ export const characters: UnitDefinition[] = [
     options: [
       { id: 'steed', name: 'Elven Steed', points: 13, group: 'mount', optionProfile: [{ name: 'Elven Steed', stats: HE_STATS.elvenSteed }], category:'mount' },
       { id: 'barding', name: 'Barding', points: 0, requires: ['steed'], category:'mount' },
-      { id: 'Tiranoc_chariot', name: 'Tiranoc Chariot', points: 60, group: 'mount', isFixedCost:true, 
+      { id: 'Tiranoc_chariot', name: 'Tiranoc Chariot', points: 60, group: 'mount', isFixedCost:true, addsCrew:2, addsMounts:2,
         optionProfile: [{name:'Warrior', stats: HE_STATS.elvenWarrior},{ name: 'Elven Steed', stats: HE_STATS.elvenSteed },{ name: 'Heavy chariot', stats: HE_STATS.heavyChariot }], category:'mount', },
       { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires:['Tiranoc_chariot'] },
       {
@@ -181,7 +183,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Crew',
         points: 10,
         maxPerUnit: 1,
-        isExtraCrew: true,
+        addsCrew:1,
         requires:['Tiranoc_chariot'],
       },
       { id: 'crew_halberds', name: 'Halberds', points: 0, isFixedCost: true, requires:['Tiranoc_chariot'] },
@@ -192,10 +194,11 @@ export const characters: UnitDefinition[] = [
         maxPerUnit: 2,
         isFixedCost: true,
         requires:['Tiranoc_chariot'],
-        conflicts:['lion_mounts']
+        conflicts:['lion_mounts'], 
+        addsMounts:1
       },
 
-      { id: 'whitelion_chariot', name: 'White Lion Chariot', points: 80, group: 'mount', isFixedCost:true, 
+      { id: 'whitelion_chariot', name: 'White Lion Chariot', points: 80, group: 'mount', isFixedCost:true, addsCrew:2, addsMounts:2,
         optionProfile: [{name:'Warrior', stats: HE_STATS.elvenWarrior},{ name: 'White lion', stats: HE_STATS.whiteLion },{ name: 'Heavy chariot', stats: HE_STATS.heavyChariot }], category:'mount', },
       { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires:['whitelion_chariot'] },
       {
@@ -203,12 +206,12 @@ export const characters: UnitDefinition[] = [
         name: 'additional Crew',
         points: 10,
         maxPerUnit: 1,
-        isExtraCrew: true,
+        addsCrew:1,
         requires:['whitelion_chariot'],
       },
       { id: 'crew_halberds', name: 'Halberds', points: 0, isFixedCost: true, requires:['whitelion_chariot'] },
       { id: 'lion_barding', name: 'White Lions Barding', points: 5, isFixedCost: true, requires:['whitelion_chariot'] },
-      { id: 'additional_lion_mounts', name: 'additional White Lions', points: 17, isFixedCost: true,maxPerUnit: 2, requires:['whitelion_chariot'] },
+      { id: 'additional_lion_mounts', name: 'additional White Lions', points: 17, isFixedCost: true, addsMounts:1, maxPerUnit: 2, requires:['whitelion_chariot'] },
       
       { id: 'light_armor', name: 'Light armour', points: 0, group: 'armour', category:'armour' },
       { id: 'dragon_armor', name: 'Dragon armour', points: 0, group: 'armour', category:'armour' },
@@ -235,7 +238,7 @@ export const characters: UnitDefinition[] = [
 
       { id: 'steed', name: 'Elven Steed', points: 0, group: 'mount', optionProfile: [{ name: 'Elven Steed', stats: HE_STATS.elvenSteed }], category:'mount' },
       { id: 'barding', name: 'Barding', points: 0, requires: ['steed'], category:'mount' },
-      { id: 'Tiranoc_chariot', name: 'Tiranoc Chariot', points: 60, group: 'mount', isFixedCost:true, 
+      { id: 'Tiranoc_chariot', name: 'Tiranoc Chariot', points: 60, group: 'mount', isFixedCost:true, addsCrew:2, addsMounts:2,
         optionProfile: [{name:'Warrior', stats: HE_STATS.elvenWarrior},{ name: 'Elven Steed', stats: HE_STATS.elvenSteed },{ name: 'Heavy chariot', stats: HE_STATS.heavyChariot }], category:'mount', },
       { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires:['Tiranoc_chariot'] },
       {
@@ -243,7 +246,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Crew',
         points: 10,
         maxPerUnit: 1,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['Tiranoc_chariot'],
       },
       { id: 'crew_halberds', name: 'Halberds', points: 0, isFixedCost: true, requires:['Tiranoc_chariot'] },
@@ -253,11 +256,12 @@ export const characters: UnitDefinition[] = [
         points: 5,
         maxPerUnit: 2,
         isFixedCost: true,
+        addsMounts:1,
         requires:['Tiranoc_chariot'],
         conflicts:['lion_mounts']
       },
 
-      { id: 'whitelion_chariot', name: 'White Lion Chariot', points: 80, group: 'mount', isFixedCost:true, 
+      { id: 'whitelion_chariot', name: 'White Lion Chariot', points: 80, group: 'mount', isFixedCost:true, addsCrew:2, addsMounts:2,
         optionProfile: [{name:'Warrior', stats: HE_STATS.elvenWarrior},{ name: 'White lion', stats: HE_STATS.whiteLion },{ name: 'Heavy chariot', stats: HE_STATS.heavyChariot }], category:'mount', },
       { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires:['whitelion_chariot'] },
       {
@@ -265,12 +269,12 @@ export const characters: UnitDefinition[] = [
         name: 'additional Crew',
         points: 10,
         maxPerUnit: 1,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['whitelion_chariot'],
       },
       { id: 'crew_halberds', name: 'Halberds', points: 0, isFixedCost: true, requires:['whitelion_chariot'] },
       { id: 'lion_barding', name: 'White Lions Barding', points: 5, isFixedCost: true, requires:['whitelion_chariot'] },
-      { id: 'additional_lion_mounts', name: 'additional White Lions', points: 17, isFixedCost: true,maxPerUnit: 2, requires:['whitelion_chariot'] },
+      { id: 'additional_lion_mounts', name: 'additional White Lions', points: 17, isFixedCost: true, addsMounts:1, maxPerUnit: 2, requires:['whitelion_chariot'] },
       { id: 'unicorn', name: 'Unicorn', points: 30, group: 'mount', optionProfile: [{ name: 'Unicorn', stats: HE_STATS.unicorn }], category:'mount' },
       { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: [{ name: 'Pegasus', stats: HE_STATS.pegasus }], category:'mount' },
       { id: 'great_eagle', name: 'Great Eagle', points: 48, group: 'mount', optionProfile: [{ name: 'Great Eagle', stats: HE_STATS.greatEagle }], category:'mount' },
@@ -300,7 +304,7 @@ export const characters: UnitDefinition[] = [
 
       { id: 'steed', name: 'Elven Steed', points: 0, group: 'mount', optionProfile: [{ name: 'Elven Steed', stats: HE_STATS.elvenSteed }], category:'mount' },
       { id: 'barding', name: 'Barding', points: 0, requires: ['steed'], category:'mount' },
-      { id: 'Tiranoc_chariot', name: 'Tiranoc Chariot', points: 60, group: 'mount', isFixedCost:true, 
+      { id: 'Tiranoc_chariot', name: 'Tiranoc Chariot', points: 60, group: 'mount', isFixedCost:true, addsCrew:2, addsMounts:2, 
         optionProfile: [{name:'Warrior', stats: HE_STATS.elvenWarrior},{ name: 'Elven Steed', stats: HE_STATS.elvenSteed },{ name: 'Heavy chariot', stats: HE_STATS.heavyChariot }], category:'mount', },
       { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires:['Tiranoc_chariot'] },
       {
@@ -308,7 +312,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Crew',
         points: 10,
         maxPerUnit: 1,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['Tiranoc_chariot'],
       },
       { id: 'crew_halberds', name: 'Halberds', points: 0, isFixedCost: true, requires:['Tiranoc_chariot'] },
@@ -319,10 +323,11 @@ export const characters: UnitDefinition[] = [
         maxPerUnit: 2,
         isFixedCost: true,
         requires:['Tiranoc_chariot'],
-        conflicts:['lion_mounts']
+        conflicts:['lion_mounts'], 
+        addsMounts:1
       },
 
-      { id: 'whitelion_chariot', name: 'White Lion Chariot', points: 80, group: 'mount', isFixedCost:true, 
+      { id: 'whitelion_chariot', name: 'White Lion Chariot', points: 80, group: 'mount', isFixedCost:true, addsCrew:2, addsMounts:2, 
         optionProfile: [{name:'Warrior', stats: HE_STATS.elvenWarrior},{ name: 'White lion', stats: HE_STATS.whiteLion },{ name: 'Heavy chariot', stats: HE_STATS.heavyChariot }], category:'mount', },
       { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires:['whitelion_chariot'] },
       {
@@ -330,12 +335,12 @@ export const characters: UnitDefinition[] = [
         name: 'additional Crew',
         points: 10,
         maxPerUnit: 1,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['whitelion_chariot'],
       },
       { id: 'crew_halberds', name: 'Halberds', points: 0, isFixedCost: true, requires:['whitelion_chariot'] },
       { id: 'lion_barding', name: 'White Lions Barding', points: 5, isFixedCost: true, requires:['whitelion_chariot'] },
-      { id: 'additional_lion_mounts', name: 'additional White Lions', points: 17, isFixedCost: true,maxPerUnit: 2, requires:['whitelion_chariot'] },
+      { id: 'additional_lion_mounts', name: 'additional White Lions', points: 17, isFixedCost: true, addsMounts:1, maxPerUnit: 2, requires:['whitelion_chariot'] },
       { id: 'unicorn', name: 'Unicorn', points: 30, group: 'mount', optionProfile: [{ name: 'Unicorn', stats: HE_STATS.unicorn }], category:'mount' },
       { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: [{ name: 'Pegasus', stats: HE_STATS.pegasus }], category:'mount' },
       { id: 'great_eagle', name: 'Great Eagle', points: 48, group: 'mount', optionProfile: [{ name: 'Great Eagle', stats: HE_STATS.greatEagle }], category:'mount' },
@@ -362,7 +367,7 @@ export const characters: UnitDefinition[] = [
 
       { id: 'steed', name: 'Elven Steed', points: 0, group: 'mount', optionProfile: [{ name: 'Elven Steed', stats: HE_STATS.elvenSteed }], category:'mount' },
       { id: 'barding', name: 'Barding', points: 0, requires: ['steed'], category:'mount' },
-      { id: 'Tiranoc_chariot', name: 'Tiranoc Chariot', points: 60, group: 'mount', isFixedCost:true, 
+      { id: 'Tiranoc_chariot', name: 'Tiranoc Chariot', points: 60, group: 'mount', isFixedCost:true, addsCrew:2, addsMounts:2,
         optionProfile: [{name:'Warrior', stats: HE_STATS.elvenWarrior},{ name: 'Elven Steed', stats: HE_STATS.elvenSteed },{ name: 'Heavy chariot', stats: HE_STATS.heavyChariot }], category:'mount', },
       { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires:['Tiranoc_chariot'] },
       {
@@ -370,7 +375,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Crew',
         points: 10,
         maxPerUnit: 1,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['Tiranoc_chariot'],
       },
       { id: 'crew_halberds', name: 'Halberds', points: 0, isFixedCost: true, requires:['Tiranoc_chariot'] },
@@ -381,10 +386,11 @@ export const characters: UnitDefinition[] = [
         maxPerUnit: 2,
         isFixedCost: true,
         requires:['Tiranoc_chariot'],
-        conflicts:['lion_mounts']
+        conflicts:['lion_mounts'],
+        addsMounts: 1
       },
 
-      { id: 'whitelion_chariot', name: 'White Lion Chariot', points: 80, group: 'mount', isFixedCost:true, 
+      { id: 'whitelion_chariot', name: 'White Lion Chariot', points: 80, group: 'mount', isFixedCost:true, addsCrew:2, addsMounts:2,
         optionProfile: [{name:'Warrior', stats: HE_STATS.elvenWarrior},{ name: 'White lion', stats: HE_STATS.whiteLion },{ name: 'Heavy chariot', stats: HE_STATS.heavyChariot }], category:'mount', },
       { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires:['whitelion_chariot'] },
       {
@@ -392,12 +398,12 @@ export const characters: UnitDefinition[] = [
         name: 'additional Crew',
         points: 10,
         maxPerUnit: 1,
-        isExtraCrew: true,
+        addsCrew:1,
         requires:['whitelion_chariot'],
       },
       { id: 'crew_halberds', name: 'Halberds', points: 0, isFixedCost: true, requires:['whitelion_chariot'] },
       { id: 'lion_barding', name: 'White Lions Barding', points: 5, isFixedCost: true, requires:['whitelion_chariot'] },
-      { id: 'additional_lion_mounts', name: 'additional White Lions', points: 17, isFixedCost: true,maxPerUnit: 2, requires:['whitelion_chariot'] },
+      { id: 'additional_lion_mounts', name: 'additional White Lions', points: 17, isFixedCost: true, addsMounts:1, maxPerUnit: 2, requires:['whitelion_chariot'] },
       { id: 'unicorn', name: 'Unicorn', points: 30, group: 'mount', optionProfile: [{ name: 'Unicorn', stats: HE_STATS.unicorn }], category:'mount' },
       { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: [{ name: 'Pegasus', stats: HE_STATS.pegasus }], category:'mount'},
       { id: 'great_eagle', name: 'Great Eagle', points: 48, group: 'mount', optionProfile: [{ name: 'Great Eagle', stats: HE_STATS.greatEagle }], category:'mount' },
@@ -424,7 +430,7 @@ export const characters: UnitDefinition[] = [
 
       { id: 'steed', name: 'Elven Steed', points: 0, group: 'mount', optionProfile: [{ name: 'Elven Steed', stats: HE_STATS.elvenSteed }], category:'mount' },
       { id: 'barding', name: 'Barding', points: 0, requires: ['steed'], category:'mount' },
-      { id: 'Tiranoc_chariot', name: 'Tiranoc Chariot', points: 60, group: 'mount', isFixedCost:true, 
+      { id: 'Tiranoc_chariot', name: 'Tiranoc Chariot', points: 60, group: 'mount', isFixedCost:true, addsCrew:2, addsMounts:2,
         optionProfile: [{name:'Warrior', stats: HE_STATS.elvenWarrior},{ name: 'Elven Steed', stats: HE_STATS.elvenSteed },{ name: 'Heavy chariot', stats: HE_STATS.heavyChariot }], category:'mount', },
       { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires:['Tiranoc_chariot'] },
       {
@@ -432,7 +438,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Crew',
         points: 10,
         maxPerUnit: 1,
-        isExtraCrew: true,
+        addsCrew:1,
         requires:['Tiranoc_chariot'],
       },
       { id: 'crew_halberds', name: 'Halberds', points: 0, isFixedCost: true, requires:['Tiranoc_chariot'] },
@@ -443,10 +449,11 @@ export const characters: UnitDefinition[] = [
         maxPerUnit: 2,
         isFixedCost: true,
         requires:['Tiranoc_chariot'],
-        conflicts:['lion_mounts']
+        conflicts:['lion_mounts'],
+        addsMounts:1
       },
 
-      { id: 'whitelion_chariot', name: 'White Lion Chariot', points: 80, group: 'mount', isFixedCost:true, 
+      { id: 'whitelion_chariot', name: 'White Lion Chariot', points: 80, group: 'mount', isFixedCost:true, addsCrew:2, addsMounts:2,
         optionProfile: [{name:'Warrior', stats: HE_STATS.elvenWarrior},{ name: 'White lion', stats: HE_STATS.whiteLion },{ name: 'Heavy chariot', stats: HE_STATS.heavyChariot }], category:'mount', },
       { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires:['whitelion_chariot'] },
       {
@@ -454,12 +461,12 @@ export const characters: UnitDefinition[] = [
         name: 'additional Crew',
         points: 10,
         maxPerUnit: 1,
-        isExtraCrew: true,
+        addsCrew:1,
         requires:['whitelion_chariot'],
       },
       { id: 'crew_halberds', name: 'Halberds', points: 0, isFixedCost: true, requires:['whitelion_chariot'] },
       { id: 'lion_barding', name: 'White Lions Barding', points: 5, isFixedCost: true, requires:['whitelion_chariot'] },
-      { id: 'additional_lion_mounts', name: 'additional White Lions', points: 17, isFixedCost: true,maxPerUnit: 2, requires:['whitelion_chariot'] },
+      { id: 'additional_lion_mounts', name: 'additional White Lions', points: 17, addsMounts:1,maxPerUnit: 2, requires:['whitelion_chariot'] },
       { id: 'unicorn', name: 'Unicorn', points: 30, group: 'mount', optionProfile: [{ name: 'Unicorn', stats: HE_STATS.unicorn }], category:'mount' },
       { id: 'pegasus', name: 'Pegasus', points: 40, group: 'mount', optionProfile: [{ name: 'Pegasus', stats: HE_STATS.pegasus }], category:'mount' },
       { id: 'great_eagle', name: 'Great Eagle', points: 48, group: 'mount', optionProfile: [{ name: 'Great Eagle', stats: HE_STATS.greatEagle }], category:'mount' },

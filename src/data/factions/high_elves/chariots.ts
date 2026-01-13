@@ -12,6 +12,7 @@ export const chariots: UnitDefinition[] = [
     maxSize: 1,
     pointsPerModel: 60,
     baseCrew: 2,
+    baseMounts:2,
     stats: HE_STATS.heavyChariot,
     additionalProfiles:[
       {
@@ -34,14 +35,14 @@ export const chariots: UnitDefinition[] = [
         points: 10,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
       },
       { 
         id: 'extra_crew_champ', 
         name: 'Champion', 
         points: 33,
-        maxPerUnit: 1,
         requires: ['additional_crew'],
+        isFixedCost:true,
         stats:HE_STATS.elvenWarrior
       },
       {
@@ -50,6 +51,7 @@ export const chariots: UnitDefinition[] = [
         points: 5,
         maxPerUnit: 2,
         isFixedCost: true,
+        addsMounts:1,
       }
     ]
   },
@@ -63,6 +65,7 @@ export const chariots: UnitDefinition[] = [
     maxSize: 1,
     pointsPerModel: 80,
     baseCrew: 2,
+    baseMounts:2,
     stats: HE_STATS.heavyChariot,
     restrictions:{ 
       requiresTag:'White Lions'
@@ -89,15 +92,15 @@ export const chariots: UnitDefinition[] = [
         points: 10,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
       },
       { 
         id: 'extra_crew_champ', 
         name: 'Champion', 
         points: 33,
-        maxPerUnit: 1,
         requires: ['additional_crew'],
-        stats:HE_STATS.elvenWarrior
+        stats:HE_STATS.elvenWarrior,
+        isFixedCost:true
       },
       {
         id: 'additional_steed',
@@ -105,6 +108,7 @@ export const chariots: UnitDefinition[] = [
         points: 17,
         maxPerUnit: 2,
         isFixedCost: true,
+        addsMounts:1,
       }
     ]
   },

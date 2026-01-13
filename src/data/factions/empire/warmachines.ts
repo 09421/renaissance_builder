@@ -28,7 +28,7 @@ export const warmachines: UnitDefinition[] = [
         points: 5,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
       }
     ]
   },
@@ -58,7 +58,7 @@ export const warmachines: UnitDefinition[] = [
         points: 5,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
       }
     ]
   },
@@ -88,7 +88,7 @@ export const warmachines: UnitDefinition[] = [
         points: 5,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
       }
     ]
   },
@@ -118,7 +118,7 @@ export const warmachines: UnitDefinition[] = [
         points: 5,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
       }
     ]
   },
@@ -178,7 +178,7 @@ export const warmachines: UnitDefinition[] = [
         points: 5,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
       }
     ]
   },
@@ -189,8 +189,10 @@ export const warmachines: UnitDefinition[] = [
     role: 'warmachines',
     type: 'War Machine',
     restrictions: {
-      uniqueGroupMax:8,
-      uniqueGroup:'steamTank'
+      sharedSelection: { 
+        group: 'steam_tank', 
+        max: 8 
+      }
     },
     minSize: 1,
     maxSize: 1,
@@ -219,8 +221,10 @@ export const warmachines: UnitDefinition[] = [
     role: 'warmachines',
     type: 'War Machine',
     restrictions: {
-      uniqueGroupMax:8,
-      uniqueGroup:'steamTank'
+      sharedSelection: { 
+        group: 'steam_tank', 
+        max: 8 
+      }
     },
     minSize: 1,
     maxSize: 1,

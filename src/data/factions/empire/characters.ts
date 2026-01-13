@@ -34,7 +34,6 @@ export const characters: UnitDefinition[] = [
       { id: 'halberd', name: 'Halberd', points: 0, group: 'weapon', category:'weapon' },
       { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon', category:'weapon' },
       { id: 'lance', name: 'Lance', points: 0, group: 'weapon', category:'weapon' },
-
       
       { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon', category:'ranged_weapon' },
       { id: 'long_bow', name: 'Long Bow', points: 10, group: 'ranged_weapon', category:'ranged_weapon' },

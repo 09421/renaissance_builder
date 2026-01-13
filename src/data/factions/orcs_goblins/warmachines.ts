@@ -29,7 +29,7 @@ export const warmachines: UnitDefinition[] = [
         points: 2.5,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
       }
     ]
   },
@@ -59,7 +59,7 @@ export const warmachines: UnitDefinition[] = [
         points: 5,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
       }
     ]
   },
@@ -89,7 +89,7 @@ export const warmachines: UnitDefinition[] = [
         points: 2.5,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
       }
     ]
   },
@@ -119,7 +119,7 @@ export const warmachines: UnitDefinition[] = [
         points: 2.5,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
       }
     ]
   },
@@ -149,7 +149,7 @@ export const warmachines: UnitDefinition[] = [
         points: 2.5,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
       }
     ]
   },
@@ -179,7 +179,7 @@ export const warmachines: UnitDefinition[] = [
         points: 2.5,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
       }
     ]
   },
@@ -201,6 +201,26 @@ export const warmachines: UnitDefinition[] = [
       }
     ],
     equipment: ['Hand Weapon', 'Doom Diver'],
+    specialRules: ['Animosity', 'Fear Elves'],
+    options: []
+  },
+  {
+    id: 'pump_wagon',
+    name: 'Snotling Pump Wagon',
+    modelName: 'Pump Wagon',
+    role: 'warmachines',
+    type: 'War Machine',
+    minSize: 1,
+    maxSize: 1,
+    pointsPerModel: 50,
+    stats: OG_STATS.lightChariot,
+    additionalProfiles:[
+      {
+        name: 'Snotlings',
+        stats: OG_STATS.snotling
+      }
+    ],
+    equipment: ['Hand Weapon', 'Scythed wheels'],
     specialRules: ['Animosity', 'Fear Elves'],
     options: []
   },

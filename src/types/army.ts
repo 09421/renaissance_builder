@@ -3,18 +3,20 @@ import {MagicAllowance} from '@/types/magicItems';
 export type StatValue = number | string;
 export type UnitRole = 'character' | 'regiments' | 'chariots' |'warmachines' | 'monsters' | 'auxiliary';
 export type OptionCategory = 'mount' | 'weapon' | 'ranged_weapon' | 'experimantal' | 'armour' | 'command' | 'magic' | 'other';
+export type SelectionMode = 'default' | 'exclusive_subtypes';
 
 export interface Restrictions{
   maxPerArmy?: number;
-  uniqueGroupMax?:number;
   requiresTag?: string;
   cantHaveTag?: string;
-  uniqueGroup?: string;
-  uniqueType?: string;
-  uniqueGroupLogic?: 'knightly_order' | 'standard';
   requiresGeneralTag?:string;
+  sharedSelection?: {
+    group: string;
+    max?: number;
+    type?: string;
+    mode?: SelectionMode;
+  };
 }
-
 
 export interface ArmyUnit {
   instanceId: string;
@@ -38,7 +40,6 @@ export type StatBlock = {
   Ld: StatValue; // Leadership
 };
 
-
 export interface SubProfile {
   name: string;
   stats: StatBlock;
@@ -61,10 +62,11 @@ export type UnitOption = {
   optionProfile?: SubProfile[];
   requires?: string[];
   isExternalPoints?: boolean;
-  isExtraCrew?: boolean;
   perCrew?: boolean;
   magicAllowance?: MagicAllowance;
   isMount?:boolean;
+  addsCrew?:number,
+  addsMounts?:number,
 };
 
 export interface UnitDefinition {

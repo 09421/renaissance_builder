@@ -104,7 +104,7 @@ export const characters: UnitDefinition[] = [
       { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 21, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
       { id: 'wyvern', name: 'Wyvern', points: 155, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }] },
-      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
+      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
       { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, requires:['boar_chariot'] },
       {
         id: 'additional_orc_crew',
@@ -112,7 +112,7 @@ export const characters: UnitDefinition[] = [
         points: 8,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['boar_chariot'],
         optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc }]
       },
@@ -121,7 +121,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Boar',
         points: 5,
         maxPerUnit: 2,
-        isFixedCost: true,
+        addsMounts: 1,
         requires:['boar_chariot']
       },
 
@@ -155,7 +155,7 @@ export const characters: UnitDefinition[] = [
       { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 16, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
       { id: 'wyvern', name: 'Wyvern', points: 150, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }] },
-      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
+      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
       { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, requires:['boar_chariot'] },
       {
         id: 'additional_orc_crew',
@@ -163,7 +163,7 @@ export const characters: UnitDefinition[] = [
         points: 8,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['boar_chariot'],
         optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc }]
       },
@@ -172,6 +172,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Boar',
         points: 5,
         maxPerUnit: 2,
+        addsMounts:1,
         isFixedCost: true,
         requires:['boar_chariot']
       },
@@ -204,7 +205,7 @@ export const characters: UnitDefinition[] = [
     specialRules: ['Animosity', 'Ignore panic induced by Goblins'],
     options: [
       { id: 'war_boar', name: 'War Boar', points: 11, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
+      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
       { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, requires:['boar_chariot'] },
       {
         id: 'additional_orc_crew',
@@ -212,7 +213,7 @@ export const characters: UnitDefinition[] = [
         points: 8,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['boar_chariot'],
         optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc }]
       },
@@ -221,6 +222,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Boar',
         points: 5,
         maxPerUnit: 2,
+        addsMounts:1,
         isFixedCost: true,
         requires:['boar_chariot']
       },
@@ -247,7 +249,7 @@ export const characters: UnitDefinition[] = [
       { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
       { id: 'wyvern', name: 'Wyvern', points: 140, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }] },
-      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
+      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
       { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, requires:['boar_chariot'] },
       {
         id: 'additional_orc_crew',
@@ -255,7 +257,7 @@ export const characters: UnitDefinition[] = [
         points: 8,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['boar_chariot'],
         optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc }]
       },
@@ -264,6 +266,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Boar',
         points: 5,
         maxPerUnit: 2,
+        addsMounts:1,
         isFixedCost: true,
         requires:['boar_chariot']
       },
@@ -287,7 +290,7 @@ export const characters: UnitDefinition[] = [
     options: [
       { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
+      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
       { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, requires:['boar_chariot'] },
       {
         id: 'additional_orc_crew',
@@ -295,7 +298,7 @@ export const characters: UnitDefinition[] = [
         points: 8,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['boar_chariot'],
         optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc }]
       },
@@ -304,6 +307,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Boar',
         points: 5,
         maxPerUnit: 2,
+        addsMounts:1,
         isFixedCost: true,
         requires:['boar_chariot']
       },
@@ -327,7 +331,7 @@ export const characters: UnitDefinition[] = [
     options: [
       { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
+      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
       { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, requires:['boar_chariot'] },
       {
         id: 'additional_orc_crew',
@@ -335,7 +339,7 @@ export const characters: UnitDefinition[] = [
         points: 8,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['boar_chariot'],
         optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc }]
       },
@@ -344,6 +348,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Boar',
         points: 5,
         maxPerUnit: 2,
+        addsMounts:1,
         isFixedCost: true,
         requires:['boar_chariot']
       },
@@ -367,7 +372,7 @@ export const characters: UnitDefinition[] = [
     options: [
       { id: 'general', name: 'General', points: 0 },
       { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
+      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
       { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, requires:['boar_chariot'] },
       {
         id: 'additional_orc_crew',
@@ -375,7 +380,7 @@ export const characters: UnitDefinition[] = [
         points: 8,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['boar_chariot'],
         optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc }]
       },
@@ -384,6 +389,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Boar',
         points: 5,
         maxPerUnit: 2,
+        addsMounts:1,
         isFixedCost: true,
         requires:['boar_chariot']
       },
@@ -564,7 +570,7 @@ export const characters: UnitDefinition[] = [
       { id: 'general', name: 'General', points: 0 },
       { id: 'giant_wolf', name: 'Giant Wolf', points: 14, group: 'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }] },
       { id: 'monstrou_spider', name: 'Monstrous Spider', points: 40, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
-      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
+      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
       { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, requires:['wolf_chariot'] },
       {
         id: 'additional_goblin_crew',
@@ -572,7 +578,7 @@ export const characters: UnitDefinition[] = [
         points: 6,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['wolf_chariot'],
         optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }]
       },
@@ -581,6 +587,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Wolf',
         points: 8,
         maxPerUnit: 2,
+        addsMounts:1,
         isFixedCost: true,
         requires:['wolf_chariot']
       },
@@ -613,7 +620,7 @@ export const characters: UnitDefinition[] = [
       { id: 'general', name: 'General', points: 0 },
       { id: 'giant_wolf', name: 'Giant Wolf', points: 11, group: 'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }] },
       { id: 'monstrou_spider', name: 'Monstrous Spider', points: 37, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
-      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
+      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
       { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, requires:['wolf_chariot'] },
       {
         id: 'additional_goblin_crew',
@@ -621,7 +628,7 @@ export const characters: UnitDefinition[] = [
         points: 6,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['wolf_chariot'],
         optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }]
       },
@@ -630,6 +637,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Wolf',
         points: 8,
         maxPerUnit: 2,
+        addsMounts:1,
         isFixedCost: true,
         requires:['wolf_chariot']
       },
@@ -659,7 +667,7 @@ export const characters: UnitDefinition[] = [
     specialRules: ['Animosity'],
     options: [
       { id: 'giant_wolf', name: 'Giant Wolf', points: 9, group: 'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }] },
-      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
+      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
       { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, requires:['wolf_chariot'] },
       {
         id: 'additional_goblin_crew',
@@ -667,7 +675,7 @@ export const characters: UnitDefinition[] = [
         points: 6,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['wolf_chariot'],
         optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }]
       },
@@ -676,6 +684,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Wolf',
         points: 8,
         maxPerUnit: 2,
+        addsMounts:1,
         isFixedCost: true,
         requires:['wolf_chariot']
       },
@@ -702,7 +711,7 @@ export const characters: UnitDefinition[] = [
       { id: 'general', name: 'General', points: 0 },
       { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }] },
       { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
-      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
+      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
       { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, requires:['wolf_chariot'] },
       {
         id: 'additional_goblin_crew',
@@ -710,7 +719,7 @@ export const characters: UnitDefinition[] = [
         points: 6,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['wolf_chariot'],
         optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }]
       },
@@ -719,6 +728,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Wolf',
         points: 8,
         maxPerUnit: 2,
+        addsMounts:1,
         isFixedCost: true,
         requires:['wolf_chariot']
       },
@@ -743,7 +753,7 @@ export const characters: UnitDefinition[] = [
       { id: 'general', name: 'General', points: 0 },
       { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }] },
       { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
-      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
+      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
       { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, requires:['wolf_chariot'] },
       {
         id: 'additional_goblin_crew',
@@ -751,7 +761,7 @@ export const characters: UnitDefinition[] = [
         points: 6,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['wolf_chariot'],
         optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }]
       },
@@ -760,6 +770,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Wolf',
         points: 8,
         maxPerUnit: 2,
+        addsMounts:1,
         isFixedCost: true,
         requires:['wolf_chariot']
       },
@@ -784,7 +795,7 @@ export const characters: UnitDefinition[] = [
       { id: 'general', name: 'General', points: 0 },
       { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }] },
       { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
-      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
+      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
       { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, requires:['wolf_chariot'] },
       {
         id: 'additional_goblin_crew',
@@ -792,7 +803,7 @@ export const characters: UnitDefinition[] = [
         points: 6,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['wolf_chariot'],
         optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }]
       },
@@ -801,6 +812,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Wolf',
         points: 8,
         maxPerUnit: 2,
+        addsMounts:1,
         isFixedCost: true,
         requires:['wolf_chariot']
       },
@@ -825,7 +837,7 @@ export const characters: UnitDefinition[] = [
       { id: 'general', name: 'General', points: 0 },
       { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }] },
       { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
-      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
+      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
       { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, requires:['wolf_chariot'] },
       {
         id: 'additional_goblin_crew',
@@ -833,7 +845,7 @@ export const characters: UnitDefinition[] = [
         points: 6,
         maxPerUnit: 2,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
         requires:['wolf_chariot'],
         optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }]
       },
@@ -842,6 +854,7 @@ export const characters: UnitDefinition[] = [
         name: 'additional Wolf',
         points: 8,
         maxPerUnit: 2,
+        addsMounts:1,
         isFixedCost: true,
         requires:['wolf_chariot']
       },
