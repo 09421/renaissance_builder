@@ -29,7 +29,7 @@ export const warmachines: UnitDefinition[] = [
         points: 7,
         maxPerUnit: 3,
         isFixedCost: true,
-        isExtraCrew: true,
+        addsCrew: 1,
         category:'other'
       }
     ]
