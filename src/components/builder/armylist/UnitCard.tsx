@@ -19,35 +19,6 @@ export const UnitCard = ({ unit, faction, isSelected, onSelect, onRemove }: Unit
 
   const points = calculateUnitCost(unit, def, faction);
 
-  // let modelDisplayString = `${unit.modelCount} Models`;
-
-  
-  // if (def.baseCrew) {
-  //   const extraCrew = def.options
-  //     .filter(o => o.isExtraCrew)
-  //     .reduce((sum, o) => sum + (unit.selectedOptions[o.id] || 0), 0);
-
-  //   const totalCrew = def.baseCrew + extraCrew;
-  //   modelDisplayString = `${unit.modelCount} Machine, ${totalCrew} Crew`;
-
-  //   if (def.baseMounts) {
-  //     const extraMount = def.options
-  //       .filter(o => o.isExtraMount)
-  //       .reduce((sum, o) => sum + (unit.selectedOptions[o.id] || 0), 0);
-  //     const totalMonts = def.baseMounts + extraMount;
-  //     modelDisplayString += `, ${totalMonts} Mounts`
-  //   }
-  // } 
-  // else {
-  //   const extraModels = def.options
-  //     .filter(o => o.maxPerModel)
-  //     .reduce((sum, o) => sum + (unit.selectedOptions[o.id] || 0), 0);
-
-  //   if (extraModels > 0) {
-  //     modelDisplayString = `${unit.modelCount + extraModels} Models`;
-  //   }
-  // }
-
   const selectedOptions = def.options.filter(o => (unit.selectedOptions[o.id] || 0) > 0);
 
   const selectedMagicItems = Object.keys(unit.selectedOptions).reduce((list, optId) => {

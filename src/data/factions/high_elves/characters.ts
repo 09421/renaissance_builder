@@ -18,6 +18,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Elven stoicism'],
     options: [
+      { id: 'general', name: 'General', points: 0, category:'general', isFixedCost:true },
       { id: 'steed', name: 'Elven Steed', points: 27, group: 'mount', optionProfile: [{ name: 'Elven Steed', stats: HE_STATS.elvenSteed }], category:'mount', isFixedCost:true },
       { id: 'barding', name: 'Barding', points: 0, requires: ['steed'], category:'mount', isFixedCost:true },
 
@@ -67,8 +68,8 @@ export const characters: UnitDefinition[] = [
       { id: 'emperor_Dragon', name: 'Emperor Dragon', points: 571, group: 'mount', optionProfile: [{ name: 'Emperor Dragon', stats: HE_STATS.emperorDragon }], category:'mount', isFixedCost:true },
       
       { id: 'shield', name: 'Shield', points: 0, category:'armour', isFixedCost:true },
-      { id: 'light_armor', name: 'Light armour', points: 0, group: 'armor', category:'armour', isFixedCost:true },
-      { id: 'dragon_armor', name: 'Dragon armour', points: 0, group: 'armor', category:'armour', isFixedCost:true },
+      { id: 'light_armour', name: 'Light armour', points: 0, group: 'armour', category:'armour', isFixedCost:true },
+      { id: 'dragon_armour', name: 'Dragon armour', points: 0, group: 'armour', category:'armour', isFixedCost:true },
 
       { id: 'flail', name: 'Flail', points: 0, group: 'weapon', category:'weapon', isFixedCost:true },
       { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon', category:'weapon', isFixedCost:true },
@@ -141,8 +142,8 @@ export const characters: UnitDefinition[] = [
       { id: 'dragon', name: 'Dragon', points: 314, group: 'mount', optionProfile: [{ name: 'Dragon', stats: HE_STATS.dragon }], category:'mount' },
       
       { id: 'shield', name: 'Shield', points: 0, category:'armour' },
-      { id: 'light_armor', name: 'Light armour', points: 0, group: 'armor', category:'armour' },
-      { id: 'dragon_armor', name: 'Dragon armour', points: 0, group: 'armor', category:'armour' },
+      { id: 'light_armour', name: 'Light armour', points: 0, group: 'armour', category:'armour' },
+      { id: 'dragon_armour', name: 'Dragon armour', points: 0, group: 'armour', category:'armour' },
 
       { id: 'flail', name: 'Flail', points: 0, group: 'weapon', category:'weapon' },
       { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon', category:'weapon' },
@@ -213,8 +214,8 @@ export const characters: UnitDefinition[] = [
       { id: 'lion_barding', name: 'White Lions Barding', points: 5, isFixedCost: true, requires:['whitelion_chariot'] },
       { id: 'additional_lion_mounts', name: 'additional White Lions', points: 17, isFixedCost: true, addsMounts:1, maxPerUnit: 2, requires:['whitelion_chariot'] },
       
-      { id: 'light_armor', name: 'Light armour', points: 0, group: 'armour', category:'armour' },
-      { id: 'dragon_armor', name: 'Dragon armour', points: 0, group: 'armour', category:'armour' },
+      { id: 'light_armour', name: 'Light armour', points: 0, group: 'armour', category:'armour' },
+      { id: 'dragon_armour', name: 'Dragon armour', points: 0, group: 'armour', category:'armour' },
     ]
   },
   {
@@ -227,6 +228,7 @@ export const characters: UnitDefinition[] = [
     maxSize: 1,
     pointsPerModel: 264,
     stats: HE_STATS.mageLord,
+    tags:['mage'],
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 4
@@ -293,6 +295,7 @@ export const characters: UnitDefinition[] = [
     maxSize: 1,
     pointsPerModel: 186,
     stats: HE_STATS.masterMage,
+    tags:['mage'],
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 3
@@ -356,6 +359,7 @@ export const characters: UnitDefinition[] = [
     maxSize: 1,
     pointsPerModel: 122,
     stats: HE_STATS.mageChampion,
+    tags:['mage'],
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 2
@@ -419,6 +423,7 @@ export const characters: UnitDefinition[] = [
     maxSize: 1,
     pointsPerModel: 58,
     stats: HE_STATS.mage,
+    tags:['mage'],
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 1

@@ -1,4 +1,4 @@
-export type MagicItemCategory = 'weapon' | 'armour' | 'helmet' | 'talisman' | 'arcane' | 'enchanted' | 'banner';
+export type MagicItemCategory = 'weapon' | 'armour' | 'enchanted' | 'arcane' | 'familiar' | 'banner';
 
 export interface MagicAllowance {
   maxItems?: number;
@@ -11,8 +11,11 @@ export interface MagicItem {
   type: MagicItemCategory;
   points: number;
   description?: string;
-  
-  onlyWizards?: boolean;
+  faction?:String;
   onlyBattleStandard?: boolean;
-  requiresMundaneOption?: string;
+  requiresMundaneOption?: string[];
+  requiresTags?: string[];
+  requiresGeneral?: boolean;
+  onlyOnFoot?:boolean;
+  incompatibleTags?: string[];
 }

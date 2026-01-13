@@ -93,7 +93,7 @@ function BuilderContent() {
 
       {/* CENTER COLUMN */}
       <section className="flex-1 flex flex-col min-w-0 bg-slate-950">
-        <header className="h-16 border-b border-slate-800 flex items-center justify-between px-6 bg-slate-900 shadow-sm">
+        <header className="h-16 border-b border-slate-700 flex items-center justify-between px-6 bg-slate-900 shadow-sm">
           <div>
             <h1 className="text-xl font-serif font-bold text-slate-200">
               {listName}

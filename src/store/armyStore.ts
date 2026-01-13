@@ -130,7 +130,7 @@ export const useArmyStore = create<ArmyState>()(
             if (!optionDef) {
               optionDef = getMagicItemDef(optionId, state.faction);
             }
-            console.log('optionDef: ', optionDef);
+            
             if (!optionDef) return u;
 
             if (count <= 0) {

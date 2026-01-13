@@ -5,6 +5,7 @@ import { useMemo, useState } from 'react';
 import { OptionRow, getCategory } from './utils';
 
 const CATEGORY_TITLES: Record<OptionCategory, string> = {
+  general: 'General',
   mount: 'Mounts & Chariots',
   weapon: 'Weapons',
   ranged_weapon:'Ranged weapon',
@@ -14,7 +15,7 @@ const CATEGORY_TITLES: Record<OptionCategory, string> = {
   magic: 'Magic School',
   other: 'Upgrades'
 };
-const CATEGORY_ORDER: OptionCategory[] = ['command', 'magic', 'mount', 'weapon', 'ranged_weapon', 'experimantal', 'armour', 'other'];
+const CATEGORY_ORDER: OptionCategory[] = ['general', 'command', 'magic', 'mount', 'weapon', 'ranged_weapon', 'experimantal', 'armour', 'other'];
 
 interface Props {
   unit: ArmyUnit;
