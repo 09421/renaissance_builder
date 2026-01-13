@@ -6,6 +6,7 @@ export const EMP_STATS: Record<string, StatBlock> = {
   trooper:              { M: 4, Ws: 3, Bs: 3, S: 3, T: 3, W: 1, I: 3, A: 1, Ld: 7 },
   swordsman:            { M: 4, Ws: 4, Bs: 3, S: 3, T: 3, W: 1, I: 4, A: 1, Ld: 7 },
   knight:               { M: 4, Ws: 4, Bs: 3, S: 4, T: 3, W: 1, I: 4, A: 1, Ld: 7 },
+  engineer:             { M: 4, Ws: 3, Bs: 4, S: 3, T: 3, W: 1, I: 3, A: 1, Ld: 7 },
   
   //champions
   champion:             { M: 4, Ws: 4, Bs: 4, S: 4, T: 3, W: 1, I: 4, A: 2, Ld: 7 },
@@ -32,6 +33,8 @@ export const EMP_STATS: Record<string, StatBlock> = {
 
   //warmachines  
   warmachine:           { M: '-', Ws: '-', Bs: '-', S: '-', T: 7, W: 3, I: '-', A: '-', Ld: '-' },
+  warWagon:             { M: '-', Ws: '-', Bs: '-', S: 6, T: 6, W: 4, I: '-', A: '-', Ld: '-' },
+  steamTank:            { M: '-', Ws: 2, Bs: 4, S: 7, T: 10, W: 5, I: '-', A: '-', Ld: '-' },
 
   //monsters
 

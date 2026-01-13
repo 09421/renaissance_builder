@@ -271,7 +271,8 @@ export const regiments: UnitDefinition[] = [
     stats: EMP_STATS.knight,
     restrictions: {
       uniqueGroup: 'knightly_order',
-      uniqueType: 'teutogen_wolves'
+      uniqueType: 'teutogen_wolves',
+      uniqueGroupLogic: 'knightly_order'
     },
     additionalProfiles: [
       {
@@ -304,6 +305,7 @@ export const regiments: UnitDefinition[] = [
     stats: EMP_STATS.knight,
     restrictions: {
       uniqueGroup: 'knightly_order',
+      uniqueGroupLogic: 'knightly_order'
     },
     additionalProfiles: [
       {
@@ -336,6 +338,7 @@ export const regiments: UnitDefinition[] = [
     stats: EMP_STATS.knight,
     restrictions: {
       uniqueGroup: 'knightly_order',
+      uniqueGroupLogic: 'knightly_order'
     },
     additionalProfiles: [
       {
@@ -368,7 +371,8 @@ export const regiments: UnitDefinition[] = [
     stats: EMP_STATS.knight,
     restrictions: {
       uniqueGroup: 'knightly_order',
-      uniqueType: 'teutogen_wolves'
+      uniqueType: 'teutogen_wolves',
+      uniqueGroupLogic: 'knightly_order'
     },
     equipment: ['Hand Weapon', 'Double handed weapons', 'Full plate'],
     specialRules: [],
@@ -395,7 +399,8 @@ export const regiments: UnitDefinition[] = [
     stats: EMP_STATS.knight,
     restrictions: {
       uniqueGroup: 'knightly_order',
-      uniqueType: 'reiksguard'
+      uniqueType: 'reiksguard',
+      uniqueGroupLogic: 'knightly_order'
     },
     equipment: ['Hand Weapon', 'Full plate', 'shield'],
     specialRules: [],
@@ -423,7 +428,8 @@ export const regiments: UnitDefinition[] = [
     stats: EMP_STATS.knight,
     restrictions: {
       uniqueGroup: 'knightly_order',
-      uniqueType: 'reiksguard'
+      uniqueType: 'reiksguard',
+      uniqueGroupLogic: 'knightly_order'
     },
     additionalProfiles: [
       {

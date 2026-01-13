@@ -6,10 +6,12 @@ export type OptionCategory = 'mount' | 'weapon' | 'ranged_weapon' | 'experimanta
 
 export interface Restrictions{
   maxPerArmy?: number;
+  uniqueGroupMax?:number;
   requiresTag?: string;
   cantHaveTag?: string;
   uniqueGroup?: string;
   uniqueType?: string;
+  uniqueGroupLogic?: 'knightly_order' | 'standard';
   requiresGeneralTag?:string;
 }
 
@@ -80,6 +82,7 @@ export interface UnitDefinition {
   specialRules: string[];
   additionalProfiles?: SubProfile[];
   baseCrew?: number;
+  baseMounts?: number;
   magicAllowance?: MagicAllowance;
   tags?: string[];
   restrictions?: Restrictions;

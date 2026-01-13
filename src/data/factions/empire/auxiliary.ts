@@ -164,6 +164,7 @@ export const auxiliary: UnitDefinition[] = [
     modelName: 'Halfling',
     role: 'auxiliary',
     type: 'Infantry',
+    tags:['Halfling'],
     minSize: 5,
     maxSize: null,
     pointsPerModel: 2.5,
