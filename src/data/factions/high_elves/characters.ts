@@ -14,7 +14,8 @@ export const characters: UnitDefinition[] = [
     stats: HE_STATS.elvenPrince,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 3
+      maxItems: 3,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Elven stoicism'],
     options: [
@@ -93,7 +94,8 @@ export const characters: UnitDefinition[] = [
     stats: HE_STATS.elvenHero,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 2
+      maxItems: 2,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Elven stoicism'],
     options: [
@@ -171,7 +173,8 @@ export const characters: UnitDefinition[] = [
     stats: HE_STATS.elvenBsb,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'banner'],
     },
     specialRules: ['Elven stoicism'],
     options: [
@@ -232,7 +235,8 @@ export const characters: UnitDefinition[] = [
     tags:['mage'],
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 4
+      maxItems: 4,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Elven stoicism', 'Level 4 mage'],
     options: [
@@ -299,7 +303,8 @@ export const characters: UnitDefinition[] = [
     tags:['mage'],
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 3
+      maxItems: 3,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Elven stoicism', 'Level 3 mage'],
     options: [
@@ -363,7 +368,8 @@ export const characters: UnitDefinition[] = [
     tags:['mage'],
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 2
+      maxItems: 2,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Elven stoicism', 'Level 2 mage'],
     options: [
@@ -427,7 +433,8 @@ export const characters: UnitDefinition[] = [
     tags:['mage'],
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Elven stoicism', 'Level 1 mage'],
     options: [

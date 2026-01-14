@@ -26,6 +26,28 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: OG_STATS.commonOrcChampion,
         isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
         category:'command'
       }
     ]
@@ -50,7 +72,30 @@ export const regiments: UnitDefinition[] = [
         name: 'Orc Champion',
         points: 20,
         stats: OG_STATS.commonOrcChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -79,7 +124,30 @@ export const regiments: UnitDefinition[] = [
         name: 'Orc Champion',
         points: 20,
         stats: OG_STATS.commonOrcChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -106,7 +174,30 @@ export const regiments: UnitDefinition[] = [
         name: 'Big\'un Champion',
         points: 20,
         stats: OG_STATS.bigunChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -130,7 +221,30 @@ export const regiments: UnitDefinition[] = [
         name: 'Big\'un Champion',
         points: 20,
         stats: OG_STATS.bigunChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -159,7 +273,30 @@ export const regiments: UnitDefinition[] = [
         name: 'Big\'un Champion',
         points: 20,
         stats: OG_STATS.bigunChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -185,7 +322,30 @@ export const regiments: UnitDefinition[] = [
         name: 'Savage Orc Champion',
         points: 30,
         stats: OG_STATS.savageChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -207,7 +367,30 @@ export const regiments: UnitDefinition[] = [
         name: 'Savage Orc Champion',
         points: 30,
         stats: OG_STATS.savageChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -237,7 +420,30 @@ export const regiments: UnitDefinition[] = [
         name: 'Savage Orc Champion',
         points: 30,
         stats: OG_STATS.savageChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -265,7 +471,30 @@ export const regiments: UnitDefinition[] = [
         name: 'Black Orc Champion',
         points: 20,
         stats: OG_STATS.blackOrcChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -292,7 +521,30 @@ export const regiments: UnitDefinition[] = [
         name: 'Goblin Champion',
         points: 10,
         stats: OG_STATS.goblinChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -319,13 +571,35 @@ export const regiments: UnitDefinition[] = [
       { id: 'short_bow', name: 'Short Bows', points: 1, group: 'ranged_weapon' },
       { id: 'light_armour', name: 'Light armour', points: 1 },
       { id: 'shield', name: 'Shields', points: 1 },
-      { id: 'standard bearer', name: 'Standard Bearer', points: 10, isFixedCost: true },
       {
         id: 'champion',
         name: 'Goblin Champion',
         points: 10,
         stats: OG_STATS.goblinChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 10,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -352,7 +626,30 @@ export const regiments: UnitDefinition[] = [
         name: 'Goblin Champion',
         points: 10,
         stats: OG_STATS.forestGoblinChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -379,13 +676,35 @@ export const regiments: UnitDefinition[] = [
       { id: 'spear', name: 'Spears', points: 1, group: 'weapon' },
       { id: 'short_bow', name: 'Short Bows', points: 1, group: 'ranged_weapon' },
       { id: 'shield', name: 'Shields', points: 1 },
-      { id: 'standard bearer', name: 'Standard Bearer', points: 10, isFixedCost: true },
       {
         id: 'champion',
         name: 'Goblin Champion',
         points: 10,
         stats: OG_STATS.goblinChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 10,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -428,7 +747,29 @@ export const regiments: UnitDefinition[] = [
         points: 10,
         stats: OG_STATS.goblinChampion,
         category: 'command',
-        isFixedCost: true
+        isFixedCost: true,
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -483,7 +824,7 @@ export const regiments: UnitDefinition[] = [
     maxSize: null,
     pointsPerModel: 6,
     stats: OG_STATS.nightGoblin,
-    equipment: ['Double Handed Weapons'],
+    equipment: ['Nets and Clubs'],
     specialRules: ['Animosity', 'Fear Elves', 'Hate Dwarfs', 'Always strike first', 'Always strike first'],
     options: [
       {
@@ -491,7 +832,30 @@ export const regiments: UnitDefinition[] = [
         name: 'Goblin Champion',
         points: 10,
         stats: OG_STATS.goblinChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },
@@ -567,7 +931,30 @@ export const regiments: UnitDefinition[] = [
         name: 'Ogre Champion',
         points: 50,
         stats: OG_STATS.ogreChampion,
-        isFixedCost: true
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 10,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
+        category:'command'
       }
     ]
   },

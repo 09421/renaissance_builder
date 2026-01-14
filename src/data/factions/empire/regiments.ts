@@ -23,6 +23,28 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.champion,
         isFixedCost: true, 
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
         category:'command'
       }
     ]
@@ -48,6 +70,28 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.champion,
         isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
         category:'command'
       }
     ]
@@ -72,6 +116,28 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.champion,
         isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
         category:'command'
       }
     ]
@@ -82,6 +148,7 @@ export const regiments: UnitDefinition[] = [
     modelName: 'State Troop',
     role: 'regiments',
     type: 'Infantry',
+    tags:['greatswords'],
     minSize: 5,
     maxSize: null,
     pointsPerModel: 6,
@@ -95,6 +162,28 @@ export const regiments: UnitDefinition[] = [
         name: 'Champion',
         points: 20,
         stats: EMP_STATS.champion,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
         isFixedCost: true,
         category:'command'
       }
@@ -120,6 +209,28 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: EMP_STATS.captain,
         isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
         category:'command'
       }
     ]
@@ -143,6 +254,28 @@ export const regiments: UnitDefinition[] = [
         name: 'Champion',
         points: 20,
         stats: EMP_STATS.champion,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
         isFixedCost: true,
         category:'command'
       }
@@ -168,6 +301,28 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.champion,
         isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
         category:'command'
       }
     ]
@@ -192,6 +347,28 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.champion,
         isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
         category:'command'
       }
     ]
@@ -215,12 +392,33 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Two pistols', 'Light armour'],
     specialRules: ['Detachment', 'Skirmish'],
     options: [
-      { id: 'standard', name: 'Standard bearer', points: 10, isFixedCost: true, category:'command' },
       {
         id: 'captain',
         name: 'Captain',
         points: 20,
         stats: EMP_STATS.captain,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 10,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
         isFixedCost: true,
         category:'command'
       },
@@ -246,14 +444,35 @@ export const regiments: UnitDefinition[] = [
       }
     ],
     equipment: ['Hand Weapon', 'Repeating handguns', 'Light armour', 'Barding'],
-    specialRules: ['Detachment', 'Skirmish'],
+    specialRules: ['Detachment'],
     options: [
-      { id: 'standard', name: 'Standard bearer', points: 10, isFixedCost: true, category:'command' },
       {
         id: 'captain',
         name: 'Captain',
         points: 20,
         stats: EMP_STATS.captain,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
         isFixedCost: true,
         category:'command'
       }
@@ -265,6 +484,7 @@ export const regiments: UnitDefinition[] = [
     modelName: 'Knight',
     role: 'regiments',
     type: 'Cavalry',
+    tags:['teutogen_wolves'],
     minSize: 5,
     maxSize: null,
     pointsPerModel: 20,
@@ -291,16 +511,39 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: EMP_STATS.captain,
         isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
         category:'command'
       }
     ]
   },
   {
-    id: 'Knights_Panther',
+    id: 'knights_panther',
     name: 'Knights Panther',
     modelName: 'Knight',
     role: 'regiments',
     type: 'Cavalry',
+    tags:['knights_panther'],
     minSize: 5,
     maxSize: null,
     pointsPerModel: 25,
@@ -326,6 +569,28 @@ export const regiments: UnitDefinition[] = [
         name: 'Captain',
         points: 30,
         stats: EMP_STATS.captain,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
         isFixedCost: true,
         category:'command'
       }
@@ -363,6 +628,28 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: EMP_STATS.captain,
         isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
         category:'command'
       }
     ]
@@ -373,6 +660,7 @@ export const regiments: UnitDefinition[] = [
     modelName: 'Knight',
     role: 'regiments',
     type: 'Infantry',
+    tags:['teutogen_wolves'],
     minSize: 5,
     maxSize: null,
     pointsPerModel: 13,
@@ -393,6 +681,28 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: EMP_STATS.captain,
         isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
         category:'command'
       }
     ]
@@ -403,6 +713,7 @@ export const regiments: UnitDefinition[] = [
     modelName: 'Knight',
     role: 'regiments',
     type: 'Infantry',
+    tags:['reiksguard'],
     minSize: 5,
     maxSize: null,
     pointsPerModel: 11,
@@ -423,6 +734,28 @@ export const regiments: UnitDefinition[] = [
         name: 'Commander',
         points: 50,
         stats: EMP_STATS.commander,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
         isFixedCost: true,
         category:'command'
       }
@@ -459,6 +792,28 @@ export const regiments: UnitDefinition[] = [
         name: 'Commander',
         points: 50,
         stats: EMP_STATS.commander,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
         isFixedCost: true,
         category:'command'
       }

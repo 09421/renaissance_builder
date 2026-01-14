@@ -14,7 +14,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.blackOrcWarlord,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 3
+      maxItems: 3,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Quells animosity', 'Ignore panic induced by Goblins and other orc types'],
     options: [
@@ -44,7 +45,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.blackOrcHero,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 2
+      maxItems: 2,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Quells animosity', 'Ignore panic induced by Goblins and other orc types'],
     options: [
@@ -74,7 +76,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.blackOrcBsb,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'banner'],
     },
     specialRules: ['Quells animosity', 'Ignore panic induced by Goblins and other orc types'],
     options: [
@@ -97,7 +100,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.OrcWarlord,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 3
+      maxItems: 3,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins'],
     options: [
@@ -148,7 +152,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.OrcHero,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 2
+      maxItems: 2,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins'],
     options: [
@@ -200,7 +205,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.orcBsb,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'banner'],
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins'],
     options: [
@@ -242,7 +248,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.orcShamanLord,
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
-      maxItems: 4
+      maxItems: 4,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins','Level 4 Shaman'],
     options: [
@@ -284,7 +291,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.orcMasterShaman,
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
-      maxItems: 3
+      maxItems: 3,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins','Level 3 Shaman'],
     options: [
@@ -325,7 +333,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.orcShamanChampion,
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
-      maxItems: 2
+      maxItems: 2,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins','Level 2 Shaman'],
     options: [
@@ -366,7 +375,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.orcShaman,
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins','Level 1 Shaman'],
     options: [
@@ -407,7 +417,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.OrcWarlord,
     equipment: ['Hand Weapon', 'Magical Tattoos'],
     magicAllowance: {
-      maxItems: 3
+      maxItems: 3,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins'],
     options: [
@@ -435,7 +446,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.OrcHero,
     equipment: ['Hand Weapon', 'Magical Tattoos'],
     magicAllowance: {
-      maxItems: 2
+      maxItems: 2,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins'],
     options: [
@@ -463,7 +475,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.orcBsb,
     equipment: ['Hand Weapon', 'Magical Tattoos'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'banner'],
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins'],
     options: [
@@ -482,7 +495,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.orcShamanLord,
     equipment: ['Hand Weapon', 'Lore of Waaagh!','Magical Tattoos'],
     magicAllowance: {
-      maxItems: 4
+      maxItems: 4,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins','Level 4 Shaman'],
     options: [
@@ -503,7 +517,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.orcMasterShaman,
     equipment: ['Hand Weapon', 'Lore of Waaagh!','Magical Tattoos'],
     magicAllowance: {
-      maxItems: 3
+      maxItems: 3,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins','Level 3 Shaman'],
     options: [
@@ -523,7 +538,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.orcShamanChampion,
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
-      maxItems: 2
+      maxItems: 2,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins','Level 2 Shaman'],
     options: [
@@ -543,7 +559,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.orcShaman,
     equipment: ['Hand Weapon', 'Lore of Waaagh!','Magical Tattoos'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins','Level 1 Shaman'],
     options: [
@@ -563,7 +580,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinWarlord,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 3
+      maxItems: 3,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity'],
     options: [
@@ -613,7 +631,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinHero,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 2
+      maxItems: 2,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity'],
     options: [
@@ -662,7 +681,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinHero,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'banner'],
     },
     specialRules: ['Animosity'],
     options: [
@@ -704,7 +724,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinShamanLord,
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
-      maxItems: 4
+      maxItems: 4,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity','Level 4 Shaman'],
     options: [
@@ -746,7 +767,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinShamanMaster,
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
-      maxItems: 3
+      maxItems: 3,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity','Level 3 Shaman'],
     options: [
@@ -788,7 +810,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinShamanChampion,
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
-      maxItems: 2
+      maxItems: 2,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity','Level 2 Shaman'],
     options: [
@@ -830,7 +853,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinShaman,
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity','Level 1 Shaman'],
     options: [
@@ -872,7 +896,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinWarlord,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 3
+      maxItems: 3,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     tags:['forest_goblin'],
     specialRules: ['Animosity'],
@@ -901,7 +926,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinHero,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 2
+      maxItems: 2,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     tags:['forest_goblin'],
     specialRules: ['Animosity'],
@@ -930,7 +956,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinHero,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'banner'],
     },
     tags:['forest_goblin'],
     specialRules: ['Animosity'],
@@ -950,7 +977,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinShamanLord,
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
-      maxItems: 4
+      maxItems: 4,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     tags:['forest_goblin'],
     specialRules: ['Animosity','Level 4 Shaman'],
@@ -972,7 +1000,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinShamanMaster,
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
-      maxItems: 3
+      maxItems: 3,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     tags:['forest_goblin'],
     specialRules: ['Animosity','Level 3 Shaman'],
@@ -994,7 +1023,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinShamanChampion,
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
-      maxItems: 2
+      maxItems: 2,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     tags:['forest_goblin'],
     specialRules: ['Animosity','Level 2 Shaman'],
@@ -1016,7 +1046,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinShaman,
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     tags:['forest_goblin'],
     specialRules: ['Animosity','Level 1 Shaman'],
@@ -1038,7 +1069,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinWarlord,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 3
+      maxItems: 3,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity'],
     options: [
@@ -1065,7 +1097,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinHero,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 2
+      maxItems: 2,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity'],
     options: [
@@ -1092,7 +1125,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinHero,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'banner'],
     },
     specialRules: ['Animosity'],
     options: []
@@ -1109,7 +1143,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinShamanLord,
     equipment: ['Hand Weapon', 'Lore of Waaagh!', 'Magic Mushroom'],
     magicAllowance: {
-      maxItems: 4
+      maxItems: 4,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity','Level 4 Shaman'],
     options: [      
@@ -1128,7 +1163,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinShamanMaster,
     equipment: ['Hand Weapon', 'Lore of Waaagh!', 'Magic Mushroom'],
     magicAllowance: {
-      maxItems: 3
+      maxItems: 3,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity','Level 3 Shaman'],
     options: [
@@ -1147,7 +1183,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinShamanChampion,
     equipment: ['Hand Weapon', 'Lore of Waaagh!', 'Magic Mushroom'],
     magicAllowance: {
-      maxItems: 2
+      maxItems: 2,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity','Level 2 Shaman'],
     options: [
@@ -1166,7 +1203,8 @@ export const characters: UnitDefinition[] = [
     stats: OG_STATS.goblinShaman,
     equipment: ['Hand Weapon', 'Lore of Waaagh!', 'Magic Mushroom'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Animosity','Level 1 Shaman'],
     options: [

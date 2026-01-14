@@ -46,12 +46,33 @@ export const auxiliary: UnitDefinition[] = [
     specialRules: ['Fast cavalry'],
     options: [
       { id: 'backBanners', name: 'Shrieking back banners', points: 3, category:'other' },
-      { id: 'standardbearer', name: 'standard bearer', points: 10, isFixedCost: true, category:'command' },
       {
         id: 'captain',
         name: 'Kislev Captain',
         points: 30,
         stats: EMP_STATS.kislevCaptain,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 10,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
         isFixedCost: true,
         category:'command'
       }
@@ -76,6 +97,28 @@ export const auxiliary: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.fighterChampion,
         isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
         category:'command'
       }
     ]
@@ -99,12 +142,33 @@ export const auxiliary: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Bows'],
     specialRules: ['Fast cavalry', 'Skirmish'],
     options: [
-      { id: 'standardbearer', name: 'standard bearer', points: 10, isFixedCost: true, category:'command' },
       {
         id: 'champion',
         name: 'Kislev Champion',
         points: 20,
         stats: EMP_STATS.fighterChampion,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 10,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
         isFixedCost: true,
         category:'command'
       }
@@ -131,6 +195,28 @@ export const auxiliary: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.fighterChampion,
         isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
         category:'command'
       }
     ]
@@ -153,6 +239,28 @@ export const auxiliary: UnitDefinition[] = [
         name: 'Halfling Champion',
         points: 10,
         stats: EMP_STATS.halflingChampion,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
         isFixedCost: true,
         category:'command'
       }
@@ -179,6 +287,28 @@ export const auxiliary: UnitDefinition[] = [
         points: 10,
         stats: EMP_STATS.halflingChampion,
         isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
+        isFixedCost: true,
         category:'command'
       }
     ]
@@ -200,12 +330,33 @@ export const auxiliary: UnitDefinition[] = [
       { id: 'great_wpn', name: 'Double handed weapons', points: 8, group: 'weapon', category:'weapon' },
       { id: 'flail', name: 'Flails', points: 8, group: 'weapon', category:'weapon' },      
       { id: 'heavy_armour', name: 'Heavy armour', points: 4, replaces: ['Light armour'], category:'armour' },
-      { id: 'standardbearer', name: 'standard bearer', points: 10, isFixedCost: true, category:'command' },
       {
         id: 'champion',
         name: 'Ogre Champion',
         points: 50,
         stats: EMP_STATS.ogreChampion,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 10,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
         isFixedCost: true,
         category:'command'
       }
@@ -234,6 +385,28 @@ export const auxiliary: UnitDefinition[] = [
         name: 'Dwarf Champion',
         points: 20,
         stats: EMP_STATS.dwarfChampion,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['weapon', 'armour', 'enchanted']
+        }
+      },
+      {
+        id: 'standard_bearer',
+        name: 'Standard bearer',
+        points: 0,
+        isFixedCost: true,
+        category:'command',
+        magicAllowance:{
+          maxItems:1,
+          allowedCategories:['banner']
+        }
+      },
+      {
+        id: 'musician',
+        name: 'musician',
+        points: 0,
         isFixedCost: true,
         category:'command'
       }

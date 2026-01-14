@@ -14,7 +14,8 @@ export const characters: UnitDefinition[] = [
     stats: EMP_STATS.empireLord,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 3
+      maxItems: 3,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     specialRules: [],
     options: [
@@ -55,7 +56,8 @@ export const characters: UnitDefinition[] = [
     stats: EMP_STATS.empireHero,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 2
+      maxItems: 2,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     specialRules: [],
     options: [
@@ -100,7 +102,8 @@ export const characters: UnitDefinition[] = [
     stats: EMP_STATS.empireBSB,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'banner'],
     },
     specialRules: [],
     options: [
@@ -124,7 +127,8 @@ export const characters: UnitDefinition[] = [
     stats: EMP_STATS.warriorPriest,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Religious Fervor'],
     options: [
@@ -152,7 +156,8 @@ export const characters: UnitDefinition[] = [
     stats: EMP_STATS.wizardLord,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 4
+      maxItems: 4,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Level 4 Wizard'],
     options: [
@@ -177,7 +182,8 @@ export const characters: UnitDefinition[] = [
     stats: EMP_STATS.masterWizard,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 3
+      maxItems: 3,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Level 3 Wizard'],
     options: [
@@ -201,7 +207,8 @@ export const characters: UnitDefinition[] = [
     stats: EMP_STATS.wizardChampion,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 2
+      maxItems: 2,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Level 2 Wizard'],
     options: [
@@ -225,7 +232,8 @@ export const characters: UnitDefinition[] = [
     stats: EMP_STATS.wizard,
     equipment: ['Hand Weapon'],
     magicAllowance: {
-      maxItems: 1
+      maxItems: 1,
+      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
     specialRules: ['Level 1 Wizard'],
     options: [

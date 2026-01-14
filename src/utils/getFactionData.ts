@@ -5,6 +5,7 @@ import { HIGH_ELVES_ROSTER } from '@/data/factions/high_elves/index';
 import { EMPIRE_ROSTER } from '@/data/factions/empire/index';
 import { COMMON_MAGIC_WEAPONS } from '@/data/common/magicWeapons';
 import { HIGH_ELVES_MAGIC_ITEMS } from '@/data/factions/high_elves/magicItems/';
+import { EMPIRE_MAGIC_ITEMS } from '@/data/factions/empire/magicItems/';
 
 const DB: Record<string, UnitDefinition[]> = {
   'orcs_goblins': ORCS_AND_GOBLINS_ROSTER,
@@ -27,6 +28,9 @@ export const getMagicItems = (faction: string): MagicItem[] => {
   console.log('faction:', faction);
   if (faction === 'high_elves') {
     items = [...items, ...HIGH_ELVES_MAGIC_ITEMS];
+  }
+  if (faction === 'empire') {
+    items = [...items, ...EMPIRE_MAGIC_ITEMS];
   }
 
   return items;

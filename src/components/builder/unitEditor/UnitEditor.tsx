@@ -201,7 +201,6 @@ const groupedOptions = useMemo(() => {
 
         {/* SECTION: MAGIC ITEMS */}
         <div className="pt-4 border-t border-slate-800">
-           <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3 px-1">Magic Items</h3>
            <MagicItemSelector 
              unit={unit} 
              definition={definition} 
