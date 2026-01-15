@@ -7,7 +7,7 @@ export const HE_MAGIC_WEAPONS = withFaction('high_elves', [
     type: 'weapon',
     points: 0,
     description: 'The bearer of this ancient heirloom becomes the general and forfeits all normal attacks on his profile and instead makes 4 attacks that hit and wound on 2+ and allow no armour save, and each wound multiplies into 1D3 wounds.',
-    requiresMundaneOption: ['Hand Wweapon']
+    requiresMundaneOption: ['Hand weapon']
   },
   {
     id: 'bow_old_world',
@@ -32,7 +32,7 @@ export const HE_MAGIC_WEAPONS = withFaction('high_elves', [
     points: 25,
     description: 'The whole regiment becomes equipped with magic flaming arrows which hit with S4. The Arrows of Isha cannot be nullified and do not disappear if the bearer dies',
     requiresMundaneOption: ['Hand weapon'],
-    requiresTags:['shield_maiden']
+    requiresTags:['shield maiden']
   },
   {
     id: 'fangsword',

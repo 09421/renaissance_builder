@@ -197,17 +197,81 @@ export const MagicItemSelector = ({ unit, definition, faction }: Props) => {
           const isFootRestricted = item.onlyOnFoot && isMounted;
 
           // Mundane Requirement Check
+          // 4. Mundane Requirement Check (Updated: Checks AVAILABILITY, not SELECTION)
           let missingMundane = false;
+
+          // 5. Category Requirement Check (Smart Filter)
+          let missingCategory = false;
+
+          if (item.requiresOptionCategory && item.requiresOptionCategory.length > 0) {
+
+            const hasCategoryAccess = item.requiresOptionCategory.some(reqCat => {
+
+              // DEFINE WHAT "IS A SHIELD" LOOKS LIKE
+              const isShieldType = (str: string) =>
+                str.toLowerCase().includes('shield') || str.toLowerCase().includes('buckler');
+
+              // --- A. CHECK OPTIONS ---
+              const optionExists = definition.options.some(opt => {
+                // 1. Must match the broad visual category (or be a generic 'armour' option)
+                if (opt.category !== 'armour' && opt.category !== reqCat) return false;
+
+                // 2. Refine based on specific requirement
+                if (reqCat === 'armour') {
+                  // If we need BODY ARMOUR, exclude Shields
+                  return !isShieldType(opt.id) && !isShieldType(opt.name);
+                }
+
+                if (reqCat === 'shield') {
+                  // If we need SHIELDS, enforce it
+                  return isShieldType(opt.id) || isShieldType(opt.name);
+                }
+
+                return true;
+              });
+
+              if (optionExists) return true;
+
+              // --- B. CHECK DEFAULT EQUIPMENT ---
+              return definition.equipment.some(eq => {
+                const lowerEq = eq.toLowerCase();
+
+                if (reqCat === 'armour') {
+                  // Must sound like body armour, and NOT be a shield
+                  return (lowerEq.includes('armour') || lowerEq.includes('plate') || lowerEq.includes('mail'))
+                    && !isShieldType(lowerEq);
+                }
+
+                if (reqCat === 'shield') {
+                  return isShieldType(lowerEq);
+                }
+
+                return false;
+              });
+            });
+
+            if (!hasCategoryAccess) missingCategory = true;
+          }
           if (item.requiresMundaneOption && item.requiresMundaneOption.length > 0) {
             const hasRequirement = item.requiresMundaneOption.some(reqId => {
-              const hasOption = (unit.selectedOptions[reqId] || 0) > 0;
-              const hasDefault = definition.equipment.some(eq =>
+
+              // A. Check Default Equipment (Base Gear)
+              // (Same as before: clean up strings and check equality)
+              const isDefault = definition.equipment.some(eq =>
                 eq.toLowerCase() === reqId.replace(/_/g, ' ').toLowerCase() ||
                 eq.toLowerCase() === reqId.toLowerCase()
               );
-              return hasOption || hasDefault;
+
+              // B. Check Options List (NEW LOGIC)
+              // Instead of checking selectedOptions[reqId], we just check if the option EXISTS on this unit.
+              const isOptionAvailable = definition.options.some(opt => opt.id === reqId);
+
+              return isDefault || isOptionAvailable;
             });
-            if (!hasRequirement) missingMundane = true;
+
+            if (!hasRequirement) {
+              missingMundane = true;
+            }
           }
 
           const isTakenBySomeoneElse = roster.some(u => {
@@ -220,7 +284,7 @@ export const MagicItemSelector = ({ unit, definition, faction }: Props) => {
             if (hasItemOfCategory(activeCategory)) categoryLimitReached = true;
           }
 
-          const isDisabled = (!isSelected && remainingSlots <= 0) || !isTypeAllowed || missingMundane || isTakenBySomeoneElse || categoryLimitReached || !gotTag || !isGeneral || isFootRestricted || hasForbiddenTag || slotFull;
+          const isDisabled = (!isSelected && remainingSlots <= 0) || !isTypeAllowed || missingMundane || isTakenBySomeoneElse || categoryLimitReached || !gotTag || !isGeneral || isFootRestricted || hasForbiddenTag || slotFull || missingCategory;
 
           let errorLabel = '';
           if (isTakenBySomeoneElse) errorLabel = 'Already taken';
@@ -235,6 +299,7 @@ export const MagicItemSelector = ({ unit, definition, faction }: Props) => {
           else if (!isGeneral) errorLabel = `Requires General`;
           else if (isFootRestricted) errorLabel = `Models on foot only`;
           else if (hasForbiddenTag) errorLabel = `Cannot be ${item.incompatibleTags}`;
+          else if (missingCategory) errorLabel = `Requires ${item.requiresOptionCategory?.join(' or ')}`;
 
           return (
             <div key={item.id} className={`p-2 rounded border ${isSelected ? 'border-amber-500 bg-amber-900/10' : 'border-slate-700 bg-slate-800'} flex justify-between items-center`}>

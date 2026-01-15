@@ -24,8 +24,8 @@ export const characters: UnitDefinition[] = [
       { id: 'wyvern', name: 'Wyvern', points: 167, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }], category:'mount' },
 
       { id: 'shield', name: 'Shield', points: 0, category:'armour' },
-      { id: 'light_armor', name: 'Light armour', points: 0, group: 'armour', category:'armour' },
-      { id: 'heavy_armor', name: 'Heavy armour', points: 0, group: 'armour', category:'armour' },
+      { id: 'light_armour', name: 'Light armour', points: 0, group: 'armour', category:'armour' },
+      { id: 'heavy_armour', name: 'Heavy armour', points: 0, group: 'armour', category:'armour' },
 
       { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon', category:'weapon'},
       { id: 'spear', name: 'Spear,', points: 0, group: 'weapon', category:'weapon' },
@@ -55,8 +55,8 @@ export const characters: UnitDefinition[] = [
       { id: 'wyvern', name: 'Wyvern', points: 158, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }] },
 
       { id: 'shield', name: 'Shield', points: 0 },
-      { id: 'light_armor', name: 'Light armor', points: 0, group: 'armor' },
-      { id: 'heavy_armor', name: 'Heavy armor', points: 0, group: 'armor' },
+      { id: 'light_armour', name: 'Light armour', points: 0, group: 'armour' },
+      { id: 'heavy_armour', name: 'Heavy armour', points: 0, group: 'armour' },
 
       { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
       { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
@@ -84,8 +84,8 @@ export const characters: UnitDefinition[] = [
       { id: 'war_boar', name: 'War Boar', points: 15, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
       { id: 'wyvern', name: 'Wyvern', points: 158, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }] },
 
-      { id: 'light_armor', name: 'Light armor', points: 0, group: 'armor' },
-      { id: 'heavy_armor', name: 'Heavy armor', points: 0, group: 'armor' },
+      { id: 'light_armour', name: 'Light armour', points: 0, group: 'armour' },
+      { id: 'heavy_armour', name: 'Heavy armour', points: 0, group: 'armour' },
     ]
   },
   {
@@ -130,7 +130,7 @@ export const characters: UnitDefinition[] = [
       },
 
       { id: 'shield', name: 'Shield', points: 0 },
-      { id: 'light_armor', name: 'Light armor', points: 0 },
+      { id: 'light_armour', name: 'Light armour', points: 0 },
 
       { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
       { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
@@ -183,7 +183,7 @@ export const characters: UnitDefinition[] = [
       },
 
       { id: 'shield', name: 'Shield', points: 0 },
-      { id: 'light_armor', name: 'Light armor', points: 0 },
+      { id: 'light_armour', name: 'Light armour', points: 0 },
 
       { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
       { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
@@ -233,7 +233,7 @@ export const characters: UnitDefinition[] = [
         requires:['boar_chariot']
       },
 
-      { id: 'light_armor', name: 'Light armor', points: 0 },
+      { id: 'light_armour', name: 'Light armour', points: 0 },
     ]
   },
   {
@@ -610,8 +610,8 @@ export const characters: UnitDefinition[] = [
         requires:['wolf_chariot']
       },
 
-      { id: 'shield', name: 'Shield', points: 0 },
-      { id: 'light_armor', name: 'Light armor', points: 0 },
+      { id: 'shield', name: 'Shield', points: 0, category:'armour' },
+      { id: 'light_armour', name: 'Light armour', points: 0, category:'armour' },
 
       { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
       { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
@@ -662,7 +662,7 @@ export const characters: UnitDefinition[] = [
       },
 
       { id: 'shield', name: 'Shield', points: 0 },
-      { id: 'light_armor', name: 'Light armor', points: 0 },
+      { id: 'light_armour', name: 'Light armour', points: 0 },
 
       { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
       { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
@@ -709,7 +709,7 @@ export const characters: UnitDefinition[] = [
         requires:['wolf_chariot']
       },
 
-      { id: 'light_armor', name: 'Light armor', points: 0 },
+      { id: 'light_armour', name: 'Light armour', points: 0 },
     ]
   },
   {
@@ -937,7 +937,7 @@ export const characters: UnitDefinition[] = [
       { id: 'monstrou_spider', name: 'Monstrous Spider', points: 37, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
 
       { id: 'shield', name: 'Shield', points: 0 },
-      { id: 'light_armor', name: 'Light armor', points: 0 },
+      { id: 'light_armour', name: 'Light armour', points: 0 },
 
       { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
       { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
@@ -1106,7 +1106,7 @@ export const characters: UnitDefinition[] = [
       { id: 'monstrou_spider', name: 'Monstrous Spider', points: 37, group: 'mount', optionProfile:[ { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
 
       { id: 'shield', name: 'Shield', points: 0 },
-      { id: 'light_armor', name: 'Light armor', points: 0 },
+      { id: 'light_armour', name: 'Light armour', points: 0 },
 
       { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
       { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },

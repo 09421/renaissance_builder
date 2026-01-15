@@ -510,7 +510,7 @@ export const regiments: UnitDefinition[] = [
     },
     pointsPerModel: 13,
     stats: HE_STATS.handMaidens,
-    tags:['shield_maiden'],
+    tags:['shield maiden'],
     equipment: ['Hand Weapon', 'Spear', 'Long bow', 'Light armour'],
     specialRules: ['Elven stoicism'],
     options: [

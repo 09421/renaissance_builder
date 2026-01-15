@@ -12,10 +12,10 @@ export interface MagicItem {
   points: number;
   description?: string;
   faction?:String;
-  onlyBattleStandard?: boolean;
+  onlyOnFoot?:boolean;
+  incompatibleTags?: string[];
+  requiresOptionCategory?: string[];
   requiresMundaneOption?: string[];
   requiresTags?: string[];
   requiresGeneral?: boolean;
-  onlyOnFoot?:boolean;
-  incompatibleTags?: string[];
 }
