@@ -15,22 +15,22 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 3,
-      allowedCategories:['weapon', 'armour', 'enchanted'],
+      allowedCategories: ['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Quells animosity', 'Ignore panic induced by Goblins and other orc types'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'war_boar', name: 'War Boar', points: 33, group: 'mount', optionProfile:[ { name: 'War Boar', stats: OG_STATS.warBoar }], category:'mount' },
-      { id: 'wyvern', name: 'Wyvern', points: 167, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }], category:'mount' },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'war_boar', name: 'War Boar', points: 33, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], category: 'mount', isFixedCost: true },
+      { id: 'wyvern', name: 'Wyvern', points: 167, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }], category: 'mount', isFixedCost: true },
 
-      { id: 'shield', name: 'Shield', points: 0, category:'armour' },
-      { id: 'light_armour', name: 'Light armour', points: 0, group: 'armour', category:'armour' },
-      { id: 'heavy_armour', name: 'Heavy armour', points: 0, group: 'armour', category:'armour' },
+      { id: 'shield', name: 'Shield', points: 0, category: 'armour', isFixedCost: true },
+      { id: 'light_armour', name: 'Light armour', points: 0, group: 'armour', category: 'armour', isFixedCost: true },
+      { id: 'heavy_armour', name: 'Heavy armour', points: 0, group: 'armour', category: 'armour', isFixedCost: true },
 
-      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon', category:'weapon'},
-      { id: 'spear', name: 'Spear,', points: 0, group: 'weapon', category:'weapon' },
-      { id: 'halberd', name: 'Halberd,', points: 0, group: 'weapon', category:'weapon' },
-      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon', category:'weapon' },
+      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon', category: 'weapon', isFixedCost: true },
+      { id: 'spear', name: 'Spear', points: 0, group: 'weapon', category: 'weapon', isFixedCost: true },
+      { id: 'halberd', name: 'Halberd', points: 0, group: 'weapon', category: 'weapon', isFixedCost: true },
+      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon', category: 'weapon', isFixedCost: true },
     ]
   },
   {
@@ -46,22 +46,22 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 2,
-      allowedCategories:['weapon', 'armour', 'enchanted'],
+      allowedCategories: ['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Quells animosity', 'Ignore panic induced by Goblins and other orc types'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'war_boar', name: 'War Boar', points: 24, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'wyvern', name: 'Wyvern', points: 158, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'war_boar', name: 'War Boar', points: 24, group: 'mount', category:'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], isFixedCost: true },
+      { id: 'wyvern', name: 'Wyvern', points: 158, group: 'mount', category:'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }], isFixedCost: true },
 
-      { id: 'shield', name: 'Shield', points: 0 },
-      { id: 'light_armour', name: 'Light armour', points: 0, group: 'armour' },
-      { id: 'heavy_armour', name: 'Heavy armour', points: 0, group: 'armour' },
+      { id: 'shield', name: 'Shield', points: 0, isFixedCost: true },
+      { id: 'light_armour', name: 'Light armour', points: 0, group: 'armour', category:'armour', isFixedCost: true },
+      { id: 'heavy_armour', name: 'Heavy armour', points: 0, group: 'armour', category:'armour', isFixedCost: true },
 
-      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
-      { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
-      { id: 'halberd', name: 'Halberd,', points: 0, group: 'weapon' },
-      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon' },
+      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon', category:'weapon', isFixedCost: true },
+      { id: 'spear', name: 'Spear', points: 0, group: 'weapon', category:'weapon', isFixedCost: true },
+      { id: 'halberd', name: 'Halberd', points: 0, group: 'weapon', category:'weapon', isFixedCost: true },
+      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon', category:'weapon', isFixedCost: true },
     ]
   },
   {
@@ -77,15 +77,15 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 1,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'banner'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'banner'],
     },
     specialRules: ['Quells animosity', 'Ignore panic induced by Goblins and other orc types'],
     options: [
-      { id: 'war_boar', name: 'War Boar', points: 15, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'wyvern', name: 'Wyvern', points: 158, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }] },
+      { id: 'war_boar', name: 'War Boar', points: 15, group: 'mount',category: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], isFixedCost: true },
+      { id: 'wyvern', name: 'Wyvern', points: 158, group: 'mount',category: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }], isFixedCost: true },
 
-      { id: 'light_armour', name: 'Light armour', points: 0, group: 'armour' },
-      { id: 'heavy_armour', name: 'Heavy armour', points: 0, group: 'armour' },
+      { id: 'light_armour', name: 'Light armour', points: 0, group: 'armour', category: 'armour', isFixedCost: true },
+      { id: 'heavy_armour', name: 'Heavy armour', points: 0, group: 'armour', category: 'armour', isFixedCost: true },
     ]
   },
   {
@@ -101,43 +101,43 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 3,
-      allowedCategories:['weapon', 'armour', 'enchanted'],
+      allowedCategories: ['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'war_boar', name: 'War Boar', points: 21, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'wyvern', name: 'Wyvern', points: 155, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }] },
-      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, requires:['boar_chariot'] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'war_boar', name: 'War Boar', points: 21, group: 'mount',category: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], isFixedCost: true },
+      { id: 'wyvern', name: 'Wyvern', points: 155, group: 'mount',category: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }], isFixedCost: true },
+      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew: 2, addsMounts: 2, group: 'mount',category: 'mount', optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc },  { name: 'War Boar', stats: OG_STATS.warBoar },{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot }], isFixedCost: true },
+      { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires: ['boar_chariot'] },
       {
         id: 'additional_orc_crew',
         name: 'additional Orc',
         points: 8,
-        maxPerUnit: 2,
+        maxPerUnit: 1,
         isFixedCost: true,
         addsCrew: 1,
-        requires:['boar_chariot'],
+        requires: ['boar_chariot'],
         optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc }]
       },
       {
         id: 'additional_boar',
-        name: 'additional Boar',
+        name: 'additional Boars',
         points: 5,
         maxPerUnit: 2,
         addsMounts: 1,
-        requires:['boar_chariot']
+        requires: ['boar_chariot']
       },
 
-      { id: 'shield', name: 'Shield', points: 0 },
-      { id: 'light_armour', name: 'Light armour', points: 0 },
+      { id: 'shield', name: 'Shield', category: 'armour', points: 0, isFixedCost: true },
+      { id: 'light_armour', name: 'Light armour',category: 'armour', points: 0, isFixedCost: true },
 
-      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
-      { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
-      { id: 'halberd', name: 'Halberd,', points: 0, group: 'weapon' },
-      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon' },
-      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon' },
-      { id: 'crossbow', name: 'Crossbow', points: 10, group: 'ranged_weapon' },
+      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon',category: 'weapon', isFixedCost: true },
+      { id: 'spear', name: 'Spear', points: 0, group: 'weapon',category: 'weapon', isFixedCost: true },
+      { id: 'halberd', name: 'Halberd', points: 0, group: 'weapon',category: 'weapon', isFixedCost: true },
+      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon',category: 'weapon', isFixedCost: true },
+      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon',category: 'ranged_weapon', isFixedCost: true },
+      { id: 'crossbow', name: 'Crossbow', points: 10, group: 'ranged_weapon',category: 'ranged_weapon', isFixedCost: true },
     ]
   },
   {
@@ -153,44 +153,43 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 2,
-      allowedCategories:['weapon', 'armour', 'enchanted'],
+      allowedCategories: ['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'war_boar', name: 'War Boar', points: 16, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'wyvern', name: 'Wyvern', points: 150, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }] },
-      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, requires:['boar_chariot'] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'war_boar', name: 'War Boar', points: 16, group: 'mount',category:'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], isFixedCost: true },
+      { id: 'wyvern', name: 'Wyvern', points: 150, group: 'mount',category: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }], isFixedCost: true },
+      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew: 2, addsMounts: 2, group: 'mount',category: 'mount', optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc },  { name: 'War Boar', stats: OG_STATS.warBoar },{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot }], isFixedCost: true },
+      { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires: ['boar_chariot'] },
       {
         id: 'additional_orc_crew',
         name: 'additional Orc',
         points: 8,
-        maxPerUnit: 2,
+        maxPerUnit: 1,
         isFixedCost: true,
         addsCrew: 1,
-        requires:['boar_chariot'],
+        requires: ['boar_chariot'],
         optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc }]
       },
       {
         id: 'additional_boar',
-        name: 'additional Boar',
+        name: 'additional Boars',
         points: 5,
         maxPerUnit: 2,
-        addsMounts:1,
-        isFixedCost: true,
-        requires:['boar_chariot']
+        addsMounts: 1,
+        requires: ['boar_chariot']
       },
 
-      { id: 'shield', name: 'Shield', points: 0 },
-      { id: 'light_armour', name: 'Light armour', points: 0 },
+      { id: 'shield', name: 'Shield',category:'armour', points: 0, isFixedCost: true },
+      { id: 'light_armour', name: 'Light armour',category:'armour', points: 0, isFixedCost: true },
 
-      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
-      { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
-      { id: 'halberd', name: 'Halberd,', points: 0, group: 'weapon' },
-      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon' },
-      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon' },
-      { id: 'crossbow', name: 'Crossbow', points: 10, group: 'ranged_weapon' },
+      { id: 'add_hw', name: 'Additional hand weapon',category:'weapon', points: 0, group: 'weapon', isFixedCost: true },
+      { id: 'spear', name: 'Spear', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'halberd', name: 'Halberd', points: 0, group: 'weapon', category:'weapon',isFixedCost: true },
+      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon',category:'ranged_weapon', isFixedCost: true },
+      { id: 'crossbow', name: 'Crossbow', points: 10, group: 'ranged_weapon',category:'ranged_weapon', isFixedCost: true},
     ]
   },
   {
@@ -206,34 +205,33 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 1,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'banner'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'banner'],
     },
     specialRules: ['Animosity', 'Ignore panic induced by Goblins'],
     options: [
-      { id: 'war_boar', name: 'War Boar', points: 11, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, requires:['boar_chariot'] },
+      { id: 'war_boar', name: 'War Boar', points: 11, group: 'mount',category:'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], isFixedCost: true },
+      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew: 2, addsMounts: 2, group: 'mount',category:'mount', optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc },  { name: 'War Boar', stats: OG_STATS.warBoar },{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot }], isFixedCost: true },
+      { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires: ['boar_chariot'] },
       {
         id: 'additional_orc_crew',
         name: 'additional Orc',
         points: 8,
-        maxPerUnit: 2,
+        maxPerUnit: 1,
         isFixedCost: true,
         addsCrew: 1,
-        requires:['boar_chariot'],
+        requires: ['boar_chariot'],
         optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc }]
       },
       {
         id: 'additional_boar',
-        name: 'additional Boar',
+        name: 'additional Boars',
         points: 5,
         maxPerUnit: 2,
-        addsMounts:1,
-        isFixedCost: true,
-        requires:['boar_chariot']
+        addsMounts: 1,
+        requires: ['boar_chariot']
       },
 
-      { id: 'light_armour', name: 'Light armour', points: 0 },
+      { id: 'light_armour', name: 'Light armour',category:'armour', points: 0, isFixedCost: true },
     ]
   },
   {
@@ -249,23 +247,23 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
       maxItems: 4,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity', 'Ignore panic induced by Goblins','Level 4 Shaman'],
+    specialRules: ['Animosity', 'Ignore panic induced by Goblins', 'Level 4 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'wyvern', name: 'Wyvern', points: 140, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }] },
-      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, requires:['boar_chariot'] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], isFixedCost: true },
+      { id: 'wyvern', name: 'Wyvern', points: 140, group: 'mount',category:'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }], isFixedCost: true },
+      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew: 2, addsMounts: 2, group: 'mount',category:'mount', optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc },  { name: 'War Boar', stats: OG_STATS.warBoar },{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot }], isFixedCost: true },
+      { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires: ['boar_chariot'] },
       {
         id: 'additional_orc_crew',
         name: 'additional Orc',
         points: 8,
-        maxPerUnit: 2,
+        maxPerUnit: 1,
         isFixedCost: true,
         addsCrew: 1,
-        requires:['boar_chariot'],
+        requires: ['boar_chariot'],
         optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc }]
       },
       {
@@ -273,9 +271,8 @@ export const characters: UnitDefinition[] = [
         name: 'additional Boar',
         points: 5,
         maxPerUnit: 2,
-        addsMounts:1,
-        isFixedCost: true,
-        requires:['boar_chariot']
+        addsMounts: 1,
+        requires: ['boar_chariot']
       },
     ]
   },
@@ -292,32 +289,31 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
       maxItems: 3,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity', 'Ignore panic induced by Goblins','Level 3 Shaman'],
+    specialRules: ['Animosity', 'Ignore panic induced by Goblins', 'Level 3 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, requires:['boar_chariot'] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], isFixedCost: true },
+      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew: 2, addsMounts: 2, group: 'mount',category:'mount', optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc },  { name: 'War Boar', stats: OG_STATS.warBoar },{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot }], isFixedCost: true },
+      { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires: ['boar_chariot']},
       {
         id: 'additional_orc_crew',
         name: 'additional Orc',
         points: 8,
-        maxPerUnit: 2,
+        maxPerUnit: 1,
         isFixedCost: true,
         addsCrew: 1,
-        requires:['boar_chariot'],
+        requires: ['boar_chariot'],
         optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc }]
       },
       {
         id: 'additional_boar',
-        name: 'additional Boar',
+        name: 'additional Boars',
         points: 5,
         maxPerUnit: 2,
-        addsMounts:1,
-        isFixedCost: true,
-        requires:['boar_chariot']
+        addsMounts: 1,
+        requires: ['boar_chariot']
       },
     ]
   },
@@ -334,32 +330,31 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
       maxItems: 2,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity', 'Ignore panic induced by Goblins','Level 2 Shaman'],
+    specialRules: ['Animosity', 'Ignore panic induced by Goblins', 'Level 2 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, requires:['boar_chariot'] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], isFixedCost: true },
+      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew: 2, addsMounts: 2, group: 'mount',category:'mount', optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc },  { name: 'War Boar', stats: OG_STATS.warBoar },{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot }], isFixedCost: true },
+      { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires: ['boar_chariot'] },
       {
         id: 'additional_orc_crew',
         name: 'additional Orc',
         points: 8,
-        maxPerUnit: 2,
+        maxPerUnit: 1,
         isFixedCost: true,
         addsCrew: 1,
-        requires:['boar_chariot'],
+        requires: ['boar_chariot'],
         optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc }]
       },
       {
         id: 'additional_boar',
-        name: 'additional Boar',
+        name: 'additional Boars',
         points: 5,
         maxPerUnit: 2,
-        addsMounts:1,
-        isFixedCost: true,
-        requires:['boar_chariot']
+        addsMounts: 1,
+        requires: ['boar_chariot']
       },
     ]
   },
@@ -376,32 +371,30 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
       maxItems: 1,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity', 'Ignore panic induced by Goblins','Level 1 Shaman'],
+    specialRules: ['Animosity', 'Ignore panic induced by Goblins', 'Level 1 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot },{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, requires:['boar_chariot'] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], isFixedCost: true },
+      { id: 'boar_chariot', name: 'Boar Chariot', points: 52, addsCrew: 2, addsMounts: 2, group: 'mount',category:'mount', optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc },  { name: 'War Boar', stats: OG_STATS.warBoar },{ name: 'Heavy chariot', stats: OG_STATS.heavyChariot }], isFixedCost: true },
+      { id: 'scythed', name: 'Scythed wheels', points: 20, isFixedCost: true, requires: ['boar_chariot'] },
       {
         id: 'additional_orc_crew',
         name: 'additional Orc',
         points: 8,
-        maxPerUnit: 2,
         isFixedCost: true,
         addsCrew: 1,
-        requires:['boar_chariot'],
+        requires: ['boar_chariot'],
         optionProfile: [{ name: 'Orc', stats: OG_STATS.commonOrc }]
       },
       {
         id: 'additional_boar',
-        name: 'additional Boar',
+        name: 'additional Boars',
         points: 5,
         maxPerUnit: 2,
-        addsMounts:1,
-        isFixedCost: true,
-        requires:['boar_chariot']
+        addsMounts: 1,
+        requires: ['boar_chariot']
       },
     ]
   },
@@ -418,20 +411,20 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Magical Tattoos'],
     magicAllowance: {
       maxItems: 3,
-      allowedCategories:['weapon', 'armour', 'enchanted'],
+      allowedCategories: ['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'war_boar', name: 'War Boar', points: 27, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'wyvern', name: 'Wyvern', points: 161, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'war_boar', name: 'War Boar', points: 27, group: 'mount',category:'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] , isFixedCost: true},
+      { id: 'wyvern', name: 'Wyvern', points: 161, group: 'mount',category:'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }], isFixedCost: true },
 
-      { id: 'shield', name: 'Shield', points: 0 },
+      { id: 'shield', name: 'Shield', category:'armour', points: 0, isFixedCost: true },
 
-      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
-      { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
-      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon' },
-      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon' },
+      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'spear', name: 'Spear', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon',category:'ranged_weapon', isFixedCost: true },
     ]
   },
   {
@@ -447,20 +440,20 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Magical Tattoos'],
     magicAllowance: {
       maxItems: 2,
-      allowedCategories:['weapon', 'armour', 'enchanted'],
+      allowedCategories: ['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'war_boar', name: 'War Boar', points: 20, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
-      { id: 'wyvern', name: 'Wyvern', points: 154, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'war_boar', name: 'War Boar', points: 20, group: 'mount',category:'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], isFixedCost: true },
+      { id: 'wyvern', name: 'Wyvern', points: 154, group: 'mount',category:'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }], isFixedCost: true },
 
-      { id: 'shield', name: 'Shield', points: 0 },
+      { id: 'shield', name: 'Shield',category:'armour', points: 0, isFixedCost: true },
 
-      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
-      { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
-      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon' },
-      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon' },
+      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'spear', name: 'Spear', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon',category:'ranged_weapon', isFixedCost: true },
     ]
   },
   {
@@ -476,11 +469,11 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Magical Tattoos'],
     magicAllowance: {
       maxItems: 1,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'banner'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'banner'],
     },
     specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins'],
     options: [
-      { id: 'war_boar', name: 'War Boar', points: 13, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
+      { id: 'war_boar', name: 'War Boar', points: 13, group: 'mount',category:'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], isFixedCost: true },
     ]
   },
   {
@@ -493,16 +486,16 @@ export const characters: UnitDefinition[] = [
     maxSize: 1,
     pointsPerModel: 250,
     stats: OG_STATS.orcShamanLord,
-    equipment: ['Hand Weapon', 'Lore of Waaagh!','Magical Tattoos'],
+    equipment: ['Hand Weapon', 'Lore of Waaagh!', 'Magical Tattoos'],
     magicAllowance: {
       maxItems: 4,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins','Level 4 Shaman'],
+    specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins', 'Level 4 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar } ]},
-      { id: 'wyvern', name: 'Wyvern', points: 140, group: 'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], isFixedCost: true },
+      { id: 'wyvern', name: 'Wyvern', points: 140, group: 'mount',category:'mount', optionProfile: [{ name: 'Wyvern', stats: OG_STATS.wyvern }], isFixedCost: true },
     ]
   },
   {
@@ -515,15 +508,15 @@ export const characters: UnitDefinition[] = [
     maxSize: 1,
     pointsPerModel: 185,
     stats: OG_STATS.orcMasterShaman,
-    equipment: ['Hand Weapon', 'Lore of Waaagh!','Magical Tattoos'],
+    equipment: ['Hand Weapon', 'Lore of Waaagh!', 'Magical Tattoos'],
     magicAllowance: {
       maxItems: 3,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins','Level 3 Shaman'],
+    specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins', 'Level 3 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], isFixedCost: true },
     ]
   },
   {
@@ -539,12 +532,12 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
       maxItems: 2,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins','Level 2 Shaman'],
+    specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins', 'Level 2 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], isFixedCost: true },
     ]
   },
   {
@@ -557,15 +550,15 @@ export const characters: UnitDefinition[] = [
     maxSize: 1,
     pointsPerModel: 75,
     stats: OG_STATS.orcShaman,
-    equipment: ['Hand Weapon', 'Lore of Waaagh!','Magical Tattoos'],
+    equipment: ['Hand Weapon', 'Lore of Waaagh!', 'Magical Tattoos'],
     magicAllowance: {
       maxItems: 1,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins','Level 1 Shaman'],
+    specialRules: ['Animosity', 'Frenzy', 'Magical Tattoos', 'Ignore panic induced by Goblins', 'Level 1 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'war_boar', name: 'War Boar', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'War Boar', stats: OG_STATS.warBoar }], isFixedCost: true },
     ]
   },
   {
@@ -581,42 +574,40 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 3,
-      allowedCategories:['weapon', 'armour', 'enchanted'],
+      allowedCategories: ['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'giant_wolf', name: 'Giant Wolf', points: 14, group: 'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }] },
-      { id: 'monstrou_spider', name: 'Monstrous Spider', points: 40, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
-      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
-      { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, requires:['wolf_chariot'] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'giant_wolf', name: 'Giant Wolf', points: 14, group: 'mount',category:'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }], isFixedCost: true },
+      { id: 'monstrou_spider', name: 'Monstrous Spider', points: 40, group: 'mount',category:'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }], isFixedCost: true },
+      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew: 2, addsMounts: 2, group: 'mount',category:'mount', optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }, { name: 'Wolf', stats: OG_STATS.giantWolf },{ name: 'Light chariot', stats: OG_STATS.lightChariot }], isFixedCost: true },
+      { id: 'scythed', name: 'Scythed wheels', points: 10, isFixedCost: true, requires: ['wolf_chariot'] },
       {
         id: 'additional_goblin_crew',
         name: 'additional Goblin',
         points: 6,
-        maxPerUnit: 2,
         isFixedCost: true,
         addsCrew: 1,
-        requires:['wolf_chariot'],
+        requires: ['wolf_chariot'],
         optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }]
       },
       {
         id: 'additional_wolf',
-        name: 'additional Wolf',
+        name: 'Additional Wolfss',
         points: 8,
         maxPerUnit: 2,
-        addsMounts:1,
-        isFixedCost: true,
-        requires:['wolf_chariot']
+        addsMounts: 1,
+        requires: ['wolf_chariot']
       },
 
-      { id: 'shield', name: 'Shield', points: 0, category:'armour' },
-      { id: 'light_armour', name: 'Light armour', points: 0, category:'armour' },
+      { id: 'shield', name: 'Shield', points: 0, category: 'armour', isFixedCost: true },
+      { id: 'light_armour', name: 'Light armour', points: 0, category: 'armour', isFixedCost: true },
 
-      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
-      { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
-      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon' },
-      { id: 'short_bow', name: 'Short Bow', points: 10, group: 'ranged_weapon' },
+      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon', isFixedCost: true },
+      { id: 'spear', name: 'Spear', points: 0, group: 'weapon', isFixedCost: true },
+      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon', isFixedCost: true },
+      { id: 'short_bow', name: 'Short Bow', points: 10, group: 'ranged_weapon', isFixedCost: true },
     ]
   },
   {
@@ -632,41 +623,39 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 2,
-      allowedCategories:['weapon', 'armour', 'enchanted'],
+      allowedCategories: ['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'giant_wolf', name: 'Giant Wolf', points: 11, group: 'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }] },
-      { id: 'monstrou_spider', name: 'Monstrous Spider', points: 37, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
-      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
-      { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, requires:['wolf_chariot'] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'giant_wolf', name: 'Giant Wolf', points: 11, group: 'mount',category:'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }], isFixedCost: true },
+      { id: 'monstrou_spider', name: 'Monstrous Spider', points: 37, group: 'mount',category:'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }], isFixedCost: true },
+      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew: 2, addsMounts: 2, group: 'mount',category:'mount', optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }, { name: 'Wolf', stats: OG_STATS.giantWolf },{ name: 'Light chariot', stats: OG_STATS.lightChariot }], isFixedCost: true },
+      { id: 'scythed', name: 'Scythed wheels', points: 10, isFixedCost: true, requires: ['wolf_chariot'] },
       {
         id: 'additional_goblin_crew',
         name: 'additional Goblin',
         points: 6,
-        maxPerUnit: 2,
         isFixedCost: true,
         addsCrew: 1,
-        requires:['wolf_chariot'],
+        requires: ['wolf_chariot'],
         optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }]
       },
       {
         id: 'additional_wolf',
-        name: 'additional Wolf',
+        name: 'Additional Wolfs',
         points: 8,
         maxPerUnit: 2,
-        addsMounts:1,
-        isFixedCost: true,
-        requires:['wolf_chariot']
+        addsMounts: 1,
+        requires: ['wolf_chariot']
       },
 
-      { id: 'shield', name: 'Shield', points: 0 },
-      { id: 'light_armour', name: 'Light armour', points: 0 },
+      { id: 'shield', name: 'Shield',category:'armour', points: 0, isFixedCost: true },
+      { id: 'light_armour', name: 'Light armour',category:'armour', points: 0, isFixedCost: true },
 
-      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
-      { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
-      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon' },
+      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'spear', name: 'Spear', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon',category:'ranged_weapon', isFixedCost: true },
     ]
   },
   {
@@ -682,34 +671,32 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 1,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'banner'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'banner'],
     },
     specialRules: ['Animosity'],
     options: [
-      { id: 'giant_wolf', name: 'Giant Wolf', points: 9, group: 'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }] },
-      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
-      { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, requires:['wolf_chariot'] },
+      { id: 'giant_wolf', name: 'Giant Wolf', points: 9, group: 'mount',category:'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }], isFixedCost: true },
+      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew: 2, addsMounts: 2, group: 'mount',category:'mount', optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }, { name: 'Wolf', stats: OG_STATS.giantWolf },{ name: 'Light chariot', stats: OG_STATS.lightChariot }], isFixedCost: true },
+      { id: 'scythed', name: 'Scythed wheels', points: 10, isFixedCost: true, requires: ['wolf_chariot'] },
       {
         id: 'additional_goblin_crew',
         name: 'additional Goblin',
         points: 6,
-        maxPerUnit: 2,
         isFixedCost: true,
         addsCrew: 1,
-        requires:['wolf_chariot'],
+        requires: ['wolf_chariot'],
         optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }]
       },
       {
         id: 'additional_wolf',
-        name: 'additional Wolf',
+        name: 'Additional Wolfs',
         points: 8,
         maxPerUnit: 2,
-        addsMounts:1,
-        isFixedCost: true,
-        requires:['wolf_chariot']
+        addsMounts: 1,
+        requires: ['wolf_chariot']
       },
 
-      { id: 'light_armour', name: 'Light armour', points: 0 },
+      { id: 'light_armour', name: 'Light armour',category:'armour', points: 0, isFixedCost: true },
     ]
   },
   {
@@ -725,33 +712,31 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
       maxItems: 4,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity','Level 4 Shaman'],
+    specialRules: ['Animosity', 'Level 4 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }] },
-      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
-      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
-      { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, requires:['wolf_chariot'] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }], isFixedCost: true },
+      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount',category:'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }], isFixedCost: true },
+      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew: 2, addsMounts: 2, group: 'mount',category:'mount', optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }, { name: 'Wolf', stats: OG_STATS.giantWolf },{ name: 'Light chariot', stats: OG_STATS.lightChariot }], isFixedCost: true },
+      { id: 'scythed', name: 'Scythed wheels', points: 10, isFixedCost: true, requires: ['wolf_chariot'] },
       {
         id: 'additional_goblin_crew',
         name: 'additional Goblin',
         points: 6,
-        maxPerUnit: 2,
         isFixedCost: true,
         addsCrew: 1,
-        requires:['wolf_chariot'],
+        requires: ['wolf_chariot'],
         optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }]
       },
       {
         id: 'additional_wolf',
-        name: 'additional Wolf',
+        name: 'Additional Wolfss',
         points: 8,
         maxPerUnit: 2,
-        addsMounts:1,
-        isFixedCost: true,
-        requires:['wolf_chariot']
+        addsMounts: 1,
+        requires: ['wolf_chariot']
       },
     ]
   },
@@ -768,33 +753,31 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
       maxItems: 3,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity','Level 3 Shaman'],
+    specialRules: ['Animosity', 'Level 3 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }] },
-      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
-      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
-      { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, requires:['wolf_chariot'] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }], isFixedCost: true },
+      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount',category:'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }], isFixedCost: true },
+      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew: 2, addsMounts: 2, group: 'mount',category:'mount', optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }, { name: 'Wolf', stats: OG_STATS.giantWolf },{ name: 'Light chariot', stats: OG_STATS.lightChariot }], isFixedCost: true },
+      { id: 'scythed', name: 'Scythed wheels', points: 10, isFixedCost: true, requires: ['wolf_chariot'] },
       {
         id: 'additional_goblin_crew',
         name: 'additional Goblin',
         points: 6,
-        maxPerUnit: 2,
         isFixedCost: true,
         addsCrew: 1,
-        requires:['wolf_chariot'],
+        requires: ['wolf_chariot'],
         optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }]
       },
       {
         id: 'additional_wolf',
-        name: 'additional Wolf',
+        name: 'Additional Wolfs',
         points: 8,
         maxPerUnit: 2,
-        addsMounts:1,
-        isFixedCost: true,
-        requires:['wolf_chariot']
+        addsMounts: 1,
+        requires: ['wolf_chariot']
       },
     ]
   },
@@ -811,33 +794,31 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
       maxItems: 2,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity','Level 2 Shaman'],
+    specialRules: ['Animosity', 'Level 2 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }] },
-      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
-      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
-      { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, requires:['wolf_chariot'] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }], isFixedCost: true },
+      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount',category:'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }], isFixedCost: true },
+      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew: 2, addsMounts: 2, group: 'mount',category:'mount', optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }, { name: 'Wolf', stats: OG_STATS.giantWolf },{ name: 'Light chariot', stats: OG_STATS.lightChariot }], isFixedCost: true },
+      { id: 'scythed', name: 'Scythed wheels', points: 10, isFixedCost: true, requires: ['wolf_chariot'] },
       {
         id: 'additional_goblin_crew',
         name: 'additional Goblin',
         points: 6,
-        maxPerUnit: 2,
         isFixedCost: true,
         addsCrew: 1,
-        requires:['wolf_chariot'],
+        requires: ['wolf_chariot'],
         optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }]
       },
       {
         id: 'additional_wolf',
-        name: 'additional Wolf',
+        name: 'Additional Wolfs',
         points: 8,
         maxPerUnit: 2,
-        addsMounts:1,
-        isFixedCost: true,
-        requires:['wolf_chariot']
+        addsMounts: 1,
+        requires: ['wolf_chariot']
       },
     ]
   },
@@ -854,33 +835,31 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
       maxItems: 1,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity','Level 1 Shaman'],
+    specialRules: ['Animosity', 'Level 1 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }] },
-      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
-      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew:2, addsMounts:2, group: 'mount', optionProfile: [{ name: 'Light chariot', stats: OG_STATS.lightChariot },{ name: 'Wolf', stats: OG_STATS.giantWolf }] },
-      { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, requires:['wolf_chariot'] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'giant_wolf', name: 'Giant Wolf', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'Giant Wolf', stats: OG_STATS.giantWolf }], isFixedCost: true },
+      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount',category:'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }], isFixedCost: true },
+      { id: 'wolf_chariot', name: 'Wolf Chariot', points: 44, addsCrew: 2, addsMounts: 2, group: 'mount',category:'mount', optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }, { name: 'Wolf', stats: OG_STATS.giantWolf },{ name: 'Light chariot', stats: OG_STATS.lightChariot }], isFixedCost: true },
+      { id: 'scythed', name: 'Scythed wheels', points: 10, isFixedCost: true, requires: ['wolf_chariot'] },
       {
         id: 'additional_goblin_crew',
         name: 'additional Goblin',
         points: 6,
-        maxPerUnit: 2,
         isFixedCost: true,
         addsCrew: 1,
-        requires:['wolf_chariot'],
+        requires: ['wolf_chariot'],
         optionProfile: [{ name: 'Goblin', stats: OG_STATS.goblin }]
       },
       {
         id: 'additional_wolf',
-        name: 'additional Wolf',
+        name: 'Additional Wolfs',
         points: 8,
         maxPerUnit: 2,
-        addsMounts:1,
-        isFixedCost: true,
-        requires:['wolf_chariot']
+        addsMounts: 1,
+        requires: ['wolf_chariot']
       },
     ]
   },
@@ -897,21 +876,21 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 3,
-      allowedCategories:['weapon', 'armour', 'enchanted'],
+      allowedCategories: ['weapon', 'armour', 'enchanted'],
     },
-    tags:['forest_goblin'],
+    tags: ['forest_goblin'],
     specialRules: ['Animosity'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'giant_spider', name: 'Giant Spider', points: 13, group: 'mount', optionProfile: [{ name: 'Giant Spider', stats: OG_STATS.giantSpider }] },
-      { id: 'monstrou_spider', name: 'Monstrous Spider', points: 40, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'giant_spider', name: 'Giant Spider', points: 13, group: 'mount',category:'mount', optionProfile: [{ name: 'Giant Spider', stats: OG_STATS.giantSpider }], isFixedCost: true },
+      { id: 'monstrou_spider', name: 'Monstrous Spider', points: 40, group: 'mount',category:'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }], isFixedCost: true },
 
-      { id: 'shield', name: 'Shield', points: 0 },
+      { id: 'shield', name: 'Shield',category:'armour', points: 0, isFixedCost: true },
 
-      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
-      { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
-      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon' },
-      { id: 'short_bow', name: 'Short Bow', points: 10, group: 'ranged_weapon' },
+      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'spear', name: 'Spear', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'short_bow', name: 'Short Bow', points: 10, group: 'ranged_weapon',category:'ranged_weapon', isFixedCost: true },
     ]
   },
   {
@@ -927,21 +906,21 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 2,
-      allowedCategories:['weapon', 'armour', 'enchanted'],
+      allowedCategories: ['weapon', 'armour', 'enchanted'],
     },
-    tags:['forest_goblin'],
+    tags: ['forest_goblin'],
     specialRules: ['Animosity'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'giant_spider', name: 'Giant Spider', points: 10, group: 'mount', optionProfile: [{ name: 'Giant Spider', stats: OG_STATS.giantSpider }] },
-      { id: 'monstrou_spider', name: 'Monstrous Spider', points: 37, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'giant_spider', name: 'Giant Spider', points: 10, group: 'mount',category:'mount', optionProfile: [{ name: 'Giant Spider', stats: OG_STATS.giantSpider }], isFixedCost: true },
+      { id: 'monstrou_spider', name: 'Monstrous Spider', points: 37, group: 'mount',category:'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }], isFixedCost: true },
 
-      { id: 'shield', name: 'Shield', points: 0 },
-      { id: 'light_armour', name: 'Light armour', points: 0 },
+      { id: 'shield', name: 'Shield',category:'armour', points: 0, isFixedCost: true },
+      { id: 'light_armour', name: 'Light armour',category:'armour', points: 0, isFixedCost: true },
 
-      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
-      { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
-      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon' },
+      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'spear', name: 'Spear', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon',category:'ranged_weapon', isFixedCost: true },
     ]
   },
   {
@@ -957,13 +936,13 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 1,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'banner'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'banner'],
     },
-    tags:['forest_goblin'],
+    tags: ['forest_goblin'],
     specialRules: ['Animosity'],
     options: [
-      { id: 'giant_spider', name: 'Giant Spider', points: 8, group: 'mount', optionProfile: [{ name: 'Giant Spider', stats: OG_STATS.giantSpider }] },
-     ]
+      { id: 'giant_spider', name: 'Giant Spider', points: 8, group: 'mount',category:'mount', optionProfile: [{ name: 'Giant Spider', stats: OG_STATS.giantSpider }], isFixedCost: true },
+    ]
   },
   {
     id: 'forest_goblin_shaman_lord',
@@ -978,14 +957,14 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
       maxItems: 4,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    tags:['forest_goblin'],
-    specialRules: ['Animosity','Level 4 Shaman'],
+    tags: ['forest_goblin'],
+    specialRules: ['Animosity', 'Level 4 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'giant_spider', name: 'Giant Spider', points: 0, group: 'mount', optionProfile: [{ name: 'Giant Spider', stats: OG_STATS.giantSpider }] },
-      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'giant_spider', name: 'Giant Spider', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'Giant Spider', stats: OG_STATS.giantSpider }], isFixedCost: true },
+      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount',category:'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }], isFixedCost: true },
     ]
   },
   {
@@ -1001,14 +980,14 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
       maxItems: 3,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    tags:['forest_goblin'],
-    specialRules: ['Animosity','Level 3 Shaman'],
+    tags: ['forest_goblin'],
+    specialRules: ['Animosity', 'Level 3 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'giant_spider', name: 'Giant Spider', points: 0, group: 'mount', optionProfile: [{ name: 'Giant Spider', stats: OG_STATS.giantSpider }] },
-      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'giant_spider', name: 'Giant Spider', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'Giant Spider', stats: OG_STATS.giantSpider }], isFixedCost: true },
+      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount',category:'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }], isFixedCost: true },
     ]
   },
   {
@@ -1024,14 +1003,15 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
       maxItems: 2,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    tags:['forest_goblin'],
-    specialRules: ['Animosity','Level 2 Shaman'],
+    tags: ['forest_goblin'],
+    specialRules: ['Animosity', 'Level 2 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'giant_spider', name: 'Giant Spider', points: 0, group: 'mount', optionProfile: [{ name: 'Giant Spider', stats: OG_STATS.giantSpider }] },
-      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
+
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'giant_spider', name: 'Giant Spider', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'Giant Spider', stats: OG_STATS.giantSpider }], isFixedCost: true },
+      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount',category:'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }], isFixedCost: true },
     ]
   },
   {
@@ -1047,14 +1027,14 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!'],
     magicAllowance: {
       maxItems: 1,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    tags:['forest_goblin'],
-    specialRules: ['Animosity','Level 1 Shaman'],
+    tags: ['forest_goblin'],
+    specialRules: ['Animosity', 'Level 1 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'giant_spider', name: 'Giant Spider', points: 0, group: 'mount', optionProfile: [{ name: 'Giant Spider', stats: OG_STATS.giantSpider }] },
-      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'giant_spider', name: 'Giant Spider', points: 0, group: 'mount',category:'mount', optionProfile: [{ name: 'Giant Spider', stats: OG_STATS.giantSpider }], isFixedCost: true },
+      { id: 'monstrous_spider', name: 'Monstrous Spider', points: 32, group: 'mount',category:'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }], isFixedCost: true },
     ]
   },
   {
@@ -1070,19 +1050,19 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 3,
-      allowedCategories:['weapon', 'armour', 'enchanted'],
+      allowedCategories: ['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'monstrou_spider', name: 'Monstrous Spider', points: 40, group: 'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'monstrou_spider', name: 'Monstrous Spider', points: 40, group: 'mount',category:'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }], isFixedCost: true },
 
-      { id: 'shield', name: 'Shield', points: 0 },
+      { id: 'shield', name: 'Shield',category:'armour', points: 0, isFixedCost: true },
 
-      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
-      { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
-      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon' },
-      { id: 'short_bow', name: 'Short Bow', points: 10, group: 'ranged_weapon' },
+      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'spear', name: 'Spear', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'great_weapon', name: 'Double handed weapon', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'short_bow', name: 'Short Bow', points: 10, group: 'ranged_weapon',category:'ranged_weapon', isFixedCost: true },
     ]
   },
   {
@@ -1098,19 +1078,19 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 2,
-      allowedCategories:['weapon', 'armour', 'enchanted'],
+      allowedCategories: ['weapon', 'armour', 'enchanted'],
     },
     specialRules: ['Animosity'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
-      { id: 'monstrou_spider', name: 'Monstrous Spider', points: 37, group: 'mount', optionProfile:[ { name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }] },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
+      { id: 'monstrou_spider', name: 'Monstrous Spider', points: 37, group: 'mount',category:'mount', optionProfile: [{ name: 'Monstrous Spider', stats: OG_STATS.monstrousSpider }], isFixedCost: true },
 
-      { id: 'shield', name: 'Shield', points: 0 },
-      { id: 'light_armour', name: 'Light armour', points: 0 },
+      { id: 'shield', name: 'Shield',category:'armour', points: 0, isFixedCost: true },
+      { id: 'light_armour', name: 'Light armour',category:'armour', points: 0, isFixedCost: true },
 
-      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon'},
-      { id: 'spear', name: 'Spear,', points: 0, group: 'weapon' },
-      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon' },
+      { id: 'add_hw', name: 'Additional hand weapon', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'spear', name: 'Spear', points: 0, group: 'weapon',category:'weapon', isFixedCost: true },
+      { id: 'bow', name: 'Bow', points: 10, group: 'ranged_weapon',category:'ranged_weapon', isFixedCost: true },
     ]
   },
   {
@@ -1126,7 +1106,7 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon'],
     magicAllowance: {
       maxItems: 1,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'banner'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'banner'],
     },
     specialRules: ['Animosity'],
     options: []
@@ -1144,11 +1124,11 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!', 'Magic Mushroom'],
     magicAllowance: {
       maxItems: 4,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity','Level 4 Shaman'],
-    options: [      
-      { id: 'general', name: 'General', points: 0 },
+    specialRules: ['Animosity', 'Level 4 Shaman'],
+    options: [
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
     ]
   },
   {
@@ -1164,11 +1144,11 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!', 'Magic Mushroom'],
     magicAllowance: {
       maxItems: 3,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity','Level 3 Shaman'],
+    specialRules: ['Animosity', 'Level 3 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
     ]
   },
   {
@@ -1184,11 +1164,11 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!', 'Magic Mushroom'],
     magicAllowance: {
       maxItems: 2,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity','Level 2 Shaman'],
+    specialRules: ['Animosity', 'Level 2 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
     ]
   },
   {
@@ -1204,11 +1184,11 @@ export const characters: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Lore of Waaagh!', 'Magic Mushroom'],
     magicAllowance: {
       maxItems: 1,
-      allowedCategories:['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
+      allowedCategories: ['weapon', 'armour', 'enchanted', 'arcane', 'familiar'],
     },
-    specialRules: ['Animosity','Level 1 Shaman'],
+    specialRules: ['Animosity', 'Level 1 Shaman'],
     options: [
-      { id: 'general', name: 'General', points: 0 },
+      { id: 'general', name: 'General', points: 0, category: 'general', isFixedCost: true },
     ]
   },
 ]

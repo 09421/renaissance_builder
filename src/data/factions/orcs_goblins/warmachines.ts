@@ -28,7 +28,6 @@ export const warmachines: UnitDefinition[] = [
         name: 'additional crew members',
         points: 2.5,
         maxPerUnit: 2,
-        isFixedCost: true,
         addsCrew: 1,
       }
     ]
@@ -58,7 +57,6 @@ export const warmachines: UnitDefinition[] = [
         name: 'additional crew members',
         points: 5,
         maxPerUnit: 2,
-        isFixedCost: true,
         addsCrew: 1,
       }
     ]
@@ -88,7 +86,6 @@ export const warmachines: UnitDefinition[] = [
         name: 'additional crew members',
         points: 2.5,
         maxPerUnit: 2,
-        isFixedCost: true,
         addsCrew: 1,
       }
     ]
@@ -116,9 +113,8 @@ export const warmachines: UnitDefinition[] = [
       {
         id: 'crew',
         name: 'additional crew members',
-        points: 2.5,
+        points: 5,
         maxPerUnit: 2,
-        isFixedCost: true,
         addsCrew: 1,
       }
     ]
@@ -148,7 +144,6 @@ export const warmachines: UnitDefinition[] = [
         name: 'additional crew members',
         points: 2.5,
         maxPerUnit: 2,
-        isFixedCost: true,
         addsCrew: 1,
       }
     ]
@@ -176,9 +171,8 @@ export const warmachines: UnitDefinition[] = [
       {
         id: 'crew',
         name: 'additional crew members',
-        points: 2.5,
+        points: 5,
         maxPerUnit: 2,
-        isFixedCost: true,
         addsCrew: 1,
       }
     ]

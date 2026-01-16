@@ -19,6 +19,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: [],
     options: [
+      { id: 'general', name: 'General', points: 0, category:'general', isFixedCost:true },
       { id: 'warhorse', name: 'War Horse', points: 20, group: 'mount', optionProfile: [{ name: 'War Horse', stats: EMP_STATS.Warhorse }], category:'mount' },
       { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'], category:'mount' },
       { id: 'pegasus', name: 'Pegasus', points: 55, group: 'mount', optionProfile: [{ name: 'Pegasus', stats: EMP_STATS.Pegasus }], category:'mount' },
@@ -61,6 +62,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: [],
     options: [
+      { id: 'general', name: 'General', points: 0, category:'general', isFixedCost:true },
       { id: 'warhorse', name: 'War Horse', points: 15, group: 'mount', optionProfile: [{ name: 'War Horse', stats: EMP_STATS.Warhorse }], category:'mount' },
       { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'], category:'mount' },
       { id: 'pegasus', name: 'Pegasus', points: 50, group: 'mount', optionProfile: [{ name: 'Pegasus', stats: EMP_STATS.Pegasus }], category:'mount' },
@@ -132,6 +134,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Religious Fervor'],
     options: [
+      { id: 'general', name: 'General', points: 0, category:'general', isFixedCost:true },
       { id: 'warhorse', name: 'War Horse', points: 10, group: 'mount', optionProfile: [{ name: 'War Horse', stats: EMP_STATS.Warhorse }], category:'mount' },
       { id: 'barding', name: 'Barding', points: 0, requires: ['warhorse'], category:'mount' },      
       { id: 'chariot', name: 'LargeChariot', points: 80, group: 'mount', optionProfile: [{ name: 'War Horse', stats: EMP_STATS.Warhorse }], category:'mount' },
@@ -161,6 +164,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Level 4 Wizard'],
     options: [
+      { id: 'general', name: 'General', points: 0, category:'general', isFixedCost:true },
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college', category:'magic' },
       { id: 'ice_college', name: 'Ice Magic', points: 0, group: 'magic_college', category:'magic' },
 
@@ -187,6 +191,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Level 3 Wizard'],
     options: [
+      { id: 'general', name: 'General', points: 0, category:'general', isFixedCost:true },
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college', category:'magic' },
       { id: 'ice_college', name: 'Ice Magic', points: 0, group: 'magic_college', category:'magic' },
 
@@ -212,6 +217,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Level 2 Wizard'],
     options: [
+      { id: 'general', name: 'General', points: 0, category:'general', isFixedCost:true },
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college', category:'magic' },
       { id: 'ice_college', name: 'Ice Magic', points: 0, group: 'magic_college', category:'magic' },
 
@@ -237,6 +243,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Level 1 Wizard'],
     options: [
+      { id: 'general', name: 'General', points: 0, category:'general', isFixedCost:true },
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college', category:'magic' },
       { id: 'ice_college', name: 'Ice Magic', points: 0, group: 'magic_college', category:'magic' },
 

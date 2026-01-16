@@ -309,6 +309,7 @@ export const regiments: UnitDefinition[] = [
     modelName: 'Elite',
     role: 'regiments',
     type: 'Cavalry',
+    tags:['Dragon Princes'],
     minSize: 5,
     maxSize: null,
     restrictions:{
@@ -503,6 +504,7 @@ export const regiments: UnitDefinition[] = [
     modelName: 'Hand Maiden',
     role: 'regiments',
     type: 'Infantry',
+    tags:['shield maiden'],
     minSize: 5,
     maxSize: null,
     restrictions:{
@@ -510,7 +512,6 @@ export const regiments: UnitDefinition[] = [
     },
     pointsPerModel: 13,
     stats: HE_STATS.handMaidens,
-    tags:['shield maiden'],
     equipment: ['Hand Weapon', 'Spear', 'Long bow', 'Light armour'],
     specialRules: ['Elven stoicism'],
     options: [

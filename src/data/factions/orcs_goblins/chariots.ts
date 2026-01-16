@@ -30,10 +30,9 @@ export const chariots: UnitDefinition[] = [
       { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, },
       {
         id: 'additional_goblin_crew',
-        name: 'additional goblin',
+        name: 'additional goblins',
         points: 6,
         maxPerUnit: 2,
-        isFixedCost: true,
         addsCrew: 1,
       },
       { 
@@ -46,11 +45,10 @@ export const chariots: UnitDefinition[] = [
       },
       {
         id: 'additional_wolf',
-        name: 'additional Wolf',
+        name: 'additional Wolfs',
         points: 8,
         maxPerUnit: 2,
         addsMounts:1,
-        isFixedCost: true,
       }
     ]
   },
@@ -82,10 +80,9 @@ export const chariots: UnitDefinition[] = [
       { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, },
       {
         id: 'additional_orc_crew',
-        name: 'additional Orc',
+        name: 'additional Orcs',
         points: 8,
         maxPerUnit: 2,
-        isFixedCost: true,
         addsCrew: 1,
       },
       { 
@@ -98,11 +95,10 @@ export const chariots: UnitDefinition[] = [
       },
       {
         id: 'additional_boar',
-        name: 'additional Boar',
+        name: 'additional Boars',
         points: 5,
         addsMounts:1,
         maxPerUnit: 2,
-        isFixedCost: true,
       }
     ]
   },

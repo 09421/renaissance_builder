@@ -1,6 +1,6 @@
 import { useArmyStore } from '@/store/armyStore';
 import { UnitDefinition, ArmyUnit,UnitOption, OptionCategory } from '@/types/army';
-import { MagicItemSelector } from '@/components/MagicItemSelector';
+import { MagicItemSelector } from '@/components/magicItemsSelector/MagicItemSelector';
 import { useMemo, useState } from 'react';
 import { OptionRow, getCategory } from './utils';
 

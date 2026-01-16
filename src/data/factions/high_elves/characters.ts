@@ -99,6 +99,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Elven stoicism'],
     options: [
+      { id: 'general', name: 'General', points: 0, category:'general', isFixedCost:true },
       { id: 'steed', name: 'Elven Steed', points: 20, group: 'mount', optionProfile: [{ name: 'Elven Steed', stats: HE_STATS.elvenSteed }], category:'mount' },
       { id: 'barding', name: 'Barding', points: 0, requires: ['steed'], category:'mount' },
       { id: 'Tiranoc_chariot', name: 'Tiranoc Chariot', points: 60, group: 'mount', isFixedCost:true, addsCrew:2, addsMounts:2,
@@ -240,6 +241,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Elven stoicism', 'Level 4 mage'],
     options: [
+      { id: 'general', name: 'General', points: 0, category:'general', isFixedCost:true },
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college', category:'magic' },
       { id: 'high', name: 'High Magic', points: 0, group: 'magic_college', category:'magic' },
 
@@ -308,6 +310,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Elven stoicism', 'Level 3 mage'],
     options: [
+      { id: 'general', name: 'General', points: 0, category:'general', isFixedCost:true },
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college', category:'magic' },
       { id: 'high', name: 'High Magic', points: 0, group: 'magic_college', category:'magic' },
 
@@ -373,6 +376,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Elven stoicism', 'Level 2 mage'],
     options: [
+      { id: 'general', name: 'General', points: 0, category:'general', isFixedCost:true },
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college', category:'magic' },
       { id: 'high', name: 'High Magic', points: 0, group: 'magic_college', category:'magic' },
 
@@ -438,6 +442,7 @@ export const characters: UnitDefinition[] = [
     },
     specialRules: ['Elven stoicism', 'Level 1 mage'],
     options: [
+      { id: 'general', name: 'General', points: 0, category:'general', isFixedCost:true },
       { id: 'college', name: 'College Magic', points: 0, group: 'magic_college', category:'magic' },
       { id: 'high', name: 'High Magic', points: 0, group: 'magic_college', category:'magic'},
 
