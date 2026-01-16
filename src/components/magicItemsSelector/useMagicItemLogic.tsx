@@ -23,7 +23,6 @@ export const useMagicItemLogic = (
     
     const allowedSet = new Set<string>(definition.magicAllowance?.allowedCategories || []);
 
-    // Helper: Add base limits
     const addLimits = (amount: number, cats: string[]) => {
       if (cats.includes('banner') || cats.length === 0) maxBanners += amount;
 
