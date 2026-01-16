@@ -1,12 +1,11 @@
 import {withFaction} from '@/data/utils';
 export const COMMON_MAGIC_WEAPONS = withFaction('common', [
-  //weapons
   {
     id: 'biting_blade',
     name: 'Biting Blade',
     type: 'weapon',
     points: 10,
-    description: '-2 to armor save',
+    description: '-2 to armour save',
     requiresMundaneOption: ['Hand Weapon'],
   },
   {

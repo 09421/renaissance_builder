@@ -18,7 +18,7 @@ export const monsters: UnitDefinition[] = [
         stats: HE_STATS.youngDragon
       }
     ],
-    equipment: ['Hand Weapon', 'Lance', 'Dragon armor', 'Shield'],
+    equipment: ['Hand Weapon', 'Lance', 'Dragon armour', 'Shield'],
     specialRules: ['Elven stoicism'],
     options: []
   },

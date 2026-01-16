@@ -24,7 +24,7 @@ export const chariots: UnitDefinition[] = [
         stats: OG_STATS.giantWolf
       }
     ],
-    equipment: ['Hand Weapon', 'Spears', 'Short bows', 'Light armor', 'Shields'],
+    equipment: ['Hand Weapon', 'Spears', 'Short bows', 'Light armour', 'Shields'],
     specialRules: ['Animosity'],
     options: [
       { id: 'scythed', name: 'Scythed wheels', points: 10, group: 'weapon', isFixedCost: true, },
@@ -74,7 +74,7 @@ export const chariots: UnitDefinition[] = [
         stats: OG_STATS.warBoar
       }
     ],
-    equipment: ['Hand Weapon', 'Spears', 'Bows', 'Light armor', 'Shields'],
+    equipment: ['Hand Weapon', 'Spears', 'Bows', 'Light armour', 'Shields'],
     specialRules: ['Animosity'],
     options: [
       { id: 'scythed', name: 'Scythed wheels', points: 20, group: 'weapon', isFixedCost: true, },
