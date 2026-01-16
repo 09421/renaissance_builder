@@ -1,0 +1,236 @@
+import { withFaction } from '@/data/utils';
+
+export const COMMON_ARCANE_ITEMS = withFaction('common', [
+  {
+    id: 'skull_staff',
+    name: 'Skull Staff',
+    type: 'arcane',
+    points: 10,
+    description: 'In each magic phase, at your request, your opponent must reveal the magic items and spells of all their models that are within 12” of the wizard bearing the skull staff',
+    requiresTags: ['wizard', 'shaman', 'mage']
+  },
+  {
+    id: 'enchanted_mirror',
+    name: 'Enchanted Mirror',
+    type: 'arcane',
+    points: 10,
+    description: 'Dispel attempts made by the bearer always succeed on 4+ (or better)',
+    requiresTags: ['wizard', 'shaman', 'mage']
+  },
+  {
+    id: 'staff_stealing',
+    name: 'Staff Of Stealing',
+    type: 'arcane',
+    points: 10,
+    description: 'Used when winds of magic are rolled. Your side steals one (1) magic card from your enemy. One use only',
+    requiresTags: ['wizard', 'shaman', 'mage']
+  },
+  {
+    id: 'power_scroll',
+    name: 'Power Scroll',
+    type: 'arcane',
+    points: 10,
+    description: 'Automatically powers one of the wizard’s spells. One use only',
+    requiresTags: ['wizard', 'shaman', 'mage']
+  },
+  {
+    id: 'infusion_white',
+    name: 'Infusion Of White',
+    type: 'arcane',
+    points: 10,
+    description: 'Used when winds of magic are rolled. The bearer gains 1D6 extra magic cards that only he/she can use. On a roll of six the wizard OD’s after the magic phase ends (passes out for the rest of the battle, is hit automatically if attacked in melee combat). One use only',
+    requiresTags: ['wizard', 'shaman', 'mage']
+  },
+  {
+    id: 'seerstone',
+    name: 'Seerstone',
+    type: 'arcane',
+    points: 10,
+    description: 'For each extra power card spent when attempting to cast a spell, the wizard may increase the range of the spell by 12”',
+    requiresTags: ['wizard', 'shaman', 'mage']
+  },
+  {
+    id: 'cloak_horrors',
+    name: 'Cloak Of Horrors',
+    type: 'arcane',
+    points: 10,
+    description: 'This cloak is embroidered with the number of the beast. When wearing this cloak, the wizard can replace any dealt spell during spell selection with the Savage Beast of Horrors spell, if the wizard did not initially receive this spell. The cloak amplifies the effects of the Savage Beast of Horrors spell when cast. Rather than rolling to hit with three augmented attacks, as per the spell, the bearer automatically inflicts 6 hits at strength 6. All other bonuses of the spell apply and furthermore, the bearer’s own toughness increases to 6',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+    requiresMundaneOption:['amber_lore']
+  },
+  {
+    id: 'stormcrow_staff',
+    name: 'Stormcrow Staff',
+    type: 'arcane',
+    points: 10,
+    description: 'The Stormcrow Staff can only be used against flying units (note that it can harm flying monsters and their riders). It requires line of sight and has a range of 18 inches but can also be cast on enemy units flying high (which are always assumed to be within line of sight of the caster). The targeted unit suffers 1D6 lightning strength 6 hits, distributed like normal shooting. No armour save allowed',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+    requiresMundaneOption:['celestial_lore']
+  },
+  {
+    id: 'teclis_textbook',
+    name: 'Teclis’ Textbook',
+    type: 'arcane',
+    points: 10,
+    description: 'The owner of this book may use any one of the eight lores of College Magic instead of their normal lore. Though the textbook takes up a magic item slot, it is strictly speaking not a magic item, and cannot be destroyed',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+  },
+  {
+    id: 'flameforged_cape',
+    name: 'Flameforged Cape',
+    type: 'arcane',
+    points: 10,
+    description: 'When the wizard wears this bright cape, they may replace any dealt spell during spell selection with the Scarlet Scimitar spell, if they were not originally granted this spell. The cape enhances the effects of the Scarlet Scimitar spell. In addition to the benefits mentioned in the spell’s description, the bearer of the cape becomes incredibly elusive in combat. All attempts to hit the bearer, whether in melee or with ranged attacks, require a natural roll of six to succeed, as long as the Scarlet Scimitar is active. Even attacks that would normally automatically hit, such as those from the Helblaster or most spells, must be rolled for, and only a natural roll of six will result in a successful hit',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+    requiresMundaneOption:['bright_lore']
+  },
+  {
+    id: 'purple_reaper',
+    name: 'Purple Reaper',
+    type: 'arcane',
+    points: 20,
+    description: 'A wizard who wields this enchanted scythe may exchange any dealt spell during spell selection with the Purple Scythe spell, if they did not receive it initially. When equipped with the Purple Reaper, the Purple Scythe spell inflicts 1D6 strength 10 hits on each enemy model in base contact during the melee phase, surpassing the standard 1D3 strength 5 hits. May be used even while mounted',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+    requiresMundaneOption:['amethyst_lore']
+  },
+  {
+    id: 'dispel_magic_scroll',
+    name: 'Dispel Magic Scroll',
+    type: 'arcane',
+    points: 25,
+    description: 'Automatically dispels an enemy spell, even if cast with Total Power and including spells that were cast in a previous turn and remain in play. One use only. You may include two Dispel Magic Scrolls in your army unless you play with the “Veto One Spell” house rule, in which case you may only take one',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+  },
+  {
+    id: 'dispel_magic_scroll_2',
+    name: 'Dispel Magic Scroll',
+    type: 'arcane',
+    points: 25,
+    description: 'Automatically dispels an enemy spell, even if cast with Total Power and including spells that were cast in a previous turn and remain in play. One use only. You may include two Dispel Magic Scrolls in your army unless you play with the “Veto One Spell” house rule, in which case you may only take one',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+  },
+  {
+    id: 'ring_darkness',
+    name: 'Ring Of Darkness',
+    type: 'arcane',
+    points: 30,
+    description: 'Bound spell. The wizard becomes ethereal, as described in the Undead army book. Remains in play',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+  },
+  {
+    id: 'amulet_steel',
+    name: 'Amulet Of Steel',
+    type: 'arcane',
+    points: 30,
+    description: 'The spell can be cast upon any unit within 18 inches and in line of sight of the bearer. Enemy units suffer a -2 penalty to their armour save, while friendly units gain a +2 bonus to their armour save. If a friendly unit has no armour save it is granted a 5+ armour save. The effect lasts until the next magic phase',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+    requiresMundaneOption:['gold_lore']
+  },
+  {
+    id: 'crown_shadows',
+    name: 'Crown Of Shadows',
+    type: 'arcane',
+    points: 30,
+    description: 'When a wizard dons this magnificent crown, they may exchange any dealt spell during spell selection with the Crown of Taidron spell, if they did not receive it initially. The crown amplifies the range of the Crown of Taidron to 18 inches instead of only three inches. The Crown of Taidron costs one power to cast and deals 1D6 lightning strength 6 hits distributed like normal shooting',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+    requiresMundaneOption:['grey_lore']
+  },
+  {
+    id: 'book_secrets',
+    name: 'Book Of Secrets',
+    type: 'arcane',
+    points: 40,
+    description: 'Used just after rolling for winds of magic. The player may discard any number of magic cards not belonging to a particular wizard (such as a card stored from the previous magic phase) and immediately draw replacements',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+  },
+  {
+    id: 'white_cloak',
+    name: 'White Cloak',
+    type: 'arcane',
+    points: 40,
+    description: 'When a wizard dons this cloak, they gain the ability to replace any dealt spell during spell selection with the Shimmering Cloak spell, provided they did not receive it initially. Moreover, the White Cloak enhances the effects of the Shimmering Cloak spell. As long as the spell is active, the protective properties of the Shimmering Cloak (which deflect ranged attacks harmlessly and require natural sixes to hit in melee combat) extend to any regiment the bearer of the White Cloak joins',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+    requiresMundaneOption:['light_lore']
+  },
+  {
+    id: 'wand_resurrection',
+    name: 'Wand Of Resurrection',
+    type: 'arcane',
+    points: 50,
+    description: 'Whenever a Jade spell is successfully cast, the wizard gains the ability to revive either one fallen rank-and-file cavalry model or two fallen rank-and-file infantry models. This can be done within the wizard’s own regiment or any friendly regiment within an 18-inch radius and within line of sight of the wizard. This effect cannot exceed the starting model count of the regiments involved. The Wand of Resurrection only works on (previously) living creatures and has no effect on undead, Daemons, and constructs such as chariots and war machines',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+    requiresMundaneOption:['jade_lore']
+  },
+  {
+    id: 'book_ashur',
+    name: 'Book Of Ashur',
+    type: 'arcane',
+    points: 50,
+    description: '+1 magic level. Note that increasing the magic level of the wizard does not increase the number of magic items the wizard may carry',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+  },
+  {
+    id: 'orb_forbidden_knowledge',
+    name: 'Orb Of Forbidden Knowledge',
+    type: 'arcane',
+    points: 50,
+    description: 'For purposes of casting and dispelling, the bearer always counts as having two magic levels more than he actually has',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+  },
+  {
+    id: 'destroy_magic_scroll',
+    name: 'Destroy Magic Scroll',
+    type: 'arcane',
+    points: 50,
+    description: 'Automatically dispels an enemy spell, even if cast with Total Power and including spells that were cast in a previous turn and remain in play. Furthermore, roll a 1D6, on a 4+ the spell is destroyed. If it is a bound spell, a successful roll must be re-rolled. One use only',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+  },
+  {
+    id: 'chalice_sorcery',
+    name: 'Chalice Of Sorcery',
+    type: 'arcane',
+    points: 75,
+    description: 'Once per magic phase the wizard may drink from the chalice when casting a spell. The spell is cast for free. Afterwards roll a 1D6, on a roll of 1 or 2 the wizard suffers one wound (no armour save allowed), and the chalice is empty (cannot be used again)',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+  },
+  {
+    id: 'staff_three_sisters',
+    name: 'Staff Of The Three Sisters',
+    type: 'arcane',
+    points: 75,
+    description: 'Dispel attempts made by the bearer always succeed on 3+ or better',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+  },
+  {
+    id: 'doomfire_ring',
+    name: 'Doomfire Ring',
+    type: 'arcane',
+    points: 75,
+    description: 'Bound Spell: A firebolt of doom launches from the ringbearer’s hand and strikes a visible enemy unit within 24”. The unit suffers 2D6 flaming Strength 4 hits, distributed like normal shooting. Normal armour saves apply. This spell can be used three times only',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+  },
+  {
+    id: 'wand_jet',
+    name: 'Wand Of Jet',
+    type: 'arcane',
+    points: 75,
+    description: 'Reduces the cost of casting a spell with one power card (power one spells are cast for free). May be used once per magic phase. Each time the wand is used the caster loses 1D6 characteristic points (such as BS, I, LD, etc.). The characteristic points can be reduced in any combination e.g. a roll of a 4 could be taken as -4 to one characteristic or -1 to each of four different characteristics. If any characteristic is lowered to 0 the wizard dies. Characteristics sacrificed this way cannot be restored by any means',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+  },
+  {
+    id: 'staff_flaming_death',
+    name: 'Staff Of Flaming Death',
+    type: 'arcane',
+    points: 75,
+    description: 'Bound spell. A large fireball flies from the staff and strikes a visible enemy unit within 12”. The unit suffers 1D6 flaming S5 hits, distributed like normal shooting. Normal armour saves apply',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+  },
+  {
+    id: 'staff_many_coloured_traitor',
+    name: 'Staff Of The Many Coloured Traitor',
+    type: 'arcane',
+    points: 75,
+    description: 'All successful rolls to dispel spells cast by the bearer of this item must be re-rolled. Does not include bound spells',
+    requiresTags: ['wizard', 'shaman', 'mage'],
+  },
+]);

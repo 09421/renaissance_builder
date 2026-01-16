@@ -23,6 +23,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: HE_STATS.elvenChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -72,6 +73,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: HE_STATS.elvenChampion,
         isFixedCost: true, 
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -119,6 +121,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: HE_STATS.elvenChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -173,6 +176,7 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: HE_STATS.elvenCommander,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -228,6 +232,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: HE_STATS.elvenChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -277,6 +282,7 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: HE_STATS.elvenCommander,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -332,6 +338,7 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: HE_STATS.elvenCommander,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -378,6 +385,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: HE_STATS.elvenChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -423,6 +431,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: HE_STATS.elvenChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -472,6 +481,7 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: HE_STATS.elvenCommander,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -521,6 +531,7 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: HE_STATS.elvenCommander,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -570,6 +581,7 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: HE_STATS.elvenCommander,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,

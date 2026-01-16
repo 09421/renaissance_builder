@@ -23,6 +23,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.champion,
         isFixedCost: true, 
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -70,6 +71,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.champion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -116,6 +118,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.champion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -163,6 +166,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.champion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -209,6 +213,7 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: EMP_STATS.captain,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -255,6 +260,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.champion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -301,6 +307,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.champion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -347,6 +354,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.champion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -398,6 +406,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.captain,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -452,6 +461,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: EMP_STATS.captain,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -511,6 +521,7 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: EMP_STATS.captain,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -570,6 +581,7 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: EMP_STATS.captain,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -628,6 +640,7 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: EMP_STATS.captain,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -681,6 +694,7 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: EMP_STATS.captain,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -735,6 +749,7 @@ export const regiments: UnitDefinition[] = [
         points: 50,
         stats: EMP_STATS.commander,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -793,6 +808,7 @@ export const regiments: UnitDefinition[] = [
         points: 50,
         stats: EMP_STATS.commander,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,

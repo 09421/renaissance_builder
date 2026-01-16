@@ -27,6 +27,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: OG_STATS.commonOrcChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -75,6 +76,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: OG_STATS.commonOrcChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -128,6 +130,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: OG_STATS.commonOrcChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -179,6 +182,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: OG_STATS.bigunChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -227,6 +231,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: OG_STATS.bigunChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -280,6 +285,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: OG_STATS.bigunChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -330,6 +336,7 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: OG_STATS.savageChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -376,6 +383,7 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: OG_STATS.savageChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -430,6 +438,7 @@ export const regiments: UnitDefinition[] = [
         points: 30,
         stats: OG_STATS.savageChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -482,6 +491,7 @@ export const regiments: UnitDefinition[] = [
         points: 20,
         stats: OG_STATS.blackOrcChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -533,6 +543,7 @@ export const regiments: UnitDefinition[] = [
         points: 10,
         stats: OG_STATS.goblinChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -589,6 +600,7 @@ export const regiments: UnitDefinition[] = [
         points: 10,
         stats: OG_STATS.goblinChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -639,6 +651,7 @@ export const regiments: UnitDefinition[] = [
         points: 10,
         stats: OG_STATS.forestGoblinChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -694,6 +707,7 @@ export const regiments: UnitDefinition[] = [
         points: 10,
         stats: OG_STATS.goblinChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -761,6 +775,7 @@ export const regiments: UnitDefinition[] = [
         stats: OG_STATS.goblinChampion,
         category: 'command',
         isFixedCost: true,
+        isExternalPoints: true,
         magicAllowance:{
           maxItems:1,
           allowedCategories:['weapon', 'armour', 'enchanted']
@@ -822,6 +837,7 @@ export const regiments: UnitDefinition[] = [
         maxPerModel: 3,
         ratioError: 'Only 3 Cave Squig per goblin is allowed.',
         isFixedCost: true,
+        isExternalPoints: true,
         optionProfile: [{
           name: 'Cave Squig',
           stats: OG_STATS.caveSquig
@@ -849,6 +865,7 @@ export const regiments: UnitDefinition[] = [
         points: 10,
         stats: OG_STATS.goblinChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,
@@ -950,6 +967,7 @@ export const regiments: UnitDefinition[] = [
         points: 50,
         stats: OG_STATS.ogreChampion,
         isFixedCost: true,
+        isExternalPoints: true,
         category:'command',
         magicAllowance:{
           maxItems:1,

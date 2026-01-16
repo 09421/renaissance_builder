@@ -150,7 +150,7 @@ function checkIsTakenByOthers(item: MagicItem, currentUnit: ArmyUnit, roster: Ar
 }
 
 function checkCategoryDuplicate(item: MagicItem, selectedItems: { item: MagicItem }[]): boolean {
-  if (item.type !== 'weapon' && item.type !== 'armour') return false;
+  if (item.type !== 'weapon' && item.type !== 'armour' && item.type !== 'familiar') return false;
   return selectedItems.some(entry => entry.item.type === item.type);
 }
 

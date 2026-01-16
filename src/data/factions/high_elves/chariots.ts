@@ -34,7 +34,6 @@ export const chariots: UnitDefinition[] = [
         name: 'additional Warrior',
         points: 10,
         maxPerUnit: 2,
-        isFixedCost: true,
         addsCrew: 1,
       },
       { 
@@ -43,6 +42,7 @@ export const chariots: UnitDefinition[] = [
         points: 33,
         requires: ['additional_crew'],
         isFixedCost:true,
+        isExternalPoints:true,
         stats:HE_STATS.elvenWarrior
       },
       {
@@ -50,7 +50,6 @@ export const chariots: UnitDefinition[] = [
         name: 'additional Steed',
         points: 5,
         maxPerUnit: 2,
-        isFixedCost: true,
         addsMounts:1,
       }
     ]
@@ -91,7 +90,6 @@ export const chariots: UnitDefinition[] = [
         name: 'additional Warrior',
         points: 10,
         maxPerUnit: 2,
-        isFixedCost: true,
         addsCrew: 1,
       },
       { 
@@ -107,7 +105,6 @@ export const chariots: UnitDefinition[] = [
         name: 'additional white Lion',
         points: 17,
         maxPerUnit: 2,
-        isFixedCost: true,
         addsMounts:1,
       }
     ]

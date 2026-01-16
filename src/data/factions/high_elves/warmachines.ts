@@ -28,7 +28,6 @@ export const warmachines: UnitDefinition[] = [
         name: 'additional crew members',
         points: 7,
         maxPerUnit: 3,
-        isFixedCost: true,
         addsCrew: 1,
         category:'other'
       }
