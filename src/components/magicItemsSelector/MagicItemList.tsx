@@ -8,6 +8,7 @@ interface Props {
   definition: UnitDefinition;
   getItemStatus: (item: MagicItem) => {
     isSelected: boolean;
+    currentCount: number;
     isDisabled: boolean;
     errorLabel: string | null;
   };

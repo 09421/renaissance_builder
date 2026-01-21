@@ -18,4 +18,8 @@ export interface MagicItem {
   requiresMundaneOption?: string[];
   requiresTags?: string[];
   requiresGeneral?: boolean;
+  isRune?:boolean;
+  isMasterRune?: boolean;
+  maxCount?: number;
+  allowMultipleInGroup?: boolean;
 }

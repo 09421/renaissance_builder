@@ -1,17 +1,20 @@
 import { UnitDefinition } from '@/types/army';
 import {MagicItem} from '@/types/magicItems';
 import { ORCS_AND_GOBLINS_ROSTER } from '@/data/factions/orcs_goblins/index'; 
-import { HIGH_ELVES_ROSTER } from '@/data/factions/high_elves/index';
-import { EMPIRE_ROSTER } from '@/data/factions/empire/index';
-import { COMMON_MAGIC_ITEMS } from '@/data/common/magicItems';
-import { HIGH_ELVES_MAGIC_ITEMS } from '@/data/factions/high_elves/magicItems/';
-import { EMPIRE_MAGIC_ITEMS } from '@/data/factions/empire/magicItems/';
 import { OG_MAGIC_ITEMS } from '@/data/factions/orcs_goblins/magicItems';
+import { HIGH_ELVES_ROSTER } from '@/data/factions/high_elves/index';
+import { HIGH_ELVES_MAGIC_ITEMS } from '@/data/factions/high_elves/magicItems/';
+import { EMPIRE_ROSTER } from '@/data/factions/empire/index';
+import { EMPIRE_MAGIC_ITEMS } from '@/data/factions/empire/magicItems/';
+import { COMMON_MAGIC_ITEMS } from '@/data/common/magicItems';
+import { DWARF_ROSTER } from '@/data/factions/dwarfs';
+import { DWARF_MAGIC_ITEMS } from '@/data/factions/dwarfs/magicItems';
 
 const DB: Record<string, UnitDefinition[]> = {
   'orcs_goblins': ORCS_AND_GOBLINS_ROSTER,
   'high_elves': HIGH_ELVES_ROSTER,
   'empire': EMPIRE_ROSTER,
+  'dwarfs': DWARF_ROSTER,
 };
 
 export const getFactionRoster = (factionKey: string): UnitDefinition[] => {
@@ -35,6 +38,9 @@ export const getMagicItems = (faction: string): MagicItem[] => {
   }
   if (faction === 'orcs_goblins') {
     items = [...items, ...OG_MAGIC_ITEMS];
+  }  
+  if (faction === 'dwarfs') {
+    items = [...items, ...DWARF_MAGIC_ITEMS];
   }
   return items;
 };

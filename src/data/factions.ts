@@ -14,22 +14,19 @@ export const FACTIONS: FactionInfo[] = [
   { 
     key: 'empire', 
     name: 'The Empire',
-    description: 'Work in progress'
   },
   { 
     key: 'high_elves', 
     name: 'High Elves', 
-    description: 'Work in progress'
   },
   { 
     key: 'orcs_goblins', 
     name: 'Orcs & Goblins',
-    description: 'Work in progress'
   },
   { 
     key: 'dwarfs', 
-    name: 'Dwarfs',  
-    disabled: true
+    name: 'Dwarfs',
+    description: 'Work in progress'
   },
   { 
     key: 'skaven', 

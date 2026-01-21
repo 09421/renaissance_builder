@@ -39,5 +39,10 @@ export const calculateUnitCost = (unit: ArmyUnit, definition: UnitDefinition, fa
     }
   });
 
+  if(definition.unitBaseCost){
+    const extraModels = Math.max(0, unit.modelCount - definition.minSize);
+    return definition.unitBaseCost + (extraModels * definition.pointsPerModel) + optionCost;
+  }
+
   return (definition.pointsPerModel * unit.modelCount) + optionCost;
 };

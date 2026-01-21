@@ -13,7 +13,7 @@ export const regiments: UnitDefinition[] = [
     maxSize: null,
     pointsPerModel: 8,
     stats: HE_STATS.elvenWarrior,
-    equipment: ['Hand Weapon', 'Light armour', 'Shield'],
+    equipment: ['Hand Weapon', 'Spear','Light armour', 'Shield'],
     specialRules: ['Elven stoicism'],
     options: [
       {id: 'heavy_armour', name: 'Heavy armour', points: 2, replaces: ['Light armour'], category:'armour' },
@@ -64,8 +64,8 @@ export const regiments: UnitDefinition[] = [
     equipment: ['Hand Weapon', 'Shield'],
     specialRules: ['Elven stoicism'],
     options: [
-      {id: 'add_hw', name: 'Additional hand weapons', points: 0, group: 'weapon', category:'weapon' },
-      {id: 'great_wpn', name: 'Double handed weapons', points: 2, group: 'weapon', category:'weapon'},
+      {id: 'add_hw', name: 'Additional hand weapons', points: 0, group: 'weapon', category:'weapon', replaces:['Shield'] },
+      {id: 'great_weapon', name: 'Double handed weapons', points: 2, group: 'weapon', category:'weapon', replaces:['Shield']},
       {id: 'light_armour', name: 'Light armour', points: 0.5, category:'armour' },
       {
         id: 'champion',

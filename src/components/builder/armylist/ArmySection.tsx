@@ -25,26 +25,26 @@ export const ArmySection = ({ role, units, faction, selectedUnitId, selectUnit, 
   }, 0);
 
   return (
-    <div className="mb-6">
+    <div className="mb-4 sm:mb-6">
       <div 
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between border-b-2 border-slate-700 pb-2 mb-4 cursor-pointer hover:border-slate-500 transition-colors group select-none"
+        className="flex items-center justify-between border-b-2 border-slate-700 pb-2 mb-3 sm:mb-4 cursor-pointer hover:border-slate-500 transition-colors group select-none gap-2"
       >
-        <div className="flex items-center gap-3">
-           <div className={`p-1 rounded-full bg-slate-800 text-slate-400 group-hover:text-white transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}>
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
+           <div className={`p-1 rounded-full bg-slate-800 text-slate-400 group-hover:text-white transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`}>
              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" /></svg>
            </div>
-           <h2 className="text-xl font-serif font-bold text-amber-500 uppercase tracking-widest group-hover:text-amber-400">
+           <h2 className="text-lg sm:text-xl font-serif font-bold text-amber-500 uppercase tracking-widest group-hover:text-amber-400 truncate">
              {SECTION_TITLES[role as UnitRole]}
            </h2>
         </div>
-        <div className="text-sm font-mono text-slate-400 font-bold bg-slate-800 px-3 py-1 rounded border border-slate-700">
+        <div className="text-xs sm:text-sm font-mono text-slate-400 font-bold bg-slate-800 px-2 sm:px-3 py-1 rounded border border-slate-700 flex-shrink-0">
           {sectionPoints} pts
         </div>
       </div>
 
       {isOpen && (
-        <div className="space-y-3 animate-in fade-in slide-in-from-top-2 duration-300">
+        <div className="space-y-2 sm:space-y-3 animate-in fade-in slide-in-from-top-2 duration-300">
           {units.map((unit) => (
             <UnitCard 
               key={unit.instanceId}

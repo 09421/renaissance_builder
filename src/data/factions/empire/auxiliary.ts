@@ -327,7 +327,7 @@ export const auxiliary: UnitDefinition[] = [
     specialRules: ['Fear'],
     options: [
       { id: 'add_hw', name: 'Additional hand weapons', points: 6, group: 'weapon', category:'weapon' },
-      { id: 'great_wpn', name: 'Double handed weapons', points: 8, group: 'weapon', category:'weapon' },
+      { id: 'great_weapon', name: 'Double handed weapons', points: 8, group: 'weapon', category:'weapon' },
       { id: 'flail', name: 'Flails', points: 8, group: 'weapon', category:'weapon' },      
       { id: 'heavy_armour', name: 'Heavy armour', points: 4, replaces: ['Light armour'], category:'armour' },
       {
@@ -376,7 +376,7 @@ export const auxiliary: UnitDefinition[] = [
     specialRules: ['Dwarf'],
     options: [
       { id: 'spear', name: 'Spears', points: 2, group: 'weapon', category:'weapon' },
-      { id: 'great_wpn', name: 'Double handed weapons', points: 3, group: 'weapon', category:'weapon' },
+      { id: 'great_weapon', name: 'Double handed weapons', points: 3, group: 'weapon', category:'weapon' },
       { id: 'crossbow', name: 'crossbows', points: 4, group: 'weapon', conflicts: ['shield'], category:'ranged_weapon'},
       { id: 'heavy_armour', name: 'Heavy armour', points: 2, replaces: ['Light armour'], category:'armour' },
       { id: 'shield', name: 'Shields', points: 1, category:'armour' },

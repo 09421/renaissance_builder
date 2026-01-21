@@ -91,6 +91,7 @@ export const useArmyStore = create<ArmyState>()(
             defId: unitDef.id,
             name: unitDef.name,
             role: unitDef.role,
+            unitBaseCost: unitDef.unitBaseCost || unitDef.pointsPerModel * unitDef.minSize,
             pointsPerModel: unitDef.pointsPerModel,
             modelCount: unitDef.minSize,
             selectedOptions: {},
@@ -200,7 +201,7 @@ export const useArmyStore = create<ArmyState>()(
           const def = getUnitDef(faction, unit.defId);
           if (!def) return total;
 
-          const baseCost = unit.modelCount * def.pointsPerModel;
+          const baseCost = unit.unitBaseCost ||unit.modelCount * def.pointsPerModel;
 
           let optionsCost = 0;
           Object.entries(unit.selectedOptions).forEach(([optId, count]) => {

@@ -15,12 +15,11 @@ interface Props {
 export type ItemSource = 'faction' | 'common';
 
 export const MagicItemSelector = ({ unit, definition, faction }: Props) => {
-  // UI State
   const [activeCategory, setActiveCategory] = useState<MagicItemCategory>('weapon');
   const [activeSource, setActiveSource] = useState<ItemSource>('faction');
 
-  // Data Fetching
   const allItems = useMemo(() => getMagicItems(faction), [faction]);
+  const isRunicFaction = (faction === 'dwarfs');
   
   const { factionItems, commonItems } = useMemo(() => ({
     factionItems: allItems.filter(i => i.faction === faction),
@@ -30,8 +29,8 @@ export const MagicItemSelector = ({ unit, definition, faction }: Props) => {
   const { allowance, usage, getItemStatus, isWizard } = useMagicItemLogic(
     unit, 
     definition, 
-    allItems, 
-    activeCategory
+    allItems,
+    isRunicFaction
   );
 
   if (allowance.maxTotal === 0) return null;

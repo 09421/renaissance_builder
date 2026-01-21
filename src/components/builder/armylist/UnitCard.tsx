@@ -49,65 +49,67 @@ export const UnitCard = ({ unit, faction, isSelected, onSelect, onRemove }: Unit
     <div
       onClick={(e) => { e.stopPropagation(); onSelect(); }}
       className={`
-        relative p-4 rounded-lg border cursor-pointer transition-all group
+        relative p-3 sm:p-4 rounded-lg border cursor-pointer transition-all group
         ${isSelected
           ? 'bg-slate-800 border-amber-500 ring-1 ring-amber-500/50 shadow-lg'
           : 'bg-slate-900 border-slate-700 hover:border-slate-500 hover:bg-slate-800'}
       `}
     >
-      <div className="flex justify-between items-start mb-3">
-        <h3 className="font-bold text-lg text-slate-100">{unit.name}</h3>
-        <div className="flex items-center gap-4">
-          <div className="text-sm text-amber-500 font-mono font-bold">
+      <div className="flex justify-between items-start mb-2 sm:mb-3 gap-2 min-w-0">
+        <h3 className="font-bold text-sm sm:text-lg text-slate-100 truncate">{unit.name}</h3>
+        <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+          <div className="text-xs sm:text-sm text-amber-500 font-mono font-bold whitespace-nowrap">
             {getModelDisplayString(unit, def)} • {points} pts
           </div>
           <button
             onClick={(e) => { e.stopPropagation(); onRemove(); }}
-            className="opacity-0 group-hover:opacity-100 transition-opacity text-slate-500 hover:text-red-400"
+            className="opacity-0 group-hover:opacity-100 transition-opacity text-slate-500 hover:text-red-400 flex-shrink-0"
           >
             ✕
           </button>
         </div>
       </div>
 
-      {/* STATS GRID */}
-      <div className="grid grid-cols-11 gap-px bg-slate-700/50 border border-slate-700 rounded overflow-hidden mb-3">
+      {/* STATS GRID - RESPONSIVE */}
+      <div className="overflow-x-auto mb-2 sm:mb-3 -mx-3 sm:-mx-4 px-3 sm:px-4">
+        <div className="grid grid-cols-11 gap-px bg-slate-700/50 border border-slate-700 rounded overflow-hidden min-w-min">
 
-        <div className="col-span-2 bg-slate-800"></div>
-        {['M', 'WS', 'BS', 'S', 'T', 'W', 'I', 'A', 'Ld'].map(s => (
-          <div key={s} className="bg-slate-800 py-1 text-[10px] font-bold text-slate-400 text-center">{s}</div>
-        ))}
+          <div className="col-span-2 bg-slate-800"></div>
+          {['M', 'WS', 'BS', 'S', 'T', 'W', 'I', 'A', 'Ld'].map(s => (
+            <div key={s} className="bg-slate-800 py-1 text-[9px] sm:text-[10px] font-bold text-slate-400 text-center">{s}</div>
+          ))}
 
-        <StatRow label={def.modelName} stats={def.stats} />
+          <StatRow label={def.modelName} stats={def.stats} />
 
-        {championProfiles.map(opt => (
-          <div key={opt.id} className="contents bg-slate-800/30">
-            <StatRow label={opt.name} stats={{ ...opt.stats } as StatBlock} isHighlight />
-          </div>
-        ))}
+          {championProfiles.map(opt => (
+            <div key={opt.id} className="contents bg-slate-800/30">
+              <StatRow label={opt.name} stats={{ ...opt.stats } as StatBlock} isHighlight />
+            </div>
+          ))}
 
-        {def.additionalProfiles?.map((p, i) => (
-          <div key={i} className="contents bg-slate-900/40">
-            <StatRow label={p.name} stats={p.stats} />
-          </div>
-        ))}
+          {def.additionalProfiles?.map((p, i) => (
+            <div key={i} className="contents bg-slate-900/40">
+              <StatRow label={p.name} stats={p.stats} />
+            </div>
+          ))}
 
-        {optionProfiles.map(opt => (
-          <React.Fragment key={opt.id}>
-            {opt.optionProfile?.map((profile, index) => (
-              <div key={`${opt.id}-${index}`} className="contents bg-slate-900/40">
-                <StatRow
-                  label={profile.name}
-                  stats={profile.stats}
-                />
-              </div>
-            ))}
-          </React.Fragment>
-        ))}
+          {optionProfiles.map(opt => (
+            <React.Fragment key={opt.id}>
+              {opt.optionProfile?.map((profile, index) => (
+                <div key={`${opt.id}-${index}`} className="contents bg-slate-900/40">
+                  <StatRow
+                    label={profile.name}
+                    stats={profile.stats}
+                  />
+                </div>
+              ))}
+            </React.Fragment>
+          ))}
+        </div>
       </div>
 
       {/* GEAR */}
-      <div className="text-xs text-slate-400">
+      <div className="text-xs text-slate-400 line-clamp-2">
         <span className="font-semibold text-slate-500 uppercase mr-1">Gear:</span>
         {fullGearList}
       </div>

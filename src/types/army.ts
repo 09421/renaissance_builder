@@ -23,6 +23,7 @@ export interface ArmyUnit {
   defId: string;
   name: string;
   role: string;
+  unitBaseCost: number;
   pointsPerModel: number;
   modelCount: number;
   tags?: string[];
@@ -78,6 +79,7 @@ export interface UnitDefinition {
   type: string;
   minSize: number;
   maxSize: number | null;
+  unitBaseCost?: number;
   pointsPerModel: number;
   stats: StatBlock;
   equipment: string[]; 

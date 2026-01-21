@@ -69,7 +69,7 @@ export const UnitList = ({ role, units, addUnit, roster, faction }: SectionProps
                 <span className={`text-xs font-mono ${allowed ? 'text-amber-600' : 'text-slate-600'}`}>                
                   {unit.minSize === unit.maxSize 
                     ? `${unit.pointsPerModel}pts` 
-                    : `${unit.pointsPerModel} / ${unit.pointsPerModel * unit.minSize}pts`}
+                    : `${unit.pointsPerModel} / ${unit.unitBaseCost || (unit.pointsPerModel * unit.minSize)}pts`}
                 </span>
               </button>
             );

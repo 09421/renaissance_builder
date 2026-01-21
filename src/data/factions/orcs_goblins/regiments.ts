@@ -19,7 +19,7 @@ export const regiments: UnitDefinition[] = [
       { id: 'add_hw', name: 'Additional hand weapons', points: 1, group: 'weapon', category:'weapon' },
       { id: 'spear', name: 'Spears', points: 2, group: 'weapon', category:'weapon' },
       { id: 'halberd', name: 'Halberds', points: 1, group: 'weapon', category:'weapon' },
-      { id: 'great_wpn', name: 'Double handed weapons', points: 2, group: 'weapon', category:'weapon' },
+      { id: 'great_weapon', name: 'Double handed weapons', points: 2, group: 'weapon', category:'weapon' },
       { id: 'shield', name: 'Shields', points: 1, category:'armour' },
       {
         id: 'champion',
@@ -174,7 +174,7 @@ export const regiments: UnitDefinition[] = [
       { id: 'add_hw', name: 'Additional hand weapons', points: 2, group: 'weapon', category:'weapon' },
       { id: 'spear', name: 'Spears', points: 3, group: 'weapon', category:'weapon' },
       { id: 'halberd', name: 'Halberds', points: 1, group: 'weapon', category:'weapon' },
-      { id: 'great_wpn', name: 'Double handed weapons', points: 3, group: 'weapon', category:'weapon' },
+      { id: 'great_weapon', name: 'Double handed weapons', points: 3, group: 'weapon', category:'weapon' },
       { id: 'shield', name: 'Shields', points: 1, category:'armour' },
       {
         id: 'champion',
@@ -328,7 +328,7 @@ export const regiments: UnitDefinition[] = [
     options: [
       { id: 'add_hw', name: 'Additional hand weapons', points: 1, group: 'weapon', category:'weapon', },
       { id: 'spear', name: 'Spears', points: 1, group: 'weapon', category:'weapon', },
-      { id: 'great_wpn', name: 'Double handed weapons', points: 4, group: 'weapon', category:'weapon', },
+      { id: 'great_weapon', name: 'Double handed weapons', points: 4, group: 'weapon', category:'weapon', },
       { id: 'shield', name: 'Shields', points: 1, category:'armour', },
       {
         id: 'champion',
@@ -482,7 +482,7 @@ export const regiments: UnitDefinition[] = [
       { id: 'add_hw', name: 'Additional hand weapons', points: 2, group: 'weapon', category:'weapon', },
       { id: 'spear', name: 'Spears', points: 2, group: 'weapon', category:'weapon', },
       { id: 'halberd', name: 'Halberds', points: 1, group: 'weapon', category:'weapon', },
-      { id: 'great_wpn', name: 'Double handed weapons', points: 3, group: 'weapon', category:'weapon', },
+      { id: 'great_weapon', name: 'Double handed weapons', points: 3, group: 'weapon', category:'weapon', },
       { id: 'heavy_armour', name: 'Heavy armour', points: 2, replaces: ['Light armour'], category:'armour', },
       { id: 'shield', name: 'Shields', points: 1, category:'armour', },
       {
@@ -533,7 +533,7 @@ export const regiments: UnitDefinition[] = [
     specialRules: ['Animosity', 'Fear Elves'],
     options: [
       { id: 'spear', name: 'Spears', points: 0.5, group: 'weapon', category:'weapon', },
-      { id: 'great_wpn', name: 'Double handed weapons', points: 2, group: 'weapon' , category:'weapon',},
+      { id: 'great_weapon', name: 'Double handed weapons', points: 2, group: 'weapon' , category:'weapon',},
       { id: 'short_bow', name: 'Short Bows', points: 1, group: 'ranged_weapon', category:'ranged_weapon', },
       { id: 'light_armour', name: 'Light armour', points: 0.5, category:'armour', },
       { id: 'shield', name: 'Shields', points: 0.5, category:'armour', },
@@ -642,7 +642,7 @@ export const regiments: UnitDefinition[] = [
     specialRules: ['Animosity', 'Fear Elves', 'Traverse woods without penalty'],
     options: [
       { id: 'spear', name: 'Spears', points: 0.5, group: 'weapon', category:'weapon', },
-      { id: 'great_wpn', name: 'Double handed weapons', points: 2, group: 'weapon', category:'weapon', },
+      { id: 'great_weapon', name: 'Double handed weapons', points: 2, group: 'weapon', category:'weapon', },
       { id: 'short_bow', name: 'Short Bows', points: 1, group: 'weapon', conflicts: ['shield'], category:'ranged_weapon', },
       { id: 'shield', name: 'Shields', points: 0.5, conflicts: ['short_bow'], category:'armour', },
       {
@@ -749,7 +749,7 @@ export const regiments: UnitDefinition[] = [
     specialRules: ['Animosity', 'Fear Elves', 'Hate Dwarfs'],
     options: [
       { id: 'spear', name: 'Spears', points: 0.5, group: 'weapon', category:'weapon' },
-      { id: 'great_wpn', name: 'Double handed weapons', points: 2, group: 'weapon', category:'weapon'  },
+      { id: 'great_weapon', name: 'Double handed weapons', points: 2, group: 'weapon', category:'weapon'  },
       { id: 'short_bow', name: 'Short Bows', points: 1, group: 'weapon', conflicts: ['shield'], category:'ranged_weapon' },
       { id: 'shield', name: 'Shields', points: 0.5, conflicts: ['short_bow'], category:'armour' },
       {
@@ -958,7 +958,7 @@ export const regiments: UnitDefinition[] = [
     specialRules: ['Causes fear'],
     options: [
       { id: 'add_hw', name: 'Additional hand weapons', points: 6, group: 'weapon',category:'weapon' },
-      { id: 'great_wpn', name: 'Double handed weapons', points: 8, group: 'weapon',category:'weapon' },
+      { id: 'great_weapon', name: 'Double handed weapons', points: 8, group: 'weapon',category:'weapon' },
       { id: 'flail', name: 'Flails', points: 8, group: 'weapon',category:'weapon' },
       { id: 'heavy_armour', name: 'Heavy armour', points: 4, replaces: ['Light armour'],category:'armour'},
       {

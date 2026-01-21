@@ -28,7 +28,16 @@ export const UnitEditor = ({ unit, definition, faction }: Props) => {
 
   // --- CALCULATE TOTAL POINTS ---
   const totalPoints = useMemo(() => {
-    let cost = definition.pointsPerModel * unit.modelCount;
+
+    let cost = 0;
+    if(definition.unitBaseCost){
+      const extraModels = Math.max(0, unit.modelCount - definition.minSize);
+      cost = definition.unitBaseCost + (extraModels * definition.pointsPerModel);
+    }
+    else{
+      cost = definition.pointsPerModel * unit.modelCount;
+    }
+
     Object.entries(unit.selectedOptions).forEach(([optId, count]) => {
       const opt = definition.options.find(o => o.id === optId);
       if (opt) {
@@ -133,32 +142,32 @@ const groupedOptions = useMemo(() => {
     <div className="flex flex-col h-full bg-slate-950 border-l border-slate-800">
 
       {/* 1. HEADER */}
-      <div className="p-6 border-b border-slate-800 bg-slate-900 sticky top-0 z-10 shadow-xl">
-        <h2 className="text-2xl font-bold text-slate-100 mb-1">{definition.name}</h2>
-        <div className="flex justify-between items-end">
-          <div className="text-amber-500 font-mono text-xl font-bold">
+      <div className="p-3 sm:p-6 border-b border-slate-800 bg-slate-900 sticky top-0 z-10 shadow-xl">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-100 mb-1 truncate">{definition.name}</h2>
+        <div className="flex justify-between items-end gap-2">
+          <div className="text-amber-500 font-mono text-lg sm:text-xl font-bold">
             {totalPoints} pts
           </div>
-          <div className="text-xs text-slate-500">
+          <div className="text-xs sm:text-sm text-slate-500 whitespace-nowrap">
             {unit.modelCount} Models
           </div>
         </div>
       </div>
 
       {/* 2. SCROLLABLE CONTENT */}
-      <div className="flex-1 overflow-y-auto p-4 custom-scrollbar space-y-6">
+      <div className="flex-1 overflow-y-auto p-3 sm:p-4 custom-scrollbar space-y-4 sm:space-y-6">
 
         {/* SECTION: UNIT SIZE */}
-        <section className="bg-slate-900 p-4 rounded-xl border border-slate-800">
-          <div className="flex justify-between mb-4">
+        <section className="bg-slate-900 p-3 sm:p-4 rounded-lg sm:rounded-xl border border-slate-800">
+          <div className="flex justify-between mb-3 sm:mb-4">
             <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Regiment Size</label>
             <span className="text-xs text-slate-600 font-mono">Min: {definition.minSize}</span>
           </div>
           
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <button
               onClick={() => updateUnitSize(unit.instanceId, Math.max(definition.minSize, unit.modelCount - 1))}
-              className="w-12 h-12 rounded-lg bg-slate-800 border border-slate-700 text-slate-400 hover:text-amber-500 hover:border-amber-500/50 transition-all text-xl font-bold"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-800 border border-slate-700 text-slate-400 hover:text-amber-500 hover:border-amber-500/50 transition-all text-lg sm:text-xl font-bold"
             >
               −
             </button>
@@ -169,14 +178,14 @@ const groupedOptions = useMemo(() => {
                 disabled={definition.maxSize===1}
                 value={unit.modelCount}
                 onChange={(e) => updateUnitSize(unit.instanceId, parseInt(e.target.value) || definition.minSize)}
-                className="w-full h-12 bg-slate-950 border border-slate-700 rounded-lg text-center text-xl font-mono text-white focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none 
+                className="w-full h-10 sm:h-12 bg-slate-950 border border-slate-700 rounded-lg text-center text-lg sm:text-xl font-mono text-white focus:border-amber-500 focus:ring-1 focus:ring-amber-500 outline-none 
                 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
             </div>
 
             <button
               onClick={() => updateUnitSize(unit.instanceId, Math.min(definition.maxSize || 999, unit.modelCount + 1))}
-              className="w-12 h-12 rounded-lg bg-slate-800 border border-slate-700 text-slate-400 hover:text-amber-500 hover:border-amber-500/50 transition-all text-xl font-bold"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-slate-800 border border-slate-700 text-slate-400 hover:text-amber-500 hover:border-amber-500/50 transition-all text-lg sm:text-xl font-bold"
             >
               +
             </button>
