@@ -146,20 +146,13 @@ export const useMagicItemLogic = (
   const getItemStatus = useCallback((item: MagicItem) => {
     const currentCount = unit.selectedOptions[item.id] || 0;
     
-    // Determine if this is a Toggle (Max 1) or Counter (Max > 1)
-    // Note: Master Runes usually behave as Toggle (maxCount: 1 or undefined)
+    // Toggle vs Counter Check (Master Runes are Toggles)
     const isToggle = !item.maxCount || item.maxCount === 1;
 
     // --- A. ALWAYS ALLOW DESELECTION FOR TOGGLES ---
-    // If a Master Rune is selected, we MUST return enabled so the user can click it to turn it OFF.
     if (currentCount > 0 && isToggle) {
       return { isSelected: true, currentCount, isDisabled: false, errorLabel: null };
     }
-
-    // [DELETED BLOCK] 
-    // We removed the "currentCount > 0 && !isToggle" bypass. 
-    // Now, even if you have 2 Runes of Fury, the code will proceed to check 
-    // if adding a 3rd one would break the "Max 3" rule (combined with other runes).
 
     // --- B. STANDARD CHECKS ---
     if (checkIsTakenByOthers(item, unit, roster)) {
@@ -176,23 +169,34 @@ export const useMagicItemLogic = (
     if (!tagCheck.isValid) return { isSelected: false, currentCount, isDisabled: true, errorLabel: tagCheck.error ?? null };
 
 
-    // --- C. SLOT CAPACITY CHECKS ---
+    // --- C. SLOT CAPACITY CHECKS (The Fix) ---
+    
+    // 1. Calculate if this item constitutes a "New Slot"
     let costsNewSlot = true;
     if (isRunicFaction && item.isRune) {
-        // If we already have runes in this category, adding another costs 0 extra MAGIC ITEM slots
+        // If we already have runes in this category, adding another costs 0 extra slots.
         const existingRunes = runeUsage?.[item.type] || [];
         if (existingRunes.length > 0) costsNewSlot = false;
     }
 
-    if (costsNewSlot && usage.remainingSlots <= 0) {
-       // If adding this would cost a slot, and we have none, disable it.
-       return { isSelected: false, currentCount, isDisabled: true, errorLabel: null };
+    // 2. Only enforce Capacity Limits if this item actually COSTS a slot
+    if (costsNewSlot) {
+       // Global Limit Check
+       if (usage.remainingSlots <= 0) {
+          return { isSelected: false, currentCount, isDisabled: true, errorLabel: null };
+       }
+
+       // Specific Category Limit Checks (Banner vs Non-Banner)
+       const isBanner = item.type === 'banner';
+       
+       if (isBanner && usage.countBanners >= allowance.maxBanners) {
+          return { isSelected: false, currentCount, isDisabled: true, errorLabel: null };
+       }
+       
+       if (!isBanner && usage.countNonBanners >= allowance.maxNonBanners) {
+          return { isSelected: false, currentCount, isDisabled: true, errorLabel: null };
+       }
     }
-    
-    // Banner Checks
-    const isBanner = item.type === 'banner';
-    if (isBanner && usage.countBanners >= allowance.maxBanners) return { isSelected: false, currentCount, isDisabled: true, errorLabel: null };
-    if (!isBanner && usage.countNonBanners >= allowance.maxNonBanners) return { isSelected: false, currentCount, isDisabled: true, errorLabel: null };
 
 
     // --- D. RUNIC FACTION LOGIC ---
@@ -209,15 +213,12 @@ export const useMagicItemLogic = (
 
         const runesInCategory = runeUsage?.[item.type] || [];
         
-        // 2. Max 3 Runes per Item (TOTAL)
-        // This check now correctly runs even if you already have 2 Runes of Fury.
-        // If (2 Fury + 1 Master) = 3, this returns Disabled, preventing the 3rd Fury.
+        // 2. Max 3 Runes per Item
         if (runesInCategory.length >= 3) {
            return { isSelected: false, currentCount, isDisabled: true, errorLabel: 'Max 3 Runes' };
         }
 
         // 3. Rule of Pride (Unique Combinations)
-        // Only check when adding a NEW rune instance
         if (currentCount === 0) {
           const proposedCombo = [...runesInCategory, item.id];
           const isComboTaken = roster.some(otherUnit => {
@@ -230,9 +231,7 @@ export const useMagicItemLogic = (
             return areCombosEqual(proposedCombo, otherRunes);
           });
 
-          if (isComboTaken) {
-             return { isSelected: false, currentCount, isDisabled: true, errorLabel: 'Combination Exists' };
-          }
+          if (isComboTaken) return { isSelected: false, currentCount, isDisabled: true, errorLabel: 'Combination Exists' };
         }
 
         // 4. Master Rune Checks
@@ -243,24 +242,22 @@ export const useMagicItemLogic = (
           if (isTakenAnywhere) return { isSelected: false, currentCount, isDisabled: true, errorLabel: 'Unique in Army' };
 
           const hasMasterAlready = runesInCategory.some(id => allItems.find(i => i.id === id)?.isMasterRune);
-          // If we haven't selected THIS Master Rune yet, but one exists in the group, block it.
           if (!currentCount && hasMasterAlready) {
              return { isSelected: false, currentCount, isDisabled: true, errorLabel: 'Max 1 Master Rune' };
           }
         }
 
       } else {
-        // Standard Items in Runic Faction
+        // Standard Items (in Runic Faction)
         if (hasRuneSelected) return { isSelected: false, currentCount, isDisabled: true, errorLabel: 'Inscribed with Runes' };
         if (checkCategoryDuplicate(item, usage.selectedItems)) return { isSelected: false, currentCount, isDisabled: true, errorLabel: `Max 1 ${item.type}` };
       }
 
     } else {
-      // Standard Faction Checks
+      // Standard Faction Logic
       if (checkCategoryDuplicate(item, usage.selectedItems)) return { isSelected: false, currentCount, isDisabled: true, errorLabel: `Max 1 ${item.type}` };
     }
 
-    // Success (Enable the Plus Button)
     return { isSelected: currentCount > 0, currentCount, isDisabled: false, errorLabel: null };
 
   }, [unit, roster, usage, definition, isMounted, allowance, isRunicFaction, runeUsage, allItems]);
