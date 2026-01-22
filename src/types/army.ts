@@ -23,7 +23,7 @@ export interface ArmyUnit {
   defId: string;
   name: string;
   role: string;
-  unitBaseCost: number;
+  unitBaseCost?: number;
   pointsPerModel: number;
   modelCount: number;
   tags?: string[];
