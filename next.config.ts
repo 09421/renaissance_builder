@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/:path*",
-        destination: "https://www.whrmybuilder.app/:path*",
+        destination: "https://www.whrarmybuilder.app/:path*",
         permanent: true,
       },
     ];
